@@ -19,12 +19,14 @@ body {
 .node circle {
   fill: #999;
   cursor: pointer;
-  r: 2px;
 }
 .node.root circle {
   fill: #999;
   cursor: pointer;
-  r: 3px;
+  r: 4px !important;
+}
+.node.root text {
+  font: 6px sans-serif;
 }
 .node.theory circle  {
   fill: #d95f02;
@@ -45,7 +47,7 @@ body {
   visibility: hidden;
 }
 .node text {
-  font: 4px sans-serif;
+  font: 3px sans-serif;
 }
 .node.theory text {
   fill: #d95f02;
@@ -107,7 +109,7 @@ if (canvasHeight > canvasWidth) {
 
 order = ["计算机图形学与虚拟现实", "信息检索与社会计算", "信息系统安全", "计算机软件", "计算机基础理论", "硬件与计算机体系结构", "计算机网络", "计算机图像视频处理与多媒体技术", "数据科学与大数据计算", "生物信息计算与数字健康"]
 
-var rotation = -3
+var rotation = -1
 var svg = d3.select("svg"),
     g = svg.append("g")
     .attr("transform", "translate(" + (centerMVx + margin.left + diameter / 2) + "," + (centerMVy + diameter / 2 + margin.top) + ")" + "rotate(" + rotation + ")");
