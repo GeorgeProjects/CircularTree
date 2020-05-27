@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.node circle {
+  fill: #999;
+  cursor: pointer;
+}
+
+.node text {
+  font: 3px sans-serif;
+}
+
+.node--internal circle {
+  fill: #555;
+}
+
+.node--internal text {
+  text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+}
+
+.link {
+  fill: none;
+  stroke: #555;
+  stroke-opacity: 0.4;
+  stroke-width: 0.8px;
+}
+
+</style>
+<body>
+  <svg id='canvas' width="960" height="1060"></svg>
+</body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+var canvasWidth = d3.select('#canvas').style("width")
+var canvasHeight = d3.select('#canvas').style("height")
+canvasWidth = +canvasWidth.replace("px", "")
+canvasHeight = +canvasHeight.replace("px", "")
+var margin = {top: canvasHeight * 0.05, right: canvasWidth * 0.1, bottom: canvasHeight * 0.05, left: canvasWidth * 0.1}
+
+canvasWidth = canvasWidth -  margin.left - margin.right
+canvasHeight = canvasHeight - margin.top - margin.bottom
+
+var diameter = canvasWidth>canvasHeight?canvasHeight:canvasWidth;
+var centerMVx = 0, centerMVy = 0
+
+if (canvasWidth > canvasHeight) {
+  centerMVx = (canvasWidth - canvasHeight) / 2
+}
+
+if (canvasHeight > canvasWidth) {
+  centerMVy = (canvasHeight - canvasWidth) / 2
+}
+
+var svg = d3.select("svg"),
+    g = svg.append("g")
+    .attr("transform", "translate(" + (centerMVx + margin.left + diameter / 2) + "," + (centerMVy + diameter / 2 + margin.top) + ")");
+
+var stratify = d3.stratify()
+    .parentId(function(d) { return d.id.substring(0, d.id.lastIndexOf(".")); });
+
+var tree = d3.tree()
+    .size([360, diameter / 2])
+    .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
+
+d3.json("data.json", function(error, data) {
+    if (error) throw error;
+    var treeData = d3.hierarchy(data)
+    update(treeData)
+});
+
+
+function update(treeData, add=false) {
+  var root = tree(treeData);
+  var duration = 1000
+
+  var link = g.selectAll(".link")
+    .data(root.descendants().slice(1), function(d) {
+      return d.data.name + '-' + d.parent.data.name
+    })
+    
+  link.enter().append("path")
+      .attr("class", "link")
+      .attr("d", function(d) {
+        return "M" + project(d.x, d.y)
+            + "C" + project(d.x, (d.y + d.parent.y) / 2)
+            + " " + project(d.parent.x, (d.y + d.parent.y) / 2)
+            + " " + project(d.parent.x, d.parent.y);
+      });
+  link.transition()
+      .duration(duration)
+      .attr("d", function(d) {
+        return "M" + project(d.x, d.y)
+            + "C" + project(d.x, (d.y + d.parent.y) / 2)
+            + " " + project(d.parent.x, (d.y + d.parent.y) / 2)
+            + " " + project(d.parent.x, d.parent.y);
+      });
+  link.exit().remove();
+
+  var node = g.selectAll(".node")
+      .data(root.descendants(), function(d){
+        if (d.parent != null) {
+          return d.parent.data.name + '-' + d.data.name
+        }
+        return d.data.name
+      })
+
+  addRemoveNodes(node, treeData)
+  var nodeUpdate = node
+      .transition()
+      .duration(duration)
+      .attr("transform", function(d) { return "translate(" + project(d.x, d.y) + ")"; })
+  nodeUpdate.select('text')
+      .attr("dy", ".31em")
+      .attr("x", function(d) { return d.x < 180 === !d.children ? 6 : -6; })
+      .style("text-anchor", function(d) { return d.x < 180 === !d.children ? "start" : "end"; })
+      .attr("transform", function(d) { return "rotate(" + (d.x < 180 ? d.x - 90 : d.x + 90) + ")"; })
+}
+
+function addRemoveNodes(node, treeData) {
+  let nodeEnter = node.enter()
+      .append("g")
+      .attr("class", function(d) { return "node" + (d.children ? " node--internal" : " node--leaf"); })
+      .attr("transform", function(d) { return "translate(" + project(d.x, d.y) + ")"; })
+
+  nodeEnter.append("circle")
+      .attr("r", 2.5)
+      .on("click", function(d, i) {
+        var add = click(d)
+        update(treeData, add)
+      });
+  nodeEnter.append("text")
+      .attr("dy", ".31em")
+      .attr("x", function(d) { return d.x < 180 === !d.children ? 6 : -6; })
+      .style("text-anchor", function(d) { return d.x < 180 === !d.children ? "start" : "end"; })
+      .attr("transform", function(d) { return "rotate(" + (d.x < 180 ? d.x - 90 : d.x + 90) + ")"; })
+      .text(function(d) { 
+        return d.data.name 
+      });
+  node.exit().remove();
+}
+
+function project(x, y) {
+  var angle = (x - 90) / 180 * Math.PI, radius = y;
+  return [radius * Math.cos(angle), radius * Math.sin(angle)];
+}
+
+// Toggle children on click.
+function click(d) {
+  if (d.children) {
+    d._children = d.children;
+    d.children = null;
+    return false
+  } else {
+    d.children = d._children;
+    d._children = null;
+    return true
+  }
+}
+
+// Collapse nodes
+function collapse(d) {
+  if (d.children) {
+      d._children = d.children;
+      d._children.forEach(collapse);
+      d.children = null;
+    }
+}
+</script>
