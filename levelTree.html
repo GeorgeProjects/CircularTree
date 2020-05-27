@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.node circle {
+  fill: #999;
+  cursor: pointer;
+}
+.node.theory circle  {
+  fill: #d95f02;
+}
+.node.fundation circle {
+  fill: #1b9e77;
+}
+.node.application circle {
+  fill: #7570b3;
+}
+
+.node text {
+  font: 5px sans-serif;
+}
+.node.theory text {
+  fill: #d95f02;
+}
+.node.fundation text {
+  fill: #1b9e77;
+}
+.node.application text {
+  fill: #7570b3;
+}
+
+.node--internal circle {
+  fill: #555;
+}
+
+.node--internal text {
+  text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+}
+
+.link {
+  fill: none;
+  stroke: #555;
+  stroke-opacity: 0.3;
+  stroke-width: 1px;
+}
+
+form {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+label {
+  display: block;
+}
+
+</style>
+<body>
+  <svg id='canvas'></svg>
+</body>
+<script src="//d3js.org/d3.v4.min.js"></script>
+<script>
+
+var canvasWidth = d3.select('#canvas').style("width")
+var canvasHeight = d3.select('#canvas').style("height")
+canvasWidth = +canvasWidth.replace("px", "")
+canvasHeight = +canvasHeight.replace("px", "")
+var margin = {top: canvasHeight * 0.05, right: canvasWidth * 0.1, bottom: canvasHeight * 0.05, left: canvasWidth * 0.1}
+
+canvasWidth = canvasWidth -  margin.left - margin.right
+canvasHeight = canvasHeight - margin.top - margin.bottom
+
+treeHeight = canvasHeight / 8 * 3
+treeWidth = canvasWidth
+
+var orientations = {
+  "top-to-bottom": {
+    size: [treeWidth, treeHeight],
+    x: function(d) { return d.x; },
+    y: function(d) { return d.y; }
+  },
+  "bottom-to-top": {
+    size: [treeWidth, treeHeight],
+    x: function(d) { return d.x; },
+    y: function(d) { return height - d.y; }
+  }
+}
+
+var svg = d3.select("svg"),
+    g = svg.append("g").attr("transform", "translate(40,0)");
+
+var tree = d3.tree()
+    .size([treeWidth, treeHeight])
+
+d3.json("data.json", function(error, data) {
+  if (error) throw error;
+
+  var root = d3.hierarchy(data)
+  tree(root);
+
+  oFunc = orientations['top-to-bottom']
+
+  var link = g.selectAll(".link")
+      .data(root.descendants().slice(1))
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", function(d, i) {
+        diagonal(d, i)
+      });
+
+  var node = g.selectAll(".node")
+      .data(root.descendants())
+      .enter().append("g")
+      .attr("class", function(d) { return "node" + (d.children ? " node--internal" : " node--leaf"); })
+      .attr("transform", function(d) { return "translate(" + oFunc.x(d) + "," + oFunc.y(d) + ")"; });
+
+  node.append("circle")
+      .attr("r", 2);
+
+  node.append("text")
+      .attr("dy", 3)
+      .attr("x", function(d) { return d.children ? -8 : 8; })
+      .style("text-anchor", function(d) { return d.children ? "end" : "start"; })
+      .text(function(d) { return d.data.name; });
+
+  // d3.selectAll("input")
+  //     .on("change", changed);
+
+  // var timeout = setTimeout(function() {
+  //   d3.select("input[value=\"tree\"]")
+  //       .property("checked", true)
+  //       .dispatch("change");
+  // }, 1000);
+
+  // function changed() {
+  //   timeout = clearTimeout(timeout);
+  //   (this.value === "tree" ? tree : cluster)(root);
+  //   var t = d3.transition().duration(750);
+  //   node.transition(t).attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
+  //   link.transition(t).attr("d", diagonal);
+  // }
+});
+
+function diagonal(d) {
+  return "M" + d.y + "," + d.x
+      + "C" + (d.parent.y + 100) + "," + d.x
+      + " " + (d.parent.y + 100) + "," + d.parent.x
+      + " " + d.parent.y + "," + d.parent.x;
+}
+
+</script>

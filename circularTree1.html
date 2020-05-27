@@ -1,415 +1,64 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.node text {
+  font: 8px sans-serif;
+}
+
+.node--internal circle {
+  fill: #555;
+}
+
+.node--internal text {
+  text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+}
+
+.link {
+  fill: none;
+  stroke: #aaa;
+  stroke-opacity: 0.4;
+  stroke-width: 1.5px;
+}
+
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #999;
+  stroke: #999;
+  stroke-width: 1.5px;
+}
+
+</style>
+
+<body>
+  <svg id='canvas'>
+  </svg>
+</body>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+ //original code see fiddle http://jsfiddle.net/Nivaldo/CbGh2/
+ var pubs =
 {
   "name": "计算机学科",
   "children": [
-    {
-      "name": "信息系统安全",
-      "type": "fundation2",
-      "children": [
         {
-          "name": "网络安全（王骞）",
-          "children": [
-            {
-              "name": "入侵检测",
-              "children": [
-                {
-                  "name": "异常入侵检测",
-                  "children": []
-                },
-                {
-                  "name": "误用入侵检测",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "网络取证",
-              "children": [
-                {
-                  "name": "电子证据取证",
-                  "children": []
-                },
-                {
-                  "name": "蜜阱诱骗取证",
-                  "children": []
-                },
-                {
-                  "name": "入侵容忍取证",
-                  "children": []
-                },
-                {
-                  "name": "网络攻击溯源",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "物联网安全",
-              "children": [
-                {
-                  "name": "设备接入认证",
-                  "children": []
-                },
-                {
-                  "name": "传感器网络攻防",
-                  "children": []
-                },
-                {
-                  "name": "环境安全感知",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "网络匿名技术",
-              "children": [
-                {
-                  "name": "假名代理",
-                  "children": []
-                },
-                {
-                  "name": "广播与暗示地址",
-                  "children": []
-                },
-                {
-                  "name": "匿名链",
-                  "children": []
-                },
-                {
-                  "name": "洋葱路由",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "云边端融合网络安全",
-              "children": [
-                {
-                  "name": "计算环境隔离",
-                  "children": []
-                },
-                {
-                  "name": "资源调度迁移",
-                  "children": []
-                },
-                {
-                  "name": "数据安全传输 ",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "网络积极防御",
-              "children": [
-                {
-                  "name": "移动目标防御",
-                  "children": []
-                },
-                {
-                  "name": "安全态势感知与评估",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "云计算安全",
-              "children": [
-                {
-                  "name": "云网络架构安全",
-                  "children": []
-                },
-                {
-                  "name": "云访问安全",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "系统安全（杨珉）",
-          "children": [
-            {
-              "name": "硬件安全",
-              "children": [
-                {
-                  "name": "微架构安全",
-                  "children": []
-                },
-                {
-                  "name": "硬件漏洞",
-                  "children": []
-                },
-                {
-                  "name": "硬件侧信道攻击",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "操作系统安全",
-              "children": [
-                {
-                  "name": "可信启动与可信执行",
-                  "children": []
-                },
-                {
-                  "name": "访问控制",
-                  "children": []
-                },
-                {
-                  "name": "隔离机制",
-                  "children": []
-                },
-                {
-                  "name": "远程验证",
-                  "children": []
-                },
-                {
-                  "name": "SGX安全",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "漏洞攻防技术",
-              "children": [
-                {
-                  "name": "漏洞挖掘、验证与利用",
-                  "children": []
-                },
-                {
-                  "name": "缓解机制",
-                  "children": []
-                },
-                {
-                  "name": "漏洞评估与分析",
-                  "children": []
-                },
-                {
-                  "name": "补丁生成与应用",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "恶意行为",
-              "children": [
-                {
-                  "name": "高级可持续性攻击",
-                  "children": []
-                },
-                {
-                  "name": "恶意软件分析与检测",
-                  "children": []
-                },
-                {
-                  "name": "恶意软件对抗",
-                  "children": []
-                },
-                {
-                  "name": "调查取证",
-                  "children": []
-                },
-                {
-                  "name": "黑产（地下经济）",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "新兴安全",
-              "children": [
-                {
-                  "name": "移动安全",
-                  "children": []
-                },
-                {
-                  "name": "CPS/IoT安全",
-                  "children": []
-                },
-                {
-                  "name": "AI安全",
-                  "children": []
-                },
-                {
-                  "name": "供应链安全",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "信息安全（徐鹏）",
-          "children": [
-            {
-              "name": "密码理论与技术",
-              "children": [
-                {
-                  "name": "密码学的数学理论",
-                  "children": []
-                },
-                {
-                  "name": "认证加密",
-                  "children": []
-                },
-                {
-                  "name": "对称密码",
-                  "children": []
-                },
-                {
-                  "name": "杂凑函数",
-                  "children": []
-                },
-                {
-                  "name": "公钥密码",
-                  "children": []
-                },
-                {
-                  "name": "后量子密码",
-                  "children": []
-                },
-                {
-                  "name": "安全协议设计与分析",
-                  "children": []
-                },
-                {
-                  "name": "可证明安全理论",
-                  "children": []
-                },
-                {
-                  "name": "密码分析",
-                  "children": []
-                },
-                {
-                  "name": "密码工程",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "内容安全",
-              "children": [
-                {
-                  "name": "文本内容安全",
-                  "children": []
-                },
-                {
-                  "name": "多媒体内容安全",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "多媒体安全",
-              "children": [
-                {
-                  "name": "信息隐藏与分析",
-                  "children": []
-                },
-                {
-                  "name": "数字水印",
-                  "children": []
-                },
-                {
-                  "name": "数字媒体取证",
-                  "children": []
-                },
-                {
-                  "name": "生物认证和生物模板安全",
-                  "children": []
-                },
-                {
-                  "name": "多媒体感知哈希与认证",
-                  "children": []
-                },
-                {
-                  "name": "多媒体隐私保护",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "隐私保护",
-              "children": [
-                {
-                  "name": "差分隐私",
-                  "children": []
-                },
-                {
-                  "name": "关系型数据隐私保护",
-                  "children": []
-                },
-                {
-                  "name": "社交图谱的隐私保护",
-                  "children": []
-                },
-                {
-                  "name": "位置轨迹隐私保护",
-                  "children": []
-                },
-                {
-                  "name": "隐私泄露检测",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "侧信道攻击与防御",
-              "children": [
-                {
-                  "name": "能量分析攻击",
-                  "children": []
-                },
-                {
-                  "name": "错误诱发攻击",
-                  "children": []
-                },
-                {
-                  "name": "电磁泄露分析",
-                  "children": []
-                },
-                {
-                  "name": "时间侧信道分析",
-                  "children": []
-                },
-                {
-                  "name": "光信息侧信道分析",
-                  "children": []
-                },
-                {
-                  "name": "网络流量侧信道分析",
-                  "children": []
-                },
-                {
-                  "name": "声音侧信道分析",
-                  "children": []
-                },
-                {
-                  "name": "热力学侧信道分析",
-                  "children": []
-                },
-                {
-                  "name": "密钥保护",
-                  "children": []
-                },
-                {
-                  "name": "硬件保护",
-                  "children": []
-                },
-                {
-                  "name": "算法分支均一化",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "计算机软件",
-      "type": "fundation1",
       "children": [
         {
           "name": "系统软件（陈海波）",
@@ -998,7 +647,6 @@
     },
     {
       "name": "计算机基础理论",
-      "type": "theory",
       "children": [
         {
           "name": "算法与数据结构",
@@ -1142,7 +790,6 @@
     },
     {
       "name": "硬件与计算机体系结构",
-      "type": "fundation",
       "children": [
         {
           "name": "存储器结构",
@@ -1179,14 +826,6 @@
           ]
         },
         {
-          "name": "empty",
-          "type": "empty"
-        },
-        {
-          "name": "empty",
-          "type": "empty"
-        },          
-        {
           "name": "处理器结构",
           "children": [
             {
@@ -1218,14 +857,6 @@
           ]
         },
         {
-          "name": "empty",
-          "type": "empty"
-        }, 
-        {
-          "name": "empty",
-          "type": "empty"
-        }, 
-        {
           "name": "嵌入式系统",
           "children": [
             {
@@ -1242,14 +873,6 @@
             }
           ]
         },
-        {
-          "name": "empty",
-          "type": "empty"
-        }, 
-        {
-          "name": "empty",
-          "type": "empty"
-        }, 
         {
           "name": "并行计算",
           "children": [
@@ -1341,7 +964,6 @@
     },
     {
       "name": "计算机网络",
-      "type": "fundation",
       "children": [
         {
           "name": "传统网络（崔勇）",
@@ -1412,26 +1034,6 @@
               ]
             },
             {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
               "name": "网络协议",
               "children": [
                 {
@@ -1489,26 +1091,6 @@
               ]
             },
             {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
               "name": "协议工程",
               "children": [
                 {
@@ -1534,26 +1116,6 @@
                 {
                   "name": "网络模拟与仿真",
                   "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
                 }
               ]
             },
@@ -1603,14 +1165,6 @@
               ]
             },
             {
-              "name": "empty",
-              "type": "empty"
-            },
-            {
-              "name": "empty",
-              "type": "empty"
-            },
-            {
               "name": "数据中心网络",
               "children": [
                 {
@@ -1656,14 +1210,6 @@
               ]
             },
             {
-              "name": "empty",
-              "type": "empty"
-            },
-            {
-              "name": "empty",
-              "type": "empty"
-            },
-            {
               "name": "云计算与边缘计算网络",
               "children": [
                 {
@@ -1683,14 +1229,6 @@
                   "children": []
                 }
               ]
-            },
-            {
-              "name": "empty",
-              "type": "empty"
-            },
-            {
-              "name": "empty",
-              "type": "empty"
             },
             {
               "name": "网络应用",
@@ -1760,26 +1298,6 @@
               ]
             },
             {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
               "name": "无线网络协议",
               "children": [
                 {
@@ -1809,26 +1327,6 @@
               ]
             },
             {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
               "name": "物联网路由技术",
               "children": [
                 {
@@ -1842,26 +1340,6 @@
                 {
                   "name": "智能路由",
                   "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
                 }
               ]
             },
@@ -1891,14 +1369,6 @@
               ]
             },
             {
-              "name": "empty",
-              "type": "empty"
-            },
-            {
-              "name": "empty",
-              "type": "empty"
-            },
-            {
               "name": "无线传感器网络",
               "children": [
                 {
@@ -1912,26 +1382,6 @@
                 {
                   "name": "离散目标感知网络",
                   "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
                 }
               ]
             },
@@ -1957,26 +1407,6 @@
               ]
             },
             {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
               "name": "异构传感网络",
               "children": [
                 {
@@ -1994,26 +1424,6 @@
                 {
                   "name": "多源传感数据融合",
                   "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
                 }
               ]
             },
@@ -2051,26 +1461,6 @@
               ]
             },
             {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
               "name": "群智感知网络",
               "children": [
                 {
@@ -2100,37 +1490,17 @@
               ]
             },
             {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
               "name": "无源感知网络",
               "children": [
                 {
                   "name": "能量捕获技术 ",
                   "children": []
+                },
+                {
+                  "name": "环境感知",
+                  "children": []
                 }
               ]
-            },
-            {
-              "name": "empty",
-              "type": "empty"
             },
             {
               "name": "新型感知理论与技术",
@@ -2158,16 +1528,6 @@
                 {
                   "name": "边缘一体化感知",
                   "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
                 }
               ]
             },
@@ -2203,10 +1563,6 @@
                   "children": []
                 }
               ]
-            },
-            {
-              "name": "empty",
-              "type": "empty"
             },
             {
               "name": "物联网应用",
@@ -2258,8 +1614,412 @@
       ]
     },
     {
+      "name": "信息系统安全",
+      "children": [
+        {
+          "name": "网络安全（王骞）",
+          "children": [
+            {
+              "name": "入侵检测",
+              "children": [
+                {
+                  "name": "异常入侵检测",
+                  "children": []
+                },
+                {
+                  "name": "误用入侵检测",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "网络取证",
+              "children": [
+                {
+                  "name": "电子证据取证",
+                  "children": []
+                },
+                {
+                  "name": "蜜阱诱骗取证",
+                  "children": []
+                },
+                {
+                  "name": "入侵容忍取证",
+                  "children": []
+                },
+                {
+                  "name": "网络攻击溯源",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "物联网安全",
+              "children": [
+                {
+                  "name": "设备接入认证",
+                  "children": []
+                },
+                {
+                  "name": "传感器网络攻防",
+                  "children": []
+                },
+                {
+                  "name": "环境安全感知",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "网络匿名技术",
+              "children": [
+                {
+                  "name": "假名代理",
+                  "children": []
+                },
+                {
+                  "name": "广播与暗示地址",
+                  "children": []
+                },
+                {
+                  "name": "匿名链",
+                  "children": []
+                },
+                {
+                  "name": "洋葱路由",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "云边端融合网络安全",
+              "children": [
+                {
+                  "name": "计算环境隔离",
+                  "children": []
+                },
+                {
+                  "name": "资源调度迁移",
+                  "children": []
+                },
+                {
+                  "name": "数据安全传输 ",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "网络积极防御",
+              "children": [
+                {
+                  "name": "移动目标防御",
+                  "children": []
+                },
+                {
+                  "name": "安全态势感知与评估",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "云计算安全",
+              "children": [
+                {
+                  "name": "云网络架构安全",
+                  "children": []
+                },
+                {
+                  "name": "云访问安全",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "系统安全（杨珉）",
+          "children": [
+            {
+              "name": "硬件安全",
+              "children": [
+                {
+                  "name": "微架构安全",
+                  "children": []
+                },
+                {
+                  "name": "硬件漏洞",
+                  "children": []
+                },
+                {
+                  "name": "硬件侧信道攻击",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "操作系统安全",
+              "children": [
+                {
+                  "name": "可信启动与可信执行",
+                  "children": []
+                },
+                {
+                  "name": "访问控制",
+                  "children": []
+                },
+                {
+                  "name": "隔离机制",
+                  "children": []
+                },
+                {
+                  "name": "远程验证",
+                  "children": []
+                },
+                {
+                  "name": "SGX安全",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "漏洞攻防技术",
+              "children": [
+                {
+                  "name": "漏洞挖掘、验证与利用",
+                  "children": []
+                },
+                {
+                  "name": "缓解机制",
+                  "children": []
+                },
+                {
+                  "name": "漏洞评估与分析",
+                  "children": []
+                },
+                {
+                  "name": "补丁生成与应用",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "恶意行为",
+              "children": [
+                {
+                  "name": "高级可持续性攻击",
+                  "children": []
+                },
+                {
+                  "name": "恶意软件分析与检测",
+                  "children": []
+                },
+                {
+                  "name": "恶意软件对抗",
+                  "children": []
+                },
+                {
+                  "name": "调查取证",
+                  "children": []
+                },
+                {
+                  "name": "黑产（地下经济）",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "新兴安全",
+              "children": [
+                {
+                  "name": "移动安全",
+                  "children": []
+                },
+                {
+                  "name": "CPS/IoT安全",
+                  "children": []
+                },
+                {
+                  "name": "AI安全",
+                  "children": []
+                },
+                {
+                  "name": "供应链安全",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "信息安全（徐鹏）",
+          "children": [
+            {
+              "name": "密码理论与技术",
+              "children": [
+                {
+                  "name": "密码学的数学理论",
+                  "children": []
+                },
+                {
+                  "name": "认证加密",
+                  "children": []
+                },
+                {
+                  "name": "对称密码",
+                  "children": []
+                },
+                {
+                  "name": "杂凑函数",
+                  "children": []
+                },
+                {
+                  "name": "公钥密码",
+                  "children": []
+                },
+                {
+                  "name": "后量子密码",
+                  "children": []
+                },
+                {
+                  "name": "安全协议设计与分析",
+                  "children": []
+                },
+                {
+                  "name": "可证明安全理论",
+                  "children": []
+                },
+                {
+                  "name": "密码分析",
+                  "children": []
+                },
+                {
+                  "name": "密码工程",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "内容安全",
+              "children": [
+                {
+                  "name": "文本内容安全",
+                  "children": []
+                },
+                {
+                  "name": "多媒体内容安全",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "多媒体安全",
+              "children": [
+                {
+                  "name": "信息隐藏与分析",
+                  "children": []
+                },
+                {
+                  "name": "数字水印",
+                  "children": []
+                },
+                {
+                  "name": "数字媒体取证",
+                  "children": []
+                },
+                {
+                  "name": "生物认证和生物模板安全",
+                  "children": []
+                },
+                {
+                  "name": "多媒体感知哈希与认证",
+                  "children": []
+                },
+                {
+                  "name": "多媒体隐私保护",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "隐私保护",
+              "children": [
+                {
+                  "name": "差分隐私",
+                  "children": []
+                },
+                {
+                  "name": "关系型数据隐私保护",
+                  "children": []
+                },
+                {
+                  "name": "社交图谱的隐私保护",
+                  "children": []
+                },
+                {
+                  "name": "位置轨迹隐私保护",
+                  "children": []
+                },
+                {
+                  "name": "隐私泄露检测",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "侧信道攻击与防御",
+              "children": [
+                {
+                  "name": "能量分析攻击",
+                  "children": []
+                },
+                {
+                  "name": "错误诱发攻击",
+                  "children": []
+                },
+                {
+                  "name": "电磁泄露分析",
+                  "children": []
+                },
+                {
+                  "name": "时间侧信道分析",
+                  "children": []
+                },
+                {
+                  "name": "光信息侧信道分析",
+                  "children": []
+                },
+                {
+                  "name": "网络流量侧信道分析",
+                  "children": []
+                },
+                {
+                  "name": "声音侧信道分析",
+                  "children": []
+                },
+                {
+                  "name": "热力学侧信道分析",
+                  "children": []
+                },
+                {
+                  "name": "密钥保护",
+                  "children": []
+                },
+                {
+                  "name": "硬件保护",
+                  "children": []
+                },
+                {
+                  "name": "算法分支均一化",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "计算机图形学与虚拟现实",
-      "type": "application",
       "children": [
         {
           "name": "几何建模与处理",
@@ -2662,7 +2422,6 @@
     },
     {
       "name": "计算机图像视频处理与多媒体技术",
-      "type": "application",
       "children": [
         {
           "name": "图像视频处理",
@@ -2920,7 +2679,6 @@
     },
     {
       "name": "信息检索与社会计算",
-      "type": "application",
       "children": [
         {
           "name": "社会计算",
@@ -3105,7 +2863,6 @@
     },
     {
       "name": "数据科学与大数据计算",
-      "type": "application",
       "children": [
         {
           "name": "数据科学基础理论",
@@ -3247,7 +3004,6 @@
     },
     {
       "name": "生物信息计算与数字健康",
-      "type": "application",
       "children": [
         {
           "name": "组学数据处理与分析",
@@ -3373,3 +3129,169 @@
     }
   ]
 }
+
+var canvasWidth = d3.select('#canvas').style("width")
+var canvasHeight = d3.select('#canvas').style("height")
+canvasWidth = +canvasWidth.replace("px", "")
+canvasHeight = +canvasHeight.replace("px", "")
+var margin = {top: canvasHeight * 0.09, right: canvasWidth * 0.1, bottom: canvasHeight * 0.09, left: canvasWidth * 0.1}
+
+canvasWidth = canvasWidth -  margin.left - margin.right
+canvasHeight = canvasHeight - margin.top - margin.bottom
+
+var diameter = canvasWidth>canvasHeight?canvasHeight:canvasWidth;
+var centerMVx = 0, centerMVy = 0
+
+if (canvasWidth > canvasHeight) {
+  centerMVx = (canvasWidth - canvasHeight) / 2
+}
+
+if (canvasHeight > canvasWidth) {
+  centerMVy = (canvasHeight - canvasWidth) / 2
+}
+
+var DEPTH = 4
+
+var depthLen = (diameter / 2) / DEPTH
+
+var width = diameter,
+    height = diameter;
+    
+var i = 0,
+    duration = 350,
+    root;
+
+var tree = d3.layout.tree()
+    .size([360, diameter / 2 - 200])
+    .separation(function(a, b) { return (a.parent == b.parent ? 1 : 10) / a.depth; });
+
+var diagonal = d3.svg.diagonal.radial()
+    .projection(function(d) { return [d.y, d.x / 180 * Math.PI]; });
+
+var svg = d3.select("body")
+    .select('#canvas')
+    .append("g")
+    .attr("transform", "translate(" + (centerMVx + margin.left + diameter / 2) + "," + (centerMVy + margin.top + diameter / 2) + ")");
+
+var nonCollapseColor = '#999' 
+var collapseColor = '#fff'
+root = pubs;
+root.x0 = height / 2;
+root.y0 = 0;
+
+// root.children.forEach(collapse); // start with all children collapsed
+update(root);
+
+d3.select(self.frameElement).style("height", "800px");
+
+function update(source) {
+
+  // Compute the new tree layout.
+  var nodes = tree.nodes(root),
+      links = tree.links(nodes);
+
+  // Normalize for fixed-depth.
+  nodes.forEach(function(d) { d.y = d.depth * depthLen; });
+
+  // Update the nodes…
+  var node = svg.selectAll("g.node")
+      .data(nodes, function(d) { return d.id || (d.id = ++i); });
+
+  // Enter any new nodes at the parent's previous position.
+  var nodeEnter = node.enter().append("g")
+      .attr("class", "node")
+      //.attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")"; })
+      .on("click", click);
+
+  nodeEnter.append("circle")
+      .attr("r", 1e-6)
+      .style("fill", function(d) { return d._children ? collapseColor : nonCollapseColor; });
+
+  nodeEnter.append("text")
+      .attr("x", 12)
+      .attr("dy", ".35em")
+      .attr("text-anchor", "start")
+      //.attr("transform", function(d) { return d.x < 180 ? "translate(0)" : "rotate(180)translate(-" + (d.name.length * 8.5)  + ")"; })
+      .text(function(d) { return d.name; })
+      .style("fill-opacity", 1e-6);
+
+  // Transition nodes to their new position.
+  var nodeUpdate = node.transition()
+      .duration(duration)
+      .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")"; })
+
+  nodeUpdate.select("circle")
+      .attr("r", 3)
+      .style("fill", function(d) { return d._children ? collapseColor : nonCollapseColor; });
+
+  nodeUpdate.select("text")
+      .style("fill-opacity", 1)
+      .attr("transform", function(d) { return d.x < 200 ? "translate(0)" : "rotate(180)translate(-" + (d.name.length + 50)  + ")"; });
+
+  // TODO: appropriate transform
+  var nodeExit = node.exit().transition()
+      .duration(duration)
+      //.attr("transform", function(d) { return "diagonal(" + source.y + "," + source.x + ")"; })
+      .remove();
+
+  nodeExit.select("circle")
+      .attr("r", 1e-6);
+
+  nodeExit.select("text")
+      .style("fill-opacity", 1e-6);
+
+  // Update the links…
+  var link = svg.selectAll("path.link")
+      .data(links, function(d) { return d.target.id; });
+
+  // Enter any new links at the parent's previous position.
+  link.enter().insert("path", "g")
+      .attr("class", "link")
+      .attr("d", function(d) {
+        var o = {x: source.x0, y: source.y0};
+        return diagonal({source: o, target: o});
+      });
+
+  // Transition links to their new position.
+  link.transition()
+      .duration(duration)
+      .attr("d", diagonal);
+
+  // Transition exiting nodes to the parent's new position.
+  link.exit().transition()
+      .duration(duration)
+      .attr("d", function(d) {
+        var o = {x: source.x, y: source.y};
+        return diagonal({source: o, target: o});
+      })
+      .remove();
+
+  // Stash the old positions for transition.
+  nodes.forEach(function(d) {
+    d.x0 = d.x;
+    d.y0 = d.y;
+  });
+}
+
+// Toggle children on click.
+function click(d) {
+  if (d.children) {
+    d._children = d.children;
+    d.children = null;
+  } else {
+    d.children = d._children;
+    d._children = null;
+  }
+  
+  update(d);
+}
+
+// Collapse nodes
+function collapse(d) {
+  if (d.children) {
+      d._children = d.children;
+      d._children.forEach(collapse);
+      d.children = null;
+    }
+}
+</script>
