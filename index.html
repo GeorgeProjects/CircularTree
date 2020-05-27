@@ -19,6 +19,12 @@ body {
 .node circle {
   fill: #999;
   cursor: pointer;
+  r: 2px;
+}
+.node.root circle {
+  fill: #999;
+  cursor: pointer;
+  r: 3px;
 }
 .node.theory circle  {
   fill: #d95f02;
@@ -119,6 +125,8 @@ d3.json("data.json", function(error, data) {
       return order.indexOf(a.name) - order.indexOf(b.name)
     })
     addColor(data)
+    data.type = "root"
+    console.log('data', data)
     var treeData = d3.hierarchy(data)
     // var root = tree(stratify(data));
     update(treeData)
