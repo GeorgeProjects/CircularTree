@@ -7,6 +7,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  margin: 0px;
 }
 
 #canvas {
@@ -39,16 +40,16 @@ body {
   font: 3px sans-serif;
 }
 .node.depth-0 text {
-  font: 10px sans-serif;
+  font: 15px sans-serif;
 }
 .node.depth-1 text {
-  font: 7px sans-serif;
+  font: 12px sans-serif;
 }
 .node.depth-2 text {
-  font: 5px sans-serif;
+  font: 10px sans-serif;
 }
 .node.depth-3 text {
-  font: 4px sans-serif;
+  font: 8px sans-serif;
 }
 .node.depth-4 text {
 }
@@ -113,7 +114,7 @@ var canvasWidth = d3.select('#canvas').style("width")
 var canvasHeight = d3.select('#canvas').style("height")
 canvasWidth = +canvasWidth.replace("px", "")
 canvasHeight = +canvasHeight.replace("px", "")
-var margin = {top: canvasHeight * 0.03, right: canvasWidth * 0.1, bottom: canvasHeight * 0.05, left: canvasWidth * 0.1}
+var margin = {top: canvasHeight * 0.03, right: canvasWidth * 0.2, bottom: canvasHeight * 0.05, left: canvasWidth * 0.2}
 
 canvasWidth = canvasWidth -  margin.left - margin.right
 canvasHeight = canvasHeight - margin.top - margin.bottom
@@ -131,35 +132,55 @@ if (canvasHeight > canvasWidth) {
 
 order = ["硬件与计算机体系结构", "信息系统安全", "计算机图形学与虚拟现实", "信息检索与数据挖掘", "生物信息计算与数字健康", "计算机图像视频处理与多媒体技术",  "计算机网络", "计算机软件", "计算机基础理论"]
 
-var rotation = 195
-var rotationRootText = -105
+var rotation = 0
 var svg = d3.select("svg"),
     g = svg.append("g")
-    .attr("transform", "translate(" + (centerMVx + margin.left + diameter / 2) + "," + (centerMVy + diameter / 2 + margin.top) + ")" + "rotate(" + rotation + ")");
 
 var stratify = d3.stratify()
     .parentId(function(d) { return d.id.substring(0, d.id.lastIndexOf(".")); });
 
 var tree = d3.tree()
-    .size([360, diameter / 2])
-    .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
+    .size([canvasHeight - 120, canvasWidth - 200])
+    // .size([360, diameter / 2])
+    // .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
 
 d3.json("data/hardware.json", function(error, data) {
     if (error) throw error;
     addColor(data)
     addIndex(data, 0)
-    data.type = "root"
     //  compute the level-3 data
     datalevel3 = JSON.parse(JSON.stringify(data))
     showLevel3(datalevel3, 0)
     var treeData = d3.hierarchy(datalevel3)
-    // var root = tree(stratify(data));
+    // position the node at center
     update(treeData)
 });
 
+function updatePos(treeData) {
+  let nodeArray = []
+  linearize(treeData, nodeArray)
+  let rangex = d3.extent(nodeArray,function (d,i){return +d.x})
+  let rangey = d3.extent(nodeArray,function (d,i){return +d.y})
+  let width = rangey[1] - rangey[0], height = rangex[1] - rangex[0]
+  let paddingLeft = (canvasWidth - width) / 2
+  let paddingTop = (canvasHeight - height) / 3
+  g.attr("transform", "translate(" + (margin.left + paddingLeft) + "," + (margin.top + paddingTop) + ")");
+}
+
+function linearize(treeData, nodeArray) {
+  if (typeof(treeData) !== 'undefined') {
+    nodeArray.push(treeData)
+  }
+  if ((typeof(treeData.children) !== 'undefined') && (treeData.children != null)) {
+    for (let i = 0; i < treeData.children.length; i++) {
+      linearize(treeData.children[i], nodeArray)
+    }
+  }
+}
 
 function update (treeData, add=false) {
   var root = tree(treeData);
+  updatePos(root)
   var duration = 1000
 
   var link = g.selectAll(".link")
@@ -171,20 +192,11 @@ function update (treeData, add=false) {
       .attr("class", function(d) {
         return "link " + d.data.index + "-" + d.parent.data.index
       })
-      .attr("d", function(d) {
-        return "M" + project(d.x, d.y)
-            + "C" + project(d.x, (d.y + d.parent.y) / 2)
-            + " " + project(d.parent.x, (d.y + d.parent.y) / 2)
-            + " " + project(d.parent.x, d.parent.y);
-      });
+      .attr("d", diagonal);
+
   link.transition()
       .duration(duration)
-      .attr("d", function(d) {
-        return "M" + project(d.x, d.y)
-            + "C" + project(d.x, (d.y + d.parent.y) / 2)
-            + " " + project(d.parent.x, (d.y + d.parent.y) / 2)
-            + " " + project(d.parent.x, d.parent.y);
-      });
+      .attr("d", diagonal);
   link.exit().remove();
 
   var node = g.selectAll(".node")
@@ -199,27 +211,19 @@ function update (treeData, add=false) {
   var nodeUpdate = node
       .transition()
       .duration(duration)
-      .attr("transform", function(d) { return "translate(" + project(d.x, d.y) + ")"; })
+      .attr("transform", function(d) { return "translate(" + [d.y, d.x] + ")"; })
   nodeUpdate.select('text')
       .attr("dy", ".31em")
-      .attr("x", function(d) { return xRange(d.x) === !d.children ? 6 : -6; })
+      .attr("x", function(d) { return xRange(d.x) === !d.children ? 8: -8; })
       .style("text-anchor", function(d) { return xRange(d.x) === !d.children ? "start" : "end"; })
-      .attr("transform", function(d) { 
-        return "rotate(" + (xRange(d.x) ? d.x - 90 : d.x + 90) + ")"; 
-      })
-  update_root_text()
-}
-
-function update_root_text() {
-  var svg = d3.select("svg")
-    .select('.depth-0')
-    .select('text')
-    .attr("transform", "rotate(" + rotationRootText + ")")
+      // .attr("transform", function(d) { 
+      //   return "rotate(" + (xRange(d.x) ? d.x - 90 : d.x + 90) + ")"; 
+      // })
 }
 
 function xRange(x) {
   rotation = 0
-  return x < rotation || x > (180 + rotation)
+  // return x < rotation || x > (180 + rotation)
 }
 
 function showLevel3(data, depth) {
@@ -267,7 +271,7 @@ function addRemoveNodes(node, treeData) {
               + (typeof(d.data.type)=='undefined'?"":" "+d.data.type)
               + (" depth-" + d.depth); 
       })
-      .attr("transform", function(d) { return "translate(" + project(d.x, d.y) + ")"; })
+      .attr("transform", function(d) { return "translate(" + [d.y, d.x] + ")"; })
 
   nodeEnter.append("circle")
       .attr("r", 2.5)
@@ -277,18 +281,12 @@ function addRemoveNodes(node, treeData) {
       });
   nodeEnter.append("text")
       .attr("dy", ".31em")
-      .attr("x", function(d) { return xRange(d.x) === !d.children ? textdx : -textdx; })
-      .style("text-anchor", function(d) { return xRange(d.x) === !d.children ? "start" : "end"; })
-      .attr("transform", function(d) { return "rotate(" + (xRange(d.x) ? d.x - 90 : d.x + 90) + ")"; })
+      .attr("x", function(d) { return d.children ? -textdx : textdx; })
+      .style("text-anchor", function(d) { return d.children ? "end" : "start"; })
       .text(function(d) { 
         return d.data.name 
       });
   node.exit().remove();
-}
-
-function project(x, y) {
-  var angle = (x - 90) / 180 * Math.PI, radius = y;
-  return [radius * Math.cos(angle), radius * Math.sin(angle)];
 }
 
 // Toggle children on click.
@@ -303,7 +301,6 @@ function click(d) {
     return true
   }
 }
-
 // Collapse nodes
 function collapse(d) {
   if (d.children) {
@@ -311,5 +308,12 @@ function collapse(d) {
       d._children.forEach(collapse);
       d.children = null;
     }
+}
+// the diagonal links between the nodes
+function diagonal(d) {
+  return "M" + d.y + "," + d.x
+      + "C" + (d.parent.y + 100) + "," + d.x
+      + " " + (d.parent.y + 100) + "," + d.parent.x
+      + " " + d.parent.y + "," + d.parent.x;
 }
 </script>

@@ -37,7 +37,7 @@ body {
 }
 
 .node text {
-  font: 3px sans-serif;
+  font: 2.5px sans-serif;
 }
 .node.depth-0 text {
   font: 15px sans-serif;
@@ -49,7 +49,7 @@ body {
   font: 10px sans-serif;
 }
 .node.depth-3 text {
-  font: 8px sans-serif;
+  font: 7px sans-serif;
 }
 .node.depth-4 text {
 }
@@ -110,7 +110,6 @@ body {
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
-var fontSizeArray = [15, 12, 6, 5, 3] 
 var canvasWidth = d3.select('#canvas').style("width")
 var canvasHeight = d3.select('#canvas').style("height")
 canvasWidth = +canvasWidth.replace("px", "")
@@ -141,11 +140,11 @@ var stratify = d3.stratify()
     .parentId(function(d) { return d.id.substring(0, d.id.lastIndexOf(".")); });
 
 var tree = d3.tree()
-    .size([canvasHeight - 400, canvasWidth - 400])
+    .size([canvasHeight-300, canvasWidth - 400])
     // .size([360, diameter / 2])
     // .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
 
-d3.json("data/biological.json", function(error, data) {
+d3.json("data/theory.json", function(error, data) {
     if (error) throw error;
     addColor(data)
     addIndex(data, 0)
