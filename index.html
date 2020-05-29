@@ -1102,19 +1102,11 @@ function select(item) {
       clearCanvas()
     }
     drawObject.drawLevel3()
-    setTimeout(function () {
-      clearCanvas()
-      drawObject.drawLevel3()
-    }, 2000)
   } else if (item === 'level-4') {
     if ((previousItem !== 'level-3') && (previousItem !== 'level-4')) {
       clearCanvas()
     }
     drawObject.drawLevel4()
-    setTimeout(function () {
-      clearCanvas()
-      drawObject.drawLevel4()
-    }, 2000)
   } else {
     clearCanvas()
     clearLegend()
