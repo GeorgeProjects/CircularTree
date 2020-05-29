@@ -1,0 +1,372 @@
+{
+  "name": "硬件与计算机体系结构",
+  "type": "fundation",
+  "children": [
+    {
+      "name": "存储器结构",
+      "children": [
+        {
+          "name": "高速缓存技术",
+          "children": [
+            {
+              "name": "缓存替换算法",
+              "children": []
+            },
+            {
+              "name": "缓存一致性",
+              "children": []
+            },
+            {
+              "name": "DMA技术",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "内存器件与技术",
+          "children": [
+            {
+              "name": "高带宽内存HBM",
+              "children": []
+            },
+            {
+              "name": "3D堆叠存储器",
+              "children": []
+            },
+            {
+              "name": "非易失性存储器",
+              "children": []
+            },
+            {
+              "name": "内存控制器",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "外存器件与技术",
+          "children": [
+            {
+              "name": "SSD存储",
+              "children": []
+            },
+            {
+              "name": "DNA存储",
+              "children": []
+            },
+            {
+              "name": "全息存储",
+              "children": []
+            },
+            {
+              "name": "蓝光存储",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "异构存储技术",
+          "children": [
+            {
+              "name": "异构混合内存结构",
+              "children": []
+            },
+            {
+              "name": "异构内存控制器",
+              "children": []
+            },
+            {
+              "name": "内外存统一结构",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "存算一体化技术",
+          "children": [
+            {
+              "name": "忆阻器存算一体结构",
+              "children": []
+            },
+            {
+              "name": "存内计算",
+              "children": []
+            },
+            {
+              "name": "近数据计算",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "处理器结构",
+      "children": [
+        {
+          "name": "微处理器体系结构",
+          "children": [
+            {
+              "name": "流水线技术",
+              "children": []
+            },
+            {
+              "name": "硬件预取技术",
+              "children": []
+            },
+            {
+              "name": "片上网络技术",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "多核/众核处理器",
+          "children": [
+            {
+              "name": "GPU/MIC",
+              "children": []
+            },
+            {
+              "name": "异构众核处理器",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "算法/领域专用加速器",
+          "children": [
+            {
+              "name": "FPGA",
+              "children": []
+            },
+            {
+              "name": "深度学习加速器",
+              "children": []
+            },
+            {
+              "name": "图计算加速器",
+              "children": []
+            },
+            {
+              "name": "CPU-加速器异构计算系统",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "嵌入式系统",
+      "children": [
+        {
+          "name": "可靠性系统",
+          "children": [
+            {
+              "name": "事务存储",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "低功耗系统",
+          "children": [
+            {
+              "name": "低功耗管控电路",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "实时系统",
+          "children": [
+            {
+              "name": "软核处理器",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "并行计算",
+      "children": [
+        {
+          "name": "并行模式",
+          "children": [
+            {
+              "name": "单指令流多数据流",
+              "children": []
+            },
+            {
+              "name": "多指令流多数据流",
+              "children": []
+            },
+            {
+              "name": "数据流体系结构",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "并行结构",
+          "children": [
+            {
+              "name": "并行向量处理机PVP",
+              "children": []
+            },
+            {
+              "name": "对称多处理机SMP",
+              "children": []
+            },
+            {
+              "name": "大规模并行处理机MPP",
+              "children": []
+            },
+            {
+              "name": "集群",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "存储模型",
+          "children": [
+            {
+              "name": "均匀访存模型UMA",
+              "children": []
+            },
+            {
+              "name": "非均匀访存模型NUMA",
+              "children": []
+            },
+            {
+              "name": "一致性高速缓存非均匀存储访问模型",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "并行系统",
+          "children": [
+            {
+              "name": "高性能计算系统",
+              "children": []
+            },
+            {
+              "name": "超级计算机",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "容错技术",
+          "children": [
+            {
+              "name": "故障检测",
+              "children": []
+            },
+            {
+              "name": "故障恢复",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "分布式计算",
+      "children": [
+        {
+          "name": "云计算体系结构",
+          "children": [
+            {
+              "name": "低熵云计算结构",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "边缘计算体系结构",
+          "children": [
+            {
+              "name": "边缘服务器",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "云边端融合计算架构",
+          "children": [
+            {
+              "name": "Disaggregated体系结构",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "数据中心体系结构",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "非传统结构",
+      "children": [
+        {
+          "name": "量子计算机",
+          "children": [
+            {
+              "name": "可逆电路",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "超导计算机",
+          "children": [
+            {
+              "name": "超低温电路",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "生物计算机",
+          "children": [
+            {
+              "name": "DNA计算",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "光计算机",
+          "children": [
+            {
+              "name": "三值光计算",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "开源硬件与敏捷设计",
+      "children": [
+        {
+          "name": "开放指令集RISC-V",
+          "children": []
+        },
+        {
+          "name": "高层次综合HLS",
+          "children": []
+        },
+        {
+          "name": "面向领域的软硬件协同设计",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

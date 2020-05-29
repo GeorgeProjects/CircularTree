@@ -20,14 +20,39 @@ body {
   fill: #999;
   cursor: pointer;
 }
-.node.root circle {
-  fill: #999;
-  cursor: pointer;
+.node.depth-0 circle {
+  r: 8.5px !important;
+}
+.node.depth-1 circle {
+  r: 7px !important;
+}
+.node.depth-2 circle {
+  r: 5px !important;
+}
+.node.depth-3 circle {
   r: 4px !important;
 }
-.node.root text {
+.node.depth-4 circle {
+}
+
+.node text {
+  font: 3px sans-serif;
+}
+.node.depth-0 text {
+  font: 10px sans-serif;
+}
+.node.depth-1 text {
+  font: 7px sans-serif;
+}
+.node.depth-2 text {
   font: 6px sans-serif;
 }
+.node.depth-3 text {
+  font: 5px sans-serif;
+}
+.node.depth-4 text {
+}
+
 .node.theory circle  {
   fill: #d95f02;
 }
@@ -45,9 +70,6 @@ body {
 }
 .empty {
   visibility: hidden;
-}
-.node text {
-  font: 3px sans-serif;
 }
 .node.theory text {
   fill: #d95f02;
@@ -91,7 +113,7 @@ var canvasWidth = d3.select('#canvas').style("width")
 var canvasHeight = d3.select('#canvas').style("height")
 canvasWidth = +canvasWidth.replace("px", "")
 canvasHeight = +canvasHeight.replace("px", "")
-var margin = {top: canvasHeight * 0.05, right: canvasWidth * 0.1, bottom: canvasHeight * 0.05, left: canvasWidth * 0.1}
+var margin = {top: canvasHeight * 0.08, right: canvasWidth * 0.1, bottom: canvasHeight * 0.08, left: canvasWidth * 0.1}
 
 canvasWidth = canvasWidth -  margin.left - margin.right
 canvasHeight = canvasHeight - margin.top - margin.bottom
@@ -107,9 +129,10 @@ if (canvasHeight > canvasWidth) {
   centerMVy = (canvasHeight - canvasWidth) / 2
 }
 
-order = ["计算机图形学与虚拟现实", "信息检索与社会计算", "信息系统安全", "计算机软件", "计算机基础理论", "硬件与计算机体系结构", "计算机网络", "计算机图像视频处理与多媒体技术", "数据科学与大数据计算", "生物信息计算与数字健康"]
+order = ["硬件与计算机体系结构", "信息系统安全", "计算机图形学与虚拟现实", "信息检索与数据挖掘", "生物信息计算与数字健康", "计算机图像视频处理与多媒体技术",  "计算机网络", "计算机软件", "计算机基础理论"]
 
-var rotation = -1
+var rotation = 195
+var rotationRootText = -105
 var svg = d3.select("svg"),
     g = svg.append("g")
     .attr("transform", "translate(" + (centerMVx + margin.left + diameter / 2) + "," + (centerMVy + diameter / 2 + margin.top) + ")" + "rotate(" + rotation + ")");
@@ -121,32 +144,35 @@ var tree = d3.tree()
     .size([360, diameter / 2])
     .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
 
-d3.json("data.json", function(error, data) {
+d3.json("data/data_3rd.json", function(error, data) {
     if (error) throw error;
     data.children.sort(function(a, b) {
       return order.indexOf(a.name) - order.indexOf(b.name)
-    })
+    })    
     addColor(data)
+    addIndex(data, 0)
     data.type = "root"
-    console.log('data', data)
-    var treeData = d3.hierarchy(data)
+    //  compute the level-3 data
+    datalevel3 = JSON.parse(JSON.stringify(data))
+    showLevel3(datalevel3, 0)
+    var treeData = d3.hierarchy(datalevel3)
     // var root = tree(stratify(data));
     update(treeData)
 });
 
 
-function update(treeData, add=false) {
+function update (treeData, add=false) {
   var root = tree(treeData);
   var duration = 1000
 
   var link = g.selectAll(".link")
     .data(root.descendants().slice(1), function(d) {
-      return d.data.name + '-' + d.parent.data.name
+      return d.data.index + '-' + d.parent.data.index
     })
     
   link.enter().append("path")
       .attr("class", function(d) {
-        return "link " + d.data.name + " " + d.parent.data.name
+        return "link " + d.data.index + "-" + d.parent.data.index
       })
       .attr("d", function(d) {
         return "M" + project(d.x, d.y)
@@ -167,9 +193,9 @@ function update(treeData, add=false) {
   var node = g.selectAll(".node")
       .data(root.descendants(), function(d){
         if (d.parent != null) {
-          return d.parent.data.name + '-' + d.data.name
+          return d.parent.data.index + '-' + d.data.index
         }
-        return d.data.name
+        return d.data.index
       })
   
   addRemoveNodes(node, treeData)
@@ -181,12 +207,33 @@ function update(treeData, add=false) {
       .attr("dy", ".31em")
       .attr("x", function(d) { return xRange(d.x) === !d.children ? 6 : -6; })
       .style("text-anchor", function(d) { return xRange(d.x) === !d.children ? "start" : "end"; })
-      .attr("transform", function(d) { return "rotate(" + (xRange(d.x) ? d.x - 90 : d.x + 90) + ")"; })
+      .attr("transform", function(d) { 
+        return "rotate(" + (xRange(d.x) ? d.x - 90 : d.x + 90) + ")"; 
+      })
+  update_root_text()
+}
+
+function update_root_text() {
+  var svg = d3.select("svg")
+    .select('.depth-0')
+    .select('text')
+    .attr("transform", "rotate(" + rotationRootText + ")")
 }
 
 function xRange(x) {
-  rotation = 180
+  rotation = 0
   return x < rotation || x > (180 + rotation)
+}
+
+function showLevel3(data, depth) {
+  if (depth == 3) {
+    collapse(data)
+  }
+  if ((typeof(data.children) !== 'undefined') && (data.children != null)) {
+    for (let i = 0;i < data.children.length;i++) {
+       showLevel3(data.children[i], depth+1)
+    }
+  }
 }
 
 function addColor (data, type) {
@@ -195,7 +242,7 @@ function addColor (data, type) {
       data.type = type
     }
   }
-  if (typeof(data.children) === 'undefined') {
+  if ((typeof(data.children) === 'undefined') || (data.children == null)) {
     return
   }
   for (let i = 0; i < data.children.length; i++) {
@@ -203,12 +250,25 @@ function addColor (data, type) {
   }
 }
 
+function addIndex (data, index) {
+  data.index = 'node-' + index
+  index += 1
+  if (typeof(data.children) !== 'undefined') {
+    for (let i = 0;i < data.children.length;i++) {
+      index = addIndex(data.children[i], index)
+    }
+  }
+  return index
+}
+
 function addRemoveNodes(node, treeData) {
+  let textdx = 8
   let nodeEnter = node.enter()
       .append("g")
-      .attr("class", function(d) { 
+      .attr("class", function(d) {
         return "node" + (d.children ? " node--internal" : " node--leaf") 
-              + (typeof(d.data.type)=='undefined'?"":" "+d.data.type); 
+              + (typeof(d.data.type)=='undefined'?"":" "+d.data.type)
+              + (" depth-" + d.depth); 
       })
       .attr("transform", function(d) { return "translate(" + project(d.x, d.y) + ")"; })
 
@@ -220,7 +280,7 @@ function addRemoveNodes(node, treeData) {
       });
   nodeEnter.append("text")
       .attr("dy", ".31em")
-      .attr("x", function(d) { return xRange(d.x) === !d.children ? 6 : -6; })
+      .attr("x", function(d) { return xRange(d.x) === !d.children ? textdx : -textdx; })
       .style("text-anchor", function(d) { return xRange(d.x) === !d.children ? "start" : "end"; })
       .attr("transform", function(d) { return "rotate(" + (xRange(d.x) ? d.x - 90 : d.x + 90) + ")"; })
       .text(function(d) { 

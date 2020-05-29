@@ -1,0 +1,174 @@
+{
+  "name": "计算机基础理论",
+  "type": "theory",
+  "children": [
+    {
+      "name": "算法与数据结构",
+      "children": [
+        {
+          "name": "在线算法",
+          "children": []
+        },
+        {
+          "name": "近似算法",
+          "children": []
+        },
+        {
+          "name": "随机算法",
+          "children": []
+        },
+        {
+          "name": "亚线性算法与性质测试",
+          "children": []
+        },
+        {
+          "name": "数据结构的时空复杂度",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "计算复杂性",
+      "children": [
+        {
+          "name": "精细复杂度",
+          "children": []
+        },
+        {
+          "name": "交互式证明",
+          "children": []
+        },
+        {
+          "name": "困难性与复杂度分类",
+          "children": []
+        },
+        {
+          "name": "通讯复杂性",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "逻辑与形式化方法",
+      "children": [
+        {
+          "name": "自动机理论",
+          "children": []
+        },
+        {
+          "name": "形式化方法",
+          "children": []
+        },
+        {
+          "name": "程序语义",
+          "children": []
+        },
+        {
+          "name": "类型理论",
+          "children": []
+        },
+        {
+          "name": "有限模型论",
+          "children": []
+        },
+        {
+          "name": "可计算性理论",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "算法博弈论",
+      "children": [
+        {
+          "name": "最优机制设计",
+          "children": []
+        },
+        {
+          "name": "纳什均衡与市场均衡",
+          "children": []
+        },
+        {
+          "name": "资源公平分配",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "量子计算",
+      "children": [
+        {
+          "name": "量子容错计算",
+          "children": []
+        },
+        {
+          "name": "量子模拟",
+          "children": []
+        },
+        {
+          "name": "量子机器学习",
+          "children": []
+        },
+        {
+          "name": "量子编码理论",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "计算几何",
+      "children": [
+        {
+          "name": "计算几何算法设计和下界证明",
+          "children": []
+        },
+        {
+          "name": "计算拓扑",
+          "children": []
+        },
+        {
+          "name": "离散与组合几何",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "信息论与算法编码理论",
+      "children": [
+        {
+          "name": "存储编码",
+          "children": []
+        },
+        {
+          "name": "译码算法",
+          "children": []
+        },
+        {
+          "name": "量子编码",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "优化理论",
+      "children": [
+        {
+          "name": "连续优化",
+          "children": []
+        },
+        {
+          "name": "组合优化",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "并行与分布式算法理论",
+      "children": []
+    },
+    {
+      "name": "密码学数学基础",
+      "children": []
+    }
+  ]
+}

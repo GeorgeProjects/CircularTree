@@ -1,0 +1,534 @@
+{
+  "name": "计算机软件",
+  "type": "fundation1",
+  "children": [
+    {
+      "name": "系统软件",
+      "children": [
+        {
+          "name": "操作系统",
+          "children": [
+            {
+              "name": "资源管理与跨层调度",
+              "children": []
+            },
+            {
+              "name": "新型存储与文件系统",
+              "children": []
+            },
+            {
+              "name": "新型设备抽象与管理",
+              "children": []
+            },
+            {
+              "name": "新型操作系统结构",
+              "children": []
+            },
+            {
+              "name": "微内核操作系统",
+              "children": []
+            },
+            {
+              "name": "操作系统可靠性",
+              "children": []
+            },
+            {
+              "name": "操作系统形式化验证",
+              "children": []
+            },
+            {
+              "name": "异构操作系统",
+              "children": []
+            },
+            {
+              "name": "众核操作系统",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "虚拟化技术",
+          "children": [
+            {
+              "name": "系统级虚拟化",
+              "children": []
+            },
+            {
+              "name": "轻量级虚拟化",
+              "children": []
+            },
+            {
+              "name": "语言级虚拟化",
+              "children": []
+            },
+            {
+              "name": "虚拟化管理软件",
+              "children": []
+            },
+            {
+              "name": "虚拟机集群管理",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "编译技术与运行时技术",
+          "children": [
+            {
+              "name": "代码生成与优化",
+              "children": []
+            },
+            {
+              "name": "动静态编译分析",
+              "children": []
+            },
+            {
+              "name": "运行时性能优化",
+              "children": []
+            },
+            {
+              "name": "内存垃圾回收",
+              "children": []
+            },
+            {
+              "name": "二进制翻译与优化",
+              "children": []
+            },
+            {
+              "name": "并行编译",
+              "children": []
+            },
+            {
+              "name": "编译安全",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "中间件技术",
+          "children": [
+            {
+              "name": "微服务/无服务器架构",
+              "children": []
+            },
+            {
+              "name": "PaaS/SaaS/FaaS",
+              "children": []
+            },
+            {
+              "name": "消息通信机制",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "并行与分布式软件",
+          "children": [
+            {
+              "name": "数据中心操作系统",
+              "children": []
+            },
+            {
+              "name": "大型分布式系统软件",
+              "children": []
+            },
+            {
+              "name": "异构并行软件",
+              "children": []
+            },
+            {
+              "name": "并行程序可靠性",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "嵌入式与实时软件",
+          "children": [
+            {
+              "name": "实时操作系统",
+              "children": []
+            },
+            {
+              "name": "嵌入式操作系统",
+              "children": []
+            },
+            {
+              "name": "系统实时分析与保证",
+              "children": []
+            },
+            {
+              "name": "嵌入式工具软件",
+              "children": []
+            },
+            {
+              "name": "嵌入式系统安全",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "泛在系统软件",
+          "children": [
+            {
+              "name": "泛在系统软件的基础理论",
+              "children": []
+            },
+            {
+              "name": "泛在系统软件的软件定义方法和技术",
+              "children": []
+            },
+            {
+              "name": "领域泛在操作系统模型与运行机理",
+              "children": []
+            },
+            {
+              "name": "泛在系统软件可靠性建模与验证",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "数据库与数据科学",
+      "children": [
+        {
+          "name": "数据库理论",
+          "children": [
+            {
+              "name": "数据模型",
+              "children": []
+            },
+            {
+              "name": "数据依赖与范式",
+              "children": []
+            },
+            {
+              "name": "结构/非结构查询语言",
+              "children": []
+            },
+            {
+              "name": "数据可用性",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "数据库系统",
+          "children": [
+            {
+              "name": "关系数据库",
+              "children": []
+            },
+            {
+              "name": "分布式数据库",
+              "children": []
+            },
+            {
+              "name": "新硬件数据处理",
+              "children": []
+            },
+            {
+              "name": "大数据处理系统",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "新型数据库",
+          "children": [
+            {
+              "name": "文本数据库",
+              "children": []
+            },
+            {
+              "name": "XML数据库",
+              "children": []
+            },
+            {
+              "name": "图数据库",
+              "children": []
+            },
+            {
+              "name": "时空数据库",
+              "children": []
+            },
+            {
+              "name": "众包数据库",
+              "children": []
+            },
+            {
+              "name": "不确定数据库",
+              "children": []
+            },
+            {
+              "name": "NewSQL数据库",
+              "children": []
+            },
+            {
+              "name": "key-value数据库",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "行业大数据应用",
+          "children": [
+            {
+              "name": "金融大数据",
+              "children": []
+            },
+            {
+              "name": "医疗大数据",
+              "children": []
+            },
+            {
+              "name": "教育大数据",
+              "children": []
+            },
+            {
+              "name": "政务大数据",
+              "children": []
+            },
+            {
+              "name": "商业大数据",
+              "children": []
+            },
+            {
+              "name": "工业大数据",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "软件理论与软件工程",
+      "children": [
+        {
+          "name": "形式化方法",
+          "children": [
+            {
+              "name": "形式化建模",
+              "children": []
+            },
+            {
+              "name": "形式化验证的数学和逻辑基础",
+              "children": []
+            },
+            {
+              "name": "模型校验",
+              "children": []
+            },
+            {
+              "name": "交互式和自动化定理证明",
+              "children": []
+            },
+            {
+              "name": "组合验证",
+              "children": []
+            },
+            {
+              "name": "概率验证",
+              "children": []
+            },
+            {
+              "name": "并行验证",
+              "children": []
+            },
+            {
+              "name": "动态验证",
+              "children": []
+            },
+            {
+              "name": "基于学习的验证",
+              "children": []
+            },
+            {
+              "name": "混成系统验证",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "程序设计语言",
+          "children": [
+            {
+              "name": "类型系统",
+              "children": []
+            },
+            {
+              "name": "程序分析、验证与综合",
+              "children": []
+            },
+            {
+              "name": "编译优化和编译器设计",
+              "children": []
+            },
+            {
+              "name": "领域特定语言与元编程",
+              "children": []
+            },
+            {
+              "name": "并行与分布式编程语言",
+              "children": []
+            },
+            {
+              "name": "概率编程语言",
+              "children": []
+            },
+            {
+              "name": "双向变换",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "软件工程方法与环境",
+          "children": [
+            {
+              "name": "软件复用",
+              "children": []
+            },
+            {
+              "name": "模型驱动的方法",
+              "children": []
+            },
+            {
+              "name": "众包和群智化方法",
+              "children": []
+            },
+            {
+              "name": "智能化开发环境",
+              "children": []
+            },
+            {
+              "name": "经验软件工程",
+              "children": []
+            },
+            {
+              "name": "开源软件与开源生态",
+              "children": []
+            },
+            {
+              "name": "软件测试",
+              "children": []
+            },
+            {
+              "name": "软件调试",
+              "children": []
+            },
+            {
+              "name": "软件再工程与逆向工程",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "软件方法学",
+          "children": [
+            {
+              "name": "软件体系结构",
+              "children": []
+            },
+            {
+              "name": "软件自适应",
+              "children": []
+            },
+            {
+              "name": "软件定义方法",
+              "children": []
+            },
+            {
+              "name": "软件自动化",
+              "children": []
+            },
+            {
+              "name": "可信软件",
+              "children": []
+            },
+            {
+              "name": "人机物融合软件",
+              "children": []
+            },
+            {
+              "name": "网构软件",
+              "children": []
+            },
+            {
+              "name": "软件演化与维护",
+              "children": []
+            },
+            {
+              "name": "软件生态学",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "服务计算",
+          "children": [
+            {
+              "name": "服务科学",
+              "children": []
+            },
+            {
+              "name": "服务计算理论",
+              "children": []
+            },
+            {
+              "name": "服务系统与工程",
+              "children": []
+            },
+            {
+              "name": "服务管理与服务治理",
+              "children": []
+            },
+            {
+              "name": "服务经济学",
+              "children": []
+            },
+            {
+              "name": "跨界服务",
+              "children": []
+            },
+            {
+              "name": "认知与智能服务",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "需求工程与领域工程",
+          "children": [
+            {
+              "name": "需求建模",
+              "children": []
+            },
+            {
+              "name": "需求约束与精化",
+              "children": []
+            },
+            {
+              "name": "领域本体",
+              "children": []
+            },
+            {
+              "name": "领域模型与构架",
+              "children": []
+            },
+            {
+              "name": "领域资产分类、获取和维护",
+              "children": []
+            },
+            {
+              "name": "软件产品线",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

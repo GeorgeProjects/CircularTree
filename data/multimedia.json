@@ -1,0 +1,194 @@
+{
+  "name": "计算机图像视频处理与多媒体技术",
+  "type": "application",
+  "children": [
+    {
+      "name": "图像视频处理",
+      "children": [
+        {
+          "name": "图像视频恢复与增强 ",
+          "children": []
+        },
+        {
+          "name": "三维图像视频处理",
+          "children": []
+        },
+        {
+          "name": "图像视频编辑与合成",
+          "children": []
+        },
+        {
+          "name": "运动估计、配准和融合",
+          "children": []
+        },
+        {
+          "name": "视频压缩、编码与传输",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "图像视频分析",
+      "children": [
+        {
+          "name": "特征提取与表示 ",
+          "children": []
+        },
+        {
+          "name": "分割、分组及形状表示",
+          "children": []
+        },
+        {
+          "name": "目标检测、识别与跟踪 ",
+          "children": []
+        },
+        {
+          "name": "行为分析与事件理解",
+          "children": []
+        },
+        {
+          "name": "视频摘要",
+          "children": []
+        },
+        {
+          "name": "生物医学影像分析",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "多媒体信号处理与编码",
+      "children": [
+        {
+          "name": "图像、视频、音频及新型传感信号处理",
+          "children": []
+        },
+        {
+          "name": "多媒体数据压缩编码与表示编码",
+          "children": []
+        },
+        {
+          "name": "多媒体质量评价",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "智能多媒体计算",
+      "children": [
+        {
+          "name": "大规模多媒体索引、搜索与推荐",
+          "children": []
+        },
+        {
+          "name": "多媒体情感计算",
+          "children": []
+        },
+        {
+          "name": "多媒体深度学习",
+          "children": []
+        },
+        {
+          "name": "多媒体描述与语言生成",
+          "children": []
+        },
+        {
+          "name": "多媒体认知与推理",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "媒体大数据分析",
+      "children": [
+        {
+          "name": "多媒体数据采集与标注",
+          "children": []
+        },
+        {
+          "name": "媒体大数据分析的评测模型与方法",
+          "children": []
+        },
+        {
+          "name": "跨媒体分析与计算",
+          "children": []
+        },
+        {
+          "name": "媒体大数据的关联分析与理解",
+          "children": []
+        },
+        {
+          "name": "媒体大数据的挖掘与推荐",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "媒体大数据分析",
+      "children": [
+        {
+          "name": "多媒体数据采集与标注",
+          "children": []
+        },
+        {
+          "name": "媒体大数据分析的评测模型与方法",
+          "children": []
+        },
+        {
+          "name": "跨媒体分析与计算",
+          "children": []
+        },
+        {
+          "name": "媒体大数据的关联分析与理解",
+          "children": []
+        },
+        {
+          "name": "媒体大数据的挖掘与推荐",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "多媒体网络与通信",
+      "children": [
+        {
+          "name": "动态自适应流媒体",
+          "children": []
+        },
+        {
+          "name": "多媒体传输与内容分发",
+          "children": []
+        },
+        {
+          "name": "多媒体用户体验",
+          "children": []
+        },
+        {
+          "name": "新型网络多媒体技术",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "多媒体系统",
+      "children": [
+        {
+          "name": "多媒体云计算",
+          "children": []
+        },
+        {
+          "name": "移动多媒体和可穿戴多媒体",
+          "children": []
+        },
+        {
+          "name": "多媒体软硬件系统",
+          "children": []
+        },
+        {
+          "name": "自动驾驶与无人系统中的多媒体技术",
+          "children": []
+        }
+      ]
+    }
+  ]
+}
