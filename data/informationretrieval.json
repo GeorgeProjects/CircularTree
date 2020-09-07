@@ -1,0 +1,154 @@
+{
+  "name": "信息检索与数据挖掘",
+  "type": "application",
+  "children": [
+    {
+      "name": "信息检索",
+      "children": [
+        {
+          "name": "文档表示",
+          "children": []
+        },
+        {
+          "name": "信息检索查询处理",
+          "children": []
+        },
+        {
+          "name": "用户和交互式检索",
+          "children": []
+        },
+        {
+          "name": "检索模型和排名",
+          "children": []
+        },
+        {
+          "name": "检索结果评估",
+          "children": []
+        },
+        {
+          "name": "搜索引擎架构和可伸缩性",
+          "children": []
+        },
+        {
+          "name": "信息检索系统",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "社会计算",
+      "children": [
+        {
+          "name": "用户行为分析",
+          "children": []
+        },
+        {
+          "name": "社交网络分析",
+          "children": []
+        },
+        {
+          "name": "社会影响力",
+          "children": []
+        },
+        {
+          "name": "网络舆情分析",
+          "children": []
+        },
+        {
+          "name": "社区发现",
+          "children": []
+        },
+        {
+          "name": "推荐系统",
+          "children": []
+        },
+        {
+          "name": "对话机器人",
+          "children": []
+        },
+        {
+          "name": "结构洞分析",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "数据挖掘",
+      "children": [
+        {
+          "name": "数据分类",
+          "children": []
+        },
+        {
+          "name": "数据聚类",
+          "children": []
+        },
+        {
+          "name": "流数据挖掘",
+          "children": []
+        },
+        {
+          "name": "数据可视化",
+          "children": []
+        },
+        {
+          "name": "知识发现",
+          "children": []
+        },
+        {
+          "name": "认知图谱",
+          "children": []
+        },
+        {
+          "name": "图数据挖掘",
+          "children": []
+        },
+        {
+          "name": "大数据分析",
+          "children": []
+        },
+        {
+          "name": "行业数据挖掘",
+          "children": []
+        },
+        {
+          "name": "数据关联挖掘",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "科技情报分析",
+      "children": [
+        {
+          "name": "知识溯源",
+          "children": []
+        },
+        {
+          "name": "趋势分析",
+          "children": []
+        },
+        {
+          "name": "前沿预测",
+          "children": []
+        },
+        {
+          "name": "命名排歧",
+          "children": []
+        },
+        {
+          "name": "决策支持",
+          "children": []
+        },
+        {
+          "name": "人才情报",
+          "children": []
+        },
+        {
+          "name": "科学计量",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

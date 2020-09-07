@@ -12,22 +12,22 @@ body {
 
 .title {
   position: absolute;
-  left: 75%;
-  top: 10%;
-  width: 22%;
-  height: 3rem;
-  padding-top: 0.5rem;
-  font-size: 2.5rem;
-  text-align: center;
-  color: #444444;
-  font-weight: bold;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 2rem;
+  background: #dddddd;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.4rem;
+  font-size: 1.2rem;
 }
 
 .main {
   position: absolute;
   left: 0%;
-  top: 0%;
-  width: 80%;
+  top: 2rem;
+  width: 100%;
   bottom: 0%;
 }
 
@@ -39,38 +39,34 @@ body {
 
 #legend {
   position: absolute;
-  top: 10%;
+  top: 9%;
   right: 8%;
   width: 12%;
-  height: 8%;
+  height: 10%;
 }
-
 /*#1b9e77, d95f02, 7570b3*/
 .node circle {
   fill: #999;
   cursor: pointer;
 }
 .node.depth-0 circle {
-  r: 7.5px !important;
+  r: 8.5px !important;
 }
 .node.depth-1 circle {
-  r: 6px !important;
+  r: 7px !important;
 }
 .node.depth-2 circle {
-  r: 4px !important;
+  r: 5px !important;
 }
 .node.depth-3 circle {
-  r: 2.5px !important;
+  r: 4px !important;
 }
 .node.depth-4 circle {
-  r: 1.5px !important;
-  fill: white !important;
 }
 
 .node text {
   font: sans-serif;
-}
-/*
+}/*
 .node.depth-0 text {
   font: 10px sans-serif;
 }
@@ -86,75 +82,40 @@ body {
 .node.depth-4 text {
 }
 */
-.level, .level.not-selected {
+.global, .global.not-selected {
   background: gray;
   border: solid gray 1px;
   color: gray;
-  stroke: gray;
 }
-.overall, .overall.not-selected {
-  background: #555555;
-  border: solid #555555 1px;
-  color: #555555;
-  stroke: #555555;
-}
-.node text {
-  stroke: none !important;
-  stroke-width: 0px !important;
-}
-.legend-item text {
-  stroke: none !important;
-}
-/* 
-theory:                       #d95f02, #d95f02, e41a1c; 66c2a5; 8dd3c7 d95f02 4286F3 006BB0
-network_hardware | fundation: #1b9e77, #e7298a, 4daf4a; fc8d62; ffffb3 EB4537 EB4537 EFA90D
-software | fundation1:        #e7298a, #1b9e77, d95f02; 8da0cb; bebada 1b9e77 FAC230 1D1815
-security | fundation2:        #999999, #66a61e, 984ea3; e78ac3; fb8072 377eb8 55AF7B 059341
-application:                  #7570b3, #7570b3, 377eb8; 4daf4a; 80b1d3 7570b3 7570b3 DC2F1F
-*/
-
-:root { 
-  --theory:           #d95f02; 
-  --network_hardware: #1b9e77;
-  --software:         #e52c65;
-  --security:         #d68a05;
-  --application:      #7570b3;
-} 
-
 .node.theory circle, .node.theory text, .legend-item.theory rect, .theory, .theory.not-selected {
-  fill: var(--theory);
-  background: var(--theory);
-  border: solid var(--theory) 1px;
-  color: var(--theory);
-  stroke: var(--theory);
+  fill: #d95f02;
+  background: #d95f02;
+  border: solid #d95f02 1px;
+  color: #d95f02;
 }
 .node.fundation circle, .node.fundation text, .legend-item.fundation rect, .fundation, .fundation.not-selected  {
-  fill: var(--network_hardware);
-  background: var(--network_hardware);
-  border: solid var(--network_hardware) 1px;
-  color: var(--network_hardware);
-  stroke: var(--network_hardware);
+  fill: #1b9e77;
+  background: #1b9e77;
+  border: solid #1b9e77 1px;
+  color: #1b9e77;
 }
 .node.fundation1 circle, .node.fundation1 text, .legend-item.fundation1 rect, .fundation1, .fundation1.not-selected {
-  fill: var(--software);
-  background: var(--software);
-  border: solid var(--software) 1px;
-  color: var(--software);
-  stroke: var(--software);
+  fill: #e7298a;
+  background: #e7298a;
+  border: solid #e7298a 1px;
+  color: #e7298a;
 }
 .node.fundation2 circle, .node.fundation2 text, .legend-item.fundation2 rect, .fundation2, .fundation2.not-selected {
-  fill: var(--security);
-  background: var(--security);
-  border: solid var(--security) 1px;
-  color: var(--security);
-  stroke: var(--security);
+  fill: #e6ab02;
+  background: #e6ab02;
+  border: solid #e6ab02 1px;
+  color: #e6ab02;
 }
 .node.application circle, .node.application text, .legend-item.application rect, .application, .application.not-selected {
-  fill: var(--application);
-  background: var(--application);
-  border: solid var(--application) 1px;
-  color: var(--application);
-  stroke: var(--application);
+  fill: #7570b3;
+  background: #7570b3;
+  border: solid #7570b3 1px;
+  color: #7570b3;
 }
 
 .selection.not-selected {
@@ -167,34 +128,31 @@ application:                  #7570b3, #7570b3, 377eb8; 4daf4a; 80b1d3 7570b3 75
 
 .selection-container {
   position: absolute;
-  left: 80%;
-  height: 100%;
-  width: 12%;
+  left: 0%;
+  height: 2rem;
+  width: 100%;
   bottom: 0%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 0.3rem;
   justify-content: center; 
 }
 
 .center {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .selection {
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
+  padding-top: 0.4rem;
   font-size: 0.8rem;
-  margin-top: 0.1rem;
-  margin-bottom: 0.1rem;
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
   padding-left: 0.4rem;
   padding-right: 0.4rem;
   cursor: pointer;
-  text-align: center;
-}
-
-.selection#level-4 {
-  margin-top: 2rem;
 }
 
 .selection.active {
@@ -225,33 +183,29 @@ application:                  #7570b3, #7570b3, 377eb8; 4daf4a; 80b1d3 7570b3 75
 
 </style>
 <body>
-  <div class="title">
-    计算机学科树
-  </div>
+  <div class="title">计算机学科树</div>
   <div class="main">
     <svg id='canvas'><g></g></svg>
     <svg id='legend'><g></g></svg>
   </div>
   <div class="selection-container">
     <div class="center">
-      <div class="selection sub-selection overall selected" id="overall" onclick="selectTree('overall')">计算机学科</div>
-      <div class="selection sub-selection application not-selected" id="multimedia" onclick="selectTree('multimedia')">图像视频处理与多媒体技术</div>
-      <div class="selection sub-selection application not-selected" id="informationretrieval" onclick="selectTree('informationretrieval')">信息检索与数据挖掘</div>
-      <div class="selection sub-selection application not-selected" id="biological" onclick="selectTree('biological')">生物信息计算与数字健康</div>
-      <div class="selection sub-selection application not-selected" id="graphics" onclick="selectTree('graphics')">图形学与虚拟现实</div>
-      <div class="selection sub-selection fundation2 not-selected" id="security" onclick="selectTree('security')">信息系统安全</div>
-      <div class="selection sub-selection fundation1 not-selected" id="software" onclick="selectTree('software')">计算机软件</div>
-      <div class="selection sub-selection fundation not-selected" id="network" onclick="selectTree('network')">计算机网络</div>      
-      <div class="selection sub-selection fundation not-selected" id="hardware" onclick="selectTree('hardware')">硬件与计算机体系结构</div>
-      <div class="selection sub-selection theory not-selected" id="theory" onclick="selectTree('theory')">计算机基础理论</div>
-
-      <div class="selection level-selection level selected" id="level-4" onclick="selectLevel('level-4')">四级学科</div>
-      <div class="selection level-selection level not-selected" id="level-3" onclick="selectLevel('level-3')">三级学科</div>
+      <div class="selection global selected" id="level-4" onclick="select('level-4')">Level 4</div>
+      <div class="selection global not-selected" id="level-3" onclick="select('level-3')">Level 3</div>
+      <div class="selection theory not-selected" id="theory" onclick="select('theory')">计算机基础理论</div>
+      <div class="selection fundation not-selected" id="hardware" onclick="select('hardware')">硬件与计算机体系结构</div>
+      <div class="selection fundation not-selected" id="network" onclick="select('network')">计算机网络</div>
+      <div class="selection fundation1 not-selected" id="software" onclick="select('software')">计算机软件</div>
+      <div class="selection fundation2 not-selected" id="security" onclick="select('security')">信息系统安全</div>
+      <div class="selection application not-selected" id="multimedia" onclick="select('multimedia')">图像视频处理与多媒体技术</div>
+      <div class="selection application not-selected" id="informationretrieval" onclick="select('informationretrieval')">信息检索与数据挖掘</div>
+      <div class="selection application not-selected" id="biological" onclick="select('biological')">生物信息计算与数字健康</div>
+      <div class="selection application not-selected" id="graphics" onclick="select('graphics')">计算机图形学与虚拟现实</div>
     </div>
   </div>
 </body>
-<script src="./library/d3.v4.min.js"></script>
-<script src="./library/jquery-3.5.1.min.js"></script>
+<script src="./d3.v4.min.js"></script>
+<script src="./jquery-3.5.1.min.js"></script>
 
 <script>
 var drawObject = {
@@ -259,55 +213,45 @@ var drawObject = {
   singleData: {},
   renderingStyle: {
     biological: {
-      fontsize: [15, 12, 10, 8, 3],
-      setting4: [500, 500],
-      setting3: [150, 400]
+      fontsize: [15, 12, 6, 5, 3],
+      setting: [400, 400]
     },
     hardware: {
       fontsize: [15, 12, 10, 8, 3],
-      setting4: [500, 500],
-      setting3: [150, 400]
+      setting: [120, 200]
     },
     informationretrieval: {
       fontsize: [15, 12, 10, 8, 3],
-      setting4: [500, 500],
-      setting3: [150, 400]
+      setting: [280, 400]
     },
     multimedia: {
       fontsize: [15, 12, 10, 8, 3],
-      setting4: [500, 500],
-      setting3: [150, 400]
+      setting: [280, 400]
     },
     network: {
-      fontsize: [15, 12, 10, 5.5, 2.5],
-      setting4: [500, 500],
-      setting3: [150, 400]
+      fontsize: [15, 12, 10, 7, 2.5],
+      setting: [0, 200]
     },
     software: {
-      fontsize: [15, 12, 10, 6, 2.5],
-      setting4: [500, 500],
-      setting3: [150, 400]
+      fontsize: [15, 12, 10, 7, 2.5],
+      setting: [0, 200]
     },
     theory: {
       fontsize: [15, 12, 10, 7, 2.5],
-      setting4: [500, 500],
-      setting3: [150, 400]
+      setting: [300, 400]
     },
     graphics: {
-      fontsize: [15, 12, 9, 6, 1.5],
-      setting4: [500, 500],
-      setting3: [150, 400]
+      fontsize: [15, 12, 10, 8, 3],
+      setting: [50, 200]
     },
     security: {
       fontsize: [15, 12, 10, 7, 2.5],
-      setting4: [500, 500],
-      setting3: [150, 400]
+      setting: [50, 200]
     }
   },
   drawLevel3: function() {
       let fileData = this.overallData
-      var fontSizeArray = [12, 7, 6, 5, 3]
-      var textdx = 8, standMovement = 5, nodeSizeArray = [6, 6, 5, 4, 2.5]
+      var fontSizeArray = [10, 7, 6, 5, 3]
       var subjectCount = {
           "application": {
             "name": "应用",
@@ -339,7 +283,7 @@ var drawObject = {
       var canvasHeight = d3.select('#canvas').style("height")
       canvasWidth = +canvasWidth.replace("px", "")
       canvasHeight = +canvasHeight.replace("px", "")
-      var margin = {top: 80, right: canvasWidth * 0.1, bottom: 80, left: canvasWidth * 0.1}
+      var margin = {top: canvasHeight * 0.15, right: canvasWidth * 0.1, bottom: canvasHeight * 0.15, left: canvasWidth * 0.1}
 
       canvasWidth = canvasWidth -  margin.left - margin.right
       canvasHeight = canvasHeight - margin.top - margin.bottom
@@ -355,10 +299,10 @@ var drawObject = {
         centerMVy = (canvasHeight - canvasWidth) / 2
       }
 
-      var order = ["计算机软件", "计算机网络",  "图形学与虚拟现实", "信息检索与数据挖掘", "生物信息计算与数字健康", "图像视频处理与多媒体技术", "信息系统安全", "硬件与计算机体系结构", "计算机基础理论"]
+      var order = ["硬件与计算机体系结构", "信息系统安全", "计算机图形学与虚拟现实", "信息检索与数据挖掘", "生物信息计算与数字健康", "图像视频处理与多媒体技术",  "计算机网络", "计算机软件", "计算机基础理论"]
 
-      var rotation = 212.5
-      var rotationRootText = 235
+      var rotation = 195
+      var rotationRootText = -105
       var svg = d3.select("svg"),
           g = svg.select("g")
           .attr("transform", "translate(" + (centerMVx + margin.left + diameter / 2) + "," + (centerMVy + diameter / 2 + margin.top) + ")" + "rotate(" + rotation + ")");
@@ -381,6 +325,7 @@ var drawObject = {
       datalevel3 = JSON.parse(JSON.stringify(fileData))
       showLevel3(datalevel3, 0)
       //  statistics of subjects
+      console.log('=====324====')
       drawLegend(datalevel3)
       var treeData = d3.hierarchy(datalevel3)
       // var root = tree(stratify(data));
@@ -430,19 +375,13 @@ var drawObject = {
             .attr("transform", function(d) { return "translate(" + project(d.x, d.y) + ")"; })
         nodeUpdate.select('text')
             .attr("dy", ".31em")
-            .attr("x", function(d) { 
-              let dx = textdx * nodeSizeArray[d.depth] / standMovement
-              return xRange(d.x) === !d.children ? dx : -dx; 
-            })
+            .attr("x", function(d) { return xRange(d.x) === !d.children ? 6 : -6; })
             .style("text-anchor", function(d) { return xRange(d.x) === !d.children ? "start" : "end"; })
             .attr("transform", function(d) {
               if (d.depth == 0) {
                 return "rotate(" + rotationRootText + ")"
               }
               return "rotate(" + (xRange(d.x) ? d.x - 90 : d.x + 90) + ")"; 
-            })
-            .style('font-size', function(d) { 
-              return fontSizeArray[d.depth] + 'px';
             })
         // update_root_text()
       }
@@ -485,6 +424,7 @@ var drawObject = {
       }
 
       function addRemoveNodes(node, treeData) {
+        let textdx = 8
         let nodeEnter = node.enter()
             .append("g")
             .attr("class", function(d) {
@@ -502,14 +442,9 @@ var drawObject = {
             });
         nodeEnter.append("text")
             .attr("dy", ".31em")
-            .attr("x", function(d) { 
-              let dx = textdx * nodeSizeArray[d.depth] / standMovement
-              return xRange(d.x) === !d.children ? dx : -dx; 
-            })
+            .attr("x", function(d) { return xRange(d.x) === !d.children ? textdx : -textdx; })
             .style("text-anchor", function(d) { return xRange(d.x) === !d.children ? "start" : "end"; })
-            .style('font-size', function(d) { 
-              return fontSizeArray[d.depth] + 'px';
-            })
+            .style('font-size', function(d) { return fontSizeArray[d.depth] + 'px'})
             .attr("transform", function(d) { 
               if (d.depth == 0) {
                 return "rotate(" + rotationRootText + ")"
@@ -560,6 +495,7 @@ var drawObject = {
         countArray.sort(function(a, b) {
           return itemArray.indexOf(b.name) - itemArray.indexOf(a.name)
         })
+        console.log('countArray', countArray)
         var canvasWidth = d3.select('#legend').style("width")
         var canvasHeight = d3.select('#legend').style("height")
         canvasWidth = +canvasWidth.replace("px", "")
@@ -580,14 +516,13 @@ var drawObject = {
             return d.type + " legend-item"
           })
           .attr('transform', function(d, i) { return "translate(" + 0 + "," + (legendHeight * i + legendRectPaddingY) + ")"; })
-        legendItemEnter.append("circle")
-          .attr("cx", legendRectPaddingX + legendRectHeight / 2)
-          .attr("cy", legendRectPaddingY + legendRectHeight / 2)
-          .attr("r", legendRectHeight * 0.4)
-          // .attr("width", function(d) {
-          //   return widthScale(d.count)
-          // })
-          // .attr("height", legendRectHeight);
+        legendItemEnter.append("rect")
+          .attr("x", legendRectPaddingX)
+          .attr("y", legendRectPaddingY)
+          .attr("width", function(d) {
+            return widthScale(d.count)
+          })
+          .attr("height", legendRectHeight);
         legendItemEnter.append("text")
           .attr("x", legendRectPaddingX)
           .attr('y', legendHeight/2)
@@ -599,18 +534,15 @@ var drawObject = {
             return fontsize*0.65 + 'px'
           })
           .text(function(d, i) {
-            return d.name
+            return d.name + " (" + d.count + ")"
           })
-        legendItem.select('circle')
-          .attr("cx", legendRectPaddingX + legendRectHeight / 2)
-          .attr("cy", legendRectPaddingY + legendRectHeight / 2)
-          .attr("r", legendRectHeight * 0.4)
-          // .transition()
-          // .duration(1000)
-          // .attr("width", function(d) {
-          //   return widthScale(d.count)
-          // })
-          // .attr("height", legendRectHeight);
+        legendItem.select('rect')
+          .transition()
+          .duration(1000)
+          .attr("width", function(d) {
+            return widthScale(d.count)
+          })
+          .attr("height", legendRectHeight);
         legendItem.exit().remove();
       }
 
@@ -627,7 +559,6 @@ var drawObject = {
       }
   },
   drawLevel4: function() {
-    var textdx = 8, standMovement = 5, nodeSizeArray = [6, 5, 4.5, 4, 2.5]
     let fileData = this.overallData
     var subjectCount = {
         "application": {
@@ -656,12 +587,12 @@ var drawObject = {
           "type": "fundation2"
         }
     }
-    var fontSizeArray = [15, 11, 10, 3, 3]
+    var fontSizeArray = [8, 6, 4, 3, 3]
     var canvasWidth = d3.select('#canvas').style("width")
     var canvasHeight = d3.select('#canvas').style("height")
     canvasWidth = +canvasWidth.replace("px", "")
     canvasHeight = +canvasHeight.replace("px", "")
-    var margin = {top: canvasHeight * 0.15, right: canvasWidth * 0.1, bottom: canvasHeight * 0.06, left: canvasWidth * 0.1}
+    var margin = {top: canvasHeight * 0.1, right: canvasWidth * 0.1, bottom: canvasHeight * 0.1, left: canvasWidth * 0.1}
 
     canvasWidth = canvasWidth -  margin.left - margin.right
     canvasHeight = canvasHeight - margin.top - margin.bottom
@@ -677,9 +608,9 @@ var drawObject = {
       centerMVy = (canvasHeight - canvasWidth) / 2
     }
 
-    var order = ["计算机软件", "计算机网络", "图形学与虚拟现实", "信息检索与数据挖掘", "生物信息计算与数字健康", "图像视频处理与多媒体技术", "信息系统安全", "硬件与计算机体系结构", "计算机基础理论"]
+    var order = ["计算机基础理论", "硬件与计算机体系结构", "信息系统安全", "计算机图形学与虚拟现实", "信息检索与数据挖掘", "生物信息计算与数字健康", "图像视频处理与多媒体技术",  "计算机网络", "计算机软件"]
 
-    var rotation = -90
+    var rotation = 186
     var rotationRootText = 0
     var svg = d3.select("svg"),
         g = svg.select("g")
@@ -689,7 +620,7 @@ var drawObject = {
         .parentId(function(d) { return d.id.substring(0, d.id.lastIndexOf(".")); });
 
     var tree = d3.tree()
-        .size([180, diameter / 2])
+        .size([360, diameter / 2])
         .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
 
     // drawing function
@@ -749,17 +680,12 @@ var drawObject = {
           .attr("transform", function(d) { return "translate(" + project(d.x, d.y) + ")"; })
       nodeUpdate.select('text')
           .attr("dy", ".31em")
-          .attr("x", function(d) { 
-            let dx = textdx * nodeSizeArray[d.depth] / standMovement
-            return xRange(d.x) === !d.children ? dx : -dx; 
-          })
+          .attr("x", function(d) { return xRange(d.x) === !d.children ? 6 : -6; })
           .style("text-anchor", function(d) { return xRange(d.x) === !d.children ? "start" : "end"; })
           .attr("transform", function(d) { 
             return "rotate(" + (xRange(d.x) ? d.x - 90 : d.x + 90) + ")"; 
           })
-          .style('font-size', function(d) {
-            return fontSizeArray[d.depth] + 'px'
-          })
+          .style('font-size', function(d) { return fontSizeArray[d.depth] + 'px'})
       // update_root_text()
     }
 
@@ -771,7 +697,7 @@ var drawObject = {
     }
 
     function xRange(x) {
-      rotation = -90
+      rotation = 0
       return x < rotation || x > (180 + rotation)
     }
 
@@ -801,6 +727,7 @@ var drawObject = {
     }
 
     function addRemoveNodes(node, treeData) {
+      let textdx = 8
       let nodeEnter = node.enter()
           .append("g")
           .attr("class", function(d) {
@@ -818,14 +745,9 @@ var drawObject = {
           });
       nodeEnter.append("text")
           .attr("dy", ".31em")
-          .attr("x", function(d) { 
-            let dx = textdx * nodeSizeArray[d.depth] / standMovement 
-            return xRange(d.x) === !d.children ? dx : -dx; 
-          })
+          .attr("x", function(d) { return xRange(d.x) === !d.children ? textdx : -textdx; })
           .style("text-anchor", function(d) { return xRange(d.x) === !d.children ? "start" : "end"; })
-          .style('font-size', function(d) { 
-            return fontSizeArray[d.depth] + 'px'
-          })
+          .style('font-size', function(d) { return fontSizeArray[d.depth] + 'px'})
           .attr("transform", function(d) { return "rotate(" + (xRange(d.x) ? d.x - 90 : d.x + 90) + ")"; })
           .text(function(d) { 
             return d.data.name 
@@ -871,6 +793,7 @@ var drawObject = {
       countArray.sort(function(a, b) {
         return itemArray.indexOf(b.name) - itemArray.indexOf(a.name)
       })
+      console.log('countArray', countArray)
       var canvasWidth = d3.select('#legend').style("width")
       var canvasHeight = d3.select('#legend').style("height")
       canvasWidth = +canvasWidth.replace("px", "")
@@ -891,14 +814,13 @@ var drawObject = {
           return d.type + " legend-item"
         })
         .attr('transform', function(d, i) { return "translate(" + 0 + "," + (legendHeight * i + legendRectPaddingY) + ")"; })
-      legendItemEnter.append("circle")
-        .attr("cx", legendRectPaddingX + legendRectHeight / 2)
-        .attr("cy", legendRectPaddingY + legendRectHeight / 2)
-        .attr('r', legendRectHeight * 0.4)
-        // .attr("width", function(d) {
-        //   return widthScale(d.count)
-        // })
-        // .attr("height", legendRectHeight);
+      legendItemEnter.append("rect")
+        .attr("x", legendRectPaddingX)
+        .attr("y", legendRectPaddingY)
+        .attr("width", function(d) {
+          return widthScale(d.count)
+        })
+        .attr("height", legendRectHeight);
       legendItemEnter.append("text")
         .attr("x", legendRectPaddingX)
         .attr('y', legendHeight/2)
@@ -910,18 +832,15 @@ var drawObject = {
           return fontsize*0.65 + 'px'
         })
         .text(function(d, i) {
-          return d.name
+          return d.name + " (" + d.count + ")"
         })
-      legendItem.select('circle')
-          .attr("cx", legendRectPaddingX + legendRectHeight / 2)
-          .attr("cy", legendRectPaddingY + legendRectHeight / 2)
-          .attr('r', legendRectHeight * 0.4)
-          // .transition()
-          // .duration(1000)
-          // .attr("width", function(d) {
-          //   return widthScale(d.count)
-          // })
-          // .attr("height", legendRectHeight);
+      legendItem.select('rect')
+          .transition()
+          .duration(1000)
+          .attr("width", function(d) {
+            return widthScale(d.count)
+          })
+          .attr("height", legendRectHeight);
       legendItem.exit().remove();
     }
 
@@ -937,21 +856,17 @@ var drawObject = {
       }
     }
   },
-  drawSingle: function(type, level, orien="right") {
+  drawSingle: function(type) {
     var fileData = this.singleData[type]
-    fileData = JSON.parse(JSON.stringify(fileData))
-    if (level == 3) {
-      showLevel3(fileData, 1)
-    }
+    console.log('fileData', fileData, 'type', type, 'renderingStyle', this.renderingStyle)
     var fontSizeArray = this.renderingStyle[type].fontsize
-    var canvasSettingArray = this.renderingStyle[type]['setting' + level]
-    var textdx = 8, standMovement = 5, nodeSizeArray = [8.5, 7, 5, 4, 2.5]
+    var canvasSettingArray = this.renderingStyle[type].setting
 
     var canvasWidth = d3.select('#canvas').style("width")
     var canvasHeight = d3.select('#canvas').style("height")
     canvasWidth = +canvasWidth.replace("px", "")
     canvasHeight = +canvasHeight.replace("px", "")
-    var margin = {top: canvasHeight * 0.02, right: canvasWidth * 0.2, bottom: canvasHeight * 0.02, left: canvasWidth * 0.2}
+    var margin = {top: canvasHeight * 0.03, right: canvasWidth * 0.2, bottom: canvasHeight * 0.05, left: canvasWidth * 0.2}
 
     canvasWidth = canvasWidth -  margin.left - margin.right
     canvasHeight = canvasHeight - margin.top - margin.bottom
@@ -967,7 +882,7 @@ var drawObject = {
       centerMVy = (canvasHeight - canvasWidth) / 2
     }
 
-    order = ["硬件与计算机体系结构", "信息系统安全", "图形学与虚拟现实", "信息检索与数据挖掘", "生物信息计算与数字健康", "计算机图像视频处理与多媒体技术",  "计算机网络", "计算机软件", "计算机基础理论"]
+    order = ["硬件与计算机体系结构", "信息系统安全", "计算机图形学与虚拟现实", "信息检索与数据挖掘", "生物信息计算与数字健康", "计算机图像视频处理与多媒体技术",  "计算机网络", "计算机软件", "计算机基础理论"]
 
     var rotation = 0
     var svg = d3.select("svg"),
@@ -993,16 +908,12 @@ var drawObject = {
     function updatePos(treeData) {
       let nodeArray = []
       linearize(treeData, nodeArray)
-      let rangex = d3.extent(nodeArray,function (d,i) {return +d.x})
-      let rangey = d3.extent(nodeArray,function (d,i) {return +d.y})
+      let rangex = d3.extent(nodeArray,function (d,i){return +d.x})
+      let rangey = d3.extent(nodeArray,function (d,i){return +d.y})
       let width = rangey[1] - rangey[0], height = rangex[1] - rangex[0]
       let paddingLeft = (canvasWidth - width) / 2
       let paddingTop = (canvasHeight - height) / 3
-      if (orien == "left") {
-        g.attr("transform", "translate(" + 0 + "," + (margin.top + paddingTop) + ")");
-      } else if(orien == "right") {
-        g.attr("transform", "translate(" + (margin.left + paddingLeft) + "," + (margin.top + paddingTop) + ")");
-      }
+      g.attr("transform", "translate(" + (margin.left + paddingLeft) + "," + (margin.top + paddingTop) + ")");
     }
 
     function linearize(treeData, nodeArray) {
@@ -1049,34 +960,20 @@ var drawObject = {
       var nodeUpdate = node
           .transition()
           .duration(duration)
-          .attr("transform", function(d) {
-            if (orien == "left") {
-              return "translate(" + [canvasWidth - d.y, d.x] + ")"; 
-            } else if (orien == "right") {
-              return "translate(" + [d.y, d.x] + ")"; 
-            } 
-          })
+          .attr("transform", function(d) { return "translate(" + [d.y, d.x] + ")"; })
       nodeUpdate.select('text')
           .attr("dy", ".31em")
-          .attr("x", function(d) { 
-            let dx = textdx * nodeSizeArray[d.depth] / standMovement 
-            if (orien == "left") {
-              return d.children ? dx : -dx; 
-            } else if (orien == "right") {
-              return d.children ? -dx : dx;
-            }
-          })
-          .style("text-anchor", function(d) {
-            if (orien == "left") {
-              return d.children ? "start" : "end"; 
-            } else if (orien == "right") {
-              return d.children ? "end" : "start"; 
-            }            
-          })
+          .attr("x", function(d) { return xRange(d.x) === !d.children ? 8: -8; })
+          .style("text-anchor", function(d) { return xRange(d.x) === !d.children ? "start" : "end"; })
           .style('font-size', function(d) { return fontSizeArray[d.depth] + 'px'})
           // .attr("transform", function(d) { 
           //   return "rotate(" + (xRange(d.x) ? d.x - 90 : d.x + 90) + ")"; 
           // })
+    }
+
+    function xRange(x) {
+      rotation = 0
+      // return x < rotation || x > (180 + rotation)
     }
 
     function showLevel3(data, depth) {
@@ -1105,6 +1002,7 @@ var drawObject = {
     }
 
     function addRemoveNodes(node, treeData) {
+      let textdx = 8
       let nodeEnter = node.enter()
           .append("g")
           .attr("class", function(d) {
@@ -1112,37 +1010,19 @@ var drawObject = {
                   + (typeof(d.data.type)=='undefined'?"":" "+d.data.type)
                   + (" depth-" + d.depth); 
           })
-          .attr("transform", function(d) { 
-            if (orien == "left") {
-              return "translate(" + [canvasWidth - d.y, d.x] + ")"; 
-            } else if (orien == "right") {
-              return "translate(" + [d.y, d.x] + ")"; 
-            }
-          })
+          .attr("transform", function(d) { return "translate(" + [d.y, d.x] + ")"; })
 
       nodeEnter.append("circle")
+          .attr("r", 2.5)
           .on("click", function(d, i) {
             var add = click(d)
             update(treeData, add)
           });
       nodeEnter.append("text")
           .attr("dy", ".31em")
-          .attr("x", function(d) { 
-            let dx = textdx * nodeSizeArray[d.depth] / standMovement 
-            if (orien == "left") {
-              return d.children ? dx : -dx; 
-            } else if (orien == "right") {
-              return d.children ? -dx : dx;
-            }
-          })
+          .attr("x", function(d) { return d.children ? -textdx : textdx; })
           .style('font-size', function(d) { return fontSizeArray[d.depth] + 'px'})
-          .style("text-anchor", function(d) {
-            if (orien == "left") {
-              return d.children ? "start" : "end"; 
-            } else if (orien == "right") {
-              return d.children ? "end" : "start"; 
-            } 
-          })
+          .style("text-anchor", function(d) { return d.children ? "end" : "start"; })
           .text(function(d) { 
             return d.data.name 
           });
@@ -1171,26 +1051,10 @@ var drawObject = {
     }
     // the diagonal links between the nodes
     function diagonal(d) {
-      if (orien == "left") {
-        return "M" + (canvasWidth - d.y) + "," + d.x
-          + "C" + (canvasWidth - d.parent.y - 100) + "," + d.x
-          + " " + (canvasWidth - d.parent.y - 100) + "," + d.parent.x
-          + " " + (canvasWidth - d.parent.y) + "," + d.parent.x;
-      } else if (orien == "right") {
-        return "M" + (d.y) + "," + d.x
+      return "M" + d.y + "," + d.x
           + "C" + (d.parent.y + 100) + "," + d.x
           + " " + (d.parent.y + 100) + "," + d.parent.x
-          + " " + (d.parent.y) + "," + d.parent.x;
-      }
-    }
-    function straight(d) {
-      if (orien == "left") {
-        return "M" + (canvasWidth - d.y) + "," + d.x
-          + "L" + (canvasWidth - d.parent.y) + "," + d.parent.x;
-      } else if (orien == "right") {
-        return "M" + (d.y) + "," + d.x
-          + "L" + (d.parent.y) + "," + d.parent.x;
-      } 
+          + " " + d.parent.y + "," + d.parent.x;
     }
   }
 }
@@ -1201,7 +1065,7 @@ $.when(deferred)
     var singleName = "security"
     drawObject.drawLevel4()
   })
-d3.json("data/all_0601.json", function(error, data) {
+d3.json("data/data_3rd.json", function(error, data) {
   if (error) throw error;
   addIndex(data, 0)
   drawObject.overallData = data
@@ -1216,7 +1080,7 @@ function initSingleData(data) {
       drawObject.singleData["hardware"] = data.children[i]
     } else if (data.children[i].name === "信息系统安全") {
       drawObject.singleData["security"] = data.children[i]
-    } else if (data.children[i].name === "图形学与虚拟现实") {
+    } else if (data.children[i].name === "计算机图形学与虚拟现实") {
       drawObject.singleData["graphics"] = data.children[i]
     } else if (data.children[i].name === "生物信息计算与数字健康") {
       drawObject.singleData["biological"] = data.children[i]
@@ -1231,53 +1095,37 @@ function initSingleData(data) {
     } 
   }
 }
-var currentTree = 'overall'
-var currentLevel = 4
-function selectTree(tree) {
-  if (currentTree === tree) {
-    return
-  }
-  if (!(((currentTree == 'overall') && (tree == 'overall')) 
-      || ((currentTree != 'overall') && (tree != 'overall')))) {
-    clearCanvas()
-  }
-  if (tree !== 'overall') {
-    clearLegend()
-  }
-  currentTree = tree
-  updateCanvas()
-  $('.sub-selection').removeClass('selected')
-  $('.sub-selection').addClass('not-selected')
-  $('#' + tree).removeClass('not-selected')
-  $('#' + tree).addClass('selected')
-}
-function selectLevel(level) {
-  if (currentLevel == +(level.replace('level-', ''))) {
-    return
-  }
-  // if (currentTree != 'overall') {
-  //   console.log('clear canvas')
-  //   clearCanvas()
-  // }
-  currentLevel = +(level.replace('level-', ''))
-  updateCanvas()
-  $('.level-selection').removeClass('selected')
-  $('.level-selection').addClass('not-selected')
-  $('#' + level).removeClass('not-selected')
-  $('#' + level).addClass('selected')
-}
-function updateCanvas() {
-  if (currentTree === 'overall') {
-    if (currentLevel === 4) {
-      drawObject.drawLevel4()
-    } else if (currentLevel === 3) {
-      drawObject.drawLevel3()
+var previousItem = null
+function select(item) {
+  if (item === 'level-3') {
+    if ((previousItem !== 'level-3') && (previousItem !== 'level-4')) {
+      clearCanvas()
     }
+    drawObject.drawLevel3()
+    setTimeout(function () {
+      clearCanvas()
+      drawObject.drawLevel3()
+    }, 2000)
+  } else if (item === 'level-4') {
+    if ((previousItem !== 'level-3') && (previousItem !== 'level-4')) {
+      clearCanvas()
+    }
+    drawObject.drawLevel4()
+    setTimeout(function () {
+      clearCanvas()
+      drawObject.drawLevel4()
+    }, 2000)
   } else {
-    drawObject.drawSingle(currentTree, currentLevel)
+    clearCanvas()
+    clearLegend()
+    drawObject.drawSingle(item)
   }
+  $('.selection').removeClass('selected')
+  $('.selection').addClass('not-selected')
+  $('#' + item).removeClass('not-selected')
+  $('#' + item).addClass('selected')
+  previousItem = item
 }
-
 function clearCanvas() {
   d3.select('#canvas')
     .select('g')

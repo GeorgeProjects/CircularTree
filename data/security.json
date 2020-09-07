@@ -1,0 +1,439 @@
+{
+  "name": "信息系统安全",
+  "type": "fundation2",
+  "children": [
+    {
+      "name": "网络安全",
+      "children": [
+        {
+          "name": "入侵检测",
+          "children": [
+            {
+              "name": "异常入侵检测",
+              "children": []
+            },
+            {
+              "name": "误用入侵检测",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "网络取证",
+          "children": [
+            {
+              "name": "电子证据取证",
+              "children": []
+            },
+            {
+              "name": "蜜阱诱骗取证",
+              "children": []
+            },
+            {
+              "name": "入侵容忍取证",
+              "children": []
+            },
+            {
+              "name": "网络攻击溯源",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "物联网安全",
+          "children": [
+            {
+              "name": "设备接入认证",
+              "children": []
+            },
+            {
+              "name": "传感器网络攻防",
+              "children": []
+            },
+            {
+              "name": "环境安全感知",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "网络匿名技术",
+          "children": [
+            {
+              "name": "假名代理",
+              "children": []
+            },
+            {
+              "name": "广播与暗示地址",
+              "children": []
+            },
+            {
+              "name": "匿名链",
+              "children": []
+            },
+            {
+              "name": "洋葱路由",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "云边端融合网络安全",
+          "children": [
+            {
+              "name": "计算环境隔离",
+              "children": []
+            },
+            {
+              "name": "信任与数据迁移",
+              "children": []
+            },
+            {
+              "name": "数据安全传输 ",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "网络积极防御",
+          "children": [
+            {
+              "name": "移动目标防御",
+              "children": []
+            },
+            {
+              "name": "安全态势感知与评估",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "云计算安全",
+          "children": [
+            {
+              "name": "云网络架构安全",
+              "children": []
+            },
+            {
+              "name": "云访问安全",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "新兴网络安全",
+          "children": [
+            {
+              "name": "软件定义网络安全",
+              "children": []
+            },
+            {
+              "name": "网络功能虚拟化安全",
+              "children": []
+            },
+            {
+              "name": "区块链安全与隐私",
+              "children": []
+            },
+            {
+              "name": "群智感知网络安全与隐私",
+              "children": []
+            },
+            {
+              "name": "移动感知安全",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "系统安全",
+      "children": [
+        {
+          "name": "硬件安全",
+          "children": [
+            {
+              "name": "微架构安全",
+              "children": []
+            },
+            {
+              "name": "硬件漏洞",
+              "children": []
+            },
+            {
+              "name": "安全硬件扩展",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "操作系统安全",
+          "children": [
+            {
+              "name": "可信计算环境",
+              "children": []
+            },
+            {
+              "name": "访问控制",
+              "children": []
+            },
+            {
+              "name": "隔离机制",
+              "children": []
+            },
+            {
+              "name": "远程验证",
+              "children": []
+            },
+            {
+              "name": "安全加固",
+              "children": []
+            },
+            {
+              "name": "虚拟化安全",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "软件漏洞",
+          "children": [
+            {
+              "name": "漏洞挖掘",
+              "children": []
+            },
+            {
+              "name": "漏洞利用",
+              "children": []
+            },
+            {
+              "name": "缓解方法",
+              "children": []
+            },
+            {
+              "name": "漏洞评估与分析",
+              "children": []
+            },
+            {
+              "name": "补丁生成与应用",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "数据安全与隐私保护",
+          "children": [
+            {
+              "name": "数字身份标识",
+              "children": []
+            },
+            {
+              "name": "隐私性关联与度量",
+              "children": []
+            },
+            {
+              "name": "隐私泄露检测",
+              "children": []
+            },
+            {
+              "name": "隐私数据保护",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "恶意代码",
+          "children": [
+            {
+              "name": "高级可持续性攻击",
+              "children": []
+            },
+            {
+              "name": "恶意软件分析与检测",
+              "children": []
+            },
+            {
+              "name": "恶意软件对抗",
+              "children": []
+            },
+            {
+              "name": "网络黑产分析",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "侧信道分析",
+          "children": [
+            {
+              "name": "能量分析攻击",
+              "children": []
+            },
+            {
+              "name": "错误诱发攻击",
+              "children": []
+            },
+            {
+              "name": "电磁泄露分析",
+              "children": []
+            },
+            {
+              "name": "时间侧信道分析",
+              "children": []
+            },
+            {
+              "name": "光信息侧信道分析",
+              "children": []
+            },
+            {
+              "name": "网络流量侧信道分析",
+              "children": []
+            },
+            {
+              "name": "声音侧信道分析",
+              "children": []
+            },
+            {
+              "name": "热力学侧信道分析",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "新兴安全",
+          "children": [
+            {
+              "name": "移动安全",
+              "children": []
+            },
+            {
+              "name": "CPS/IoT安全",
+              "children": []
+            },
+            {
+              "name": "智能系统安全",
+              "children": []
+            },
+            {
+              "name": "软件供应链安全",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "信息安全",
+      "children": [
+        {
+          "name": "密码理论与技术",
+          "children": [
+            {
+              "name": "认证加密",
+              "children": []
+            },
+            {
+              "name": "对称密码",
+              "children": []
+            },
+            {
+              "name": "杂凑函数",
+              "children": []
+            },
+            {
+              "name": "公钥密码",
+              "children": []
+            },
+            {
+              "name": "对称/非对称可搜索加密",
+              "children": []
+            },
+            {
+              "name": "后量子密码",
+              "children": []
+            },
+            {
+              "name": "安全协议设计与分析",
+              "children": []
+            },
+            {
+              "name": "可证明安全理论",
+              "children": []
+            },
+            {
+              "name": "密码分析",
+              "children": []
+            },
+            {
+              "name": "密码工程",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "内容安全",
+          "children": [
+            {
+              "name": "文本内容安全",
+              "children": []
+            },
+            {
+              "name": "多媒体内容安全",
+              "children": []
+            },
+            {
+              "name": "信息隐藏与分析",
+              "children": []
+            },
+            {
+              "name": "数字水印",
+              "children": []
+            },
+            {
+              "name": "数字媒体取证",
+              "children": []
+            },
+            {
+              "name": "生物认证和生物模板安全",
+              "children": []
+            },
+            {
+              "name": "多媒体感知哈希与认证",
+              "children": []
+            },
+            {
+              "name": "版权保护",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "隐私保护理论",
+          "children": [
+            {
+              "name": "差分隐私",
+              "children": []
+            },
+            {
+              "name": "关系型数据隐私保护",
+              "children": []
+            },
+            {
+              "name": "社交图谱的隐私保护",
+              "children": []
+            },
+            {
+              "name": "位置轨迹隐私保护",
+              "children": []
+            },
+            {
+              "name": "多媒体隐私保护",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

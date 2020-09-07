@@ -1,0 +1,126 @@
+{
+  "name": "生物信息计算与数字健康",
+  "type": "application",
+  "children": [
+    {
+      "name": "组学数据处理与分析",
+      "children": [
+        {
+          "name": "基因组数据处理与分析",
+          "children": []
+        },
+        {
+          "name": "转录组数据处理与分析",
+          "children": []
+        },
+        {
+          "name": "蛋白质组数据处理与分析",
+          "children": []
+        },
+        {
+          "name": "表观组等组学数据处理与分析",
+          "children": []
+        },
+        {
+          "name": "生物网络建模与分析 ",
+          "children": []
+        },
+        {
+          "name": "前沿测序技术（如单细胞测序）",
+          "children": []
+        },
+        {
+          "name": "复杂疾病基因及非RNA分析",
+          "children": []
+        },
+        {
+          "name": "多组学数据联合分析",
+          "children": []
+        },
+        {
+          "name": "生物数据压缩与存储方法",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "生物医学图像智能计算",
+      "children": [
+        {
+          "name": "目标区域检测",
+          "children": []
+        },
+        {
+          "name": "多模态联合分析",
+          "children": []
+        },
+        {
+          "name": "复杂疾病智能诊断",
+          "children": []
+        },
+        {
+          "name": "脑网络构建与分析",
+          "children": []
+        },
+        {
+          "name": "生物医学图像增强处理",
+          "children": []
+        },
+        {
+          "name": "影像遗传学分析",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "医疗健康大数据分析与挖掘",
+      "children": [
+        {
+          "name": "生物医学文本数据挖掘 ",
+          "children": []
+        },
+        {
+          "name": "多源异构融合表示学习",
+          "children": []
+        },
+        {
+          "name": "疾病风险预测及预后分析",
+          "children": []
+        },
+        {
+          "name": "个性化用药与治疗方案",
+          "children": []
+        },
+        {
+          "name": "智能导诊与问诊",
+          "children": []
+        },
+        {
+          "name": "医学知识图谱构建",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "药物预测及计算",
+      "children": [
+        {
+          "name": "药物靶点预测",
+          "children": []
+        },
+        {
+          "name": "药物重定位分析",
+          "children": []
+        },
+        {
+          "name": "药物敏感性及副作用分析",
+          "children": []
+        },
+        {
+          "name": "药物关联性分析",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

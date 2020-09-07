@@ -93,32 +93,31 @@ body {
   stroke: gray;
 }
 .overall, .overall.not-selected {
-  background: #555555;
-  border: solid #555555 1px;
-  color: #555555;
-  stroke: #555555;
+  background: black;
+  border: solid black 1px;
+  color: black;
+  stroke: black;
 }
 .node text {
   stroke: none !important;
-  stroke-width: 0px !important;
 }
 .legend-item text {
   stroke: none !important;
 }
 /* 
-theory:                       #d95f02, #d95f02, e41a1c; 66c2a5; 8dd3c7 d95f02 4286F3 006BB0
-network_hardware | fundation: #1b9e77, #e7298a, 4daf4a; fc8d62; ffffb3 EB4537 EB4537 EFA90D
-software | fundation1:        #e7298a, #1b9e77, d95f02; 8da0cb; bebada 1b9e77 FAC230 1D1815
-security | fundation2:        #999999, #66a61e, 984ea3; e78ac3; fb8072 377eb8 55AF7B 059341
-application:                  #7570b3, #7570b3, 377eb8; 4daf4a; 80b1d3 7570b3 7570b3 DC2F1F
+theory:                       #d95f02, #d95f02, e41a1c; 66c2a5
+network_hardware | fundation: #1b9e77, #e7298a, 4daf4a; fc8d62
+software | fundation1:        #e7298a, #1b9e77, d95f02; 8da0cb
+security | fundation2:        #999999, #66a61e, 984ea3; e78ac3
+application:                  #7570b3, #7570b3, 377eb8; 4daf4a
 */
 
 :root { 
-  --theory:           #d95f02; 
-  --network_hardware: #1b9e77;
-  --software:         #e52c65;
-  --security:         #d68a05;
-  --application:      #7570b3;
+  --theory:           #66c2a5; 
+  --network_hardware: #fc8d62;
+  --software:         #8da0cb;
+  --security:         #e78ac3;
+  --application:      #4daf4a;
 } 
 
 .node.theory circle, .node.theory text, .legend-item.theory rect, .theory, .theory.not-selected {
@@ -238,7 +237,7 @@ application:                  #7570b3, #7570b3, 377eb8; 4daf4a; 80b1d3 7570b3 75
       <div class="selection sub-selection application not-selected" id="multimedia" onclick="selectTree('multimedia')">图像视频处理与多媒体技术</div>
       <div class="selection sub-selection application not-selected" id="informationretrieval" onclick="selectTree('informationretrieval')">信息检索与数据挖掘</div>
       <div class="selection sub-selection application not-selected" id="biological" onclick="selectTree('biological')">生物信息计算与数字健康</div>
-      <div class="selection sub-selection application not-selected" id="graphics" onclick="selectTree('graphics')">图形学与虚拟现实</div>
+      <div class="selection sub-selection application not-selected" id="graphics" onclick="selectTree('graphics')">计算机图形学与虚拟现实</div>
       <div class="selection sub-selection fundation2 not-selected" id="security" onclick="selectTree('security')">信息系统安全</div>
       <div class="selection sub-selection fundation1 not-selected" id="software" onclick="selectTree('software')">计算机软件</div>
       <div class="selection sub-selection fundation not-selected" id="network" onclick="selectTree('network')">计算机网络</div>      
@@ -250,8 +249,8 @@ application:                  #7570b3, #7570b3, 377eb8; 4daf4a; 80b1d3 7570b3 75
     </div>
   </div>
 </body>
-<script src="./library/d3.v4.min.js"></script>
-<script src="./library/jquery-3.5.1.min.js"></script>
+<script src="./d3.v4.min.js"></script>
+<script src="./jquery-3.5.1.min.js"></script>
 
 <script>
 var drawObject = {
@@ -260,47 +259,47 @@ var drawObject = {
   renderingStyle: {
     biological: {
       fontsize: [15, 12, 10, 8, 3],
-      setting4: [500, 500],
+      setting4: [150, 400],
       setting3: [150, 400]
     },
     hardware: {
       fontsize: [15, 12, 10, 8, 3],
-      setting4: [500, 500],
+      setting4: [100, 200],
       setting3: [150, 400]
     },
     informationretrieval: {
       fontsize: [15, 12, 10, 8, 3],
-      setting4: [500, 500],
+      setting4: [150, 400],
       setting3: [150, 400]
     },
     multimedia: {
       fontsize: [15, 12, 10, 8, 3],
-      setting4: [500, 500],
+      setting4: [150, 400],
       setting3: [150, 400]
     },
     network: {
       fontsize: [15, 12, 10, 5.5, 2.5],
-      setting4: [500, 500],
+      setting4: [0, 100],
       setting3: [150, 400]
     },
     software: {
       fontsize: [15, 12, 10, 6, 2.5],
-      setting4: [500, 500],
+      setting4: [0, 200],
       setting3: [150, 400]
     },
     theory: {
       fontsize: [15, 12, 10, 7, 2.5],
-      setting4: [500, 500],
+      setting4: [150, 400],
       setting3: [150, 400]
     },
     graphics: {
       fontsize: [15, 12, 9, 6, 1.5],
-      setting4: [500, 500],
+      setting4: [0, 200],
       setting3: [150, 400]
     },
     security: {
       fontsize: [15, 12, 10, 7, 2.5],
-      setting4: [500, 500],
+      setting4: [0, 200],
       setting3: [150, 400]
     }
   },
@@ -355,10 +354,10 @@ var drawObject = {
         centerMVy = (canvasHeight - canvasWidth) / 2
       }
 
-      var order = ["计算机软件", "计算机网络",  "图形学与虚拟现实", "信息检索与数据挖掘", "生物信息计算与数字健康", "图像视频处理与多媒体技术", "信息系统安全", "硬件与计算机体系结构", "计算机基础理论"]
+      var order = ["硬件与计算机体系结构", "信息系统安全", "计算机图形学与虚拟现实", "信息检索与数据挖掘", "生物信息计算与数字健康", "图像视频处理与多媒体技术",  "计算机网络", "计算机软件", "计算机基础理论"]
 
-      var rotation = 212.5
-      var rotationRootText = 235
+      var rotation = 195
+      var rotationRootText = -105
       var svg = d3.select("svg"),
           g = svg.select("g")
           .attr("transform", "translate(" + (centerMVx + margin.left + diameter / 2) + "," + (centerMVy + diameter / 2 + margin.top) + ")" + "rotate(" + rotation + ")");
@@ -627,7 +626,7 @@ var drawObject = {
       }
   },
   drawLevel4: function() {
-    var textdx = 8, standMovement = 5, nodeSizeArray = [6, 5, 4.5, 4, 2.5]
+    var textdx = 8, standMovement = 5, nodeSizeArray = [6, 4.5, 4, 4, 2.5]
     let fileData = this.overallData
     var subjectCount = {
         "application": {
@@ -656,12 +655,12 @@ var drawObject = {
           "type": "fundation2"
         }
     }
-    var fontSizeArray = [15, 11, 10, 3, 3]
+    var fontSizeArray = [8, 6, 4, 3, 3]
     var canvasWidth = d3.select('#canvas').style("width")
     var canvasHeight = d3.select('#canvas').style("height")
     canvasWidth = +canvasWidth.replace("px", "")
     canvasHeight = +canvasHeight.replace("px", "")
-    var margin = {top: canvasHeight * 0.15, right: canvasWidth * 0.1, bottom: canvasHeight * 0.06, left: canvasWidth * 0.1}
+    var margin = {top: canvasHeight * 0.06, right: canvasWidth * 0.1, bottom: canvasHeight * 0.06, left: canvasWidth * 0.1}
 
     canvasWidth = canvasWidth -  margin.left - margin.right
     canvasHeight = canvasHeight - margin.top - margin.bottom
@@ -677,9 +676,9 @@ var drawObject = {
       centerMVy = (canvasHeight - canvasWidth) / 2
     }
 
-    var order = ["计算机软件", "计算机网络", "图形学与虚拟现实", "信息检索与数据挖掘", "生物信息计算与数字健康", "图像视频处理与多媒体技术", "信息系统安全", "硬件与计算机体系结构", "计算机基础理论"]
+    var order = ["计算机基础理论", "硬件与计算机体系结构", "信息系统安全", "计算机图形学与虚拟现实", "信息检索与数据挖掘", "生物信息计算与数字健康", "图像视频处理与多媒体技术",  "计算机网络", "计算机软件"]
 
-    var rotation = -90
+    var rotation = 186
     var rotationRootText = 0
     var svg = d3.select("svg"),
         g = svg.select("g")
@@ -689,7 +688,7 @@ var drawObject = {
         .parentId(function(d) { return d.id.substring(0, d.id.lastIndexOf(".")); });
 
     var tree = d3.tree()
-        .size([180, diameter / 2])
+        .size([360, diameter / 2])
         .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
 
     // drawing function
@@ -771,7 +770,7 @@ var drawObject = {
     }
 
     function xRange(x) {
-      rotation = -90
+      rotation = 0
       return x < rotation || x > (180 + rotation)
     }
 
@@ -937,9 +936,10 @@ var drawObject = {
       }
     }
   },
-  drawSingle: function(type, level, orien="right") {
+  drawSingle: function(type, level) {
     var fileData = this.singleData[type]
     fileData = JSON.parse(JSON.stringify(fileData))
+    console.log('level', level)
     if (level == 3) {
       showLevel3(fileData, 1)
     }
@@ -967,7 +967,7 @@ var drawObject = {
       centerMVy = (canvasHeight - canvasWidth) / 2
     }
 
-    order = ["硬件与计算机体系结构", "信息系统安全", "图形学与虚拟现实", "信息检索与数据挖掘", "生物信息计算与数字健康", "计算机图像视频处理与多媒体技术",  "计算机网络", "计算机软件", "计算机基础理论"]
+    order = ["硬件与计算机体系结构", "信息系统安全", "计算机图形学与虚拟现实", "信息检索与数据挖掘", "生物信息计算与数字健康", "计算机图像视频处理与多媒体技术",  "计算机网络", "计算机软件", "计算机基础理论"]
 
     var rotation = 0
     var svg = d3.select("svg"),
@@ -998,11 +998,7 @@ var drawObject = {
       let width = rangey[1] - rangey[0], height = rangex[1] - rangex[0]
       let paddingLeft = (canvasWidth - width) / 2
       let paddingTop = (canvasHeight - height) / 3
-      if (orien == "left") {
-        g.attr("transform", "translate(" + 0 + "," + (margin.top + paddingTop) + ")");
-      } else if(orien == "right") {
-        g.attr("transform", "translate(" + (margin.left + paddingLeft) + "," + (margin.top + paddingTop) + ")");
-      }
+      g.attr("transform", "translate(" + (margin.left + paddingLeft) + "," + (margin.top + paddingTop) + ")");
     }
 
     function linearize(treeData, nodeArray) {
@@ -1049,30 +1045,14 @@ var drawObject = {
       var nodeUpdate = node
           .transition()
           .duration(duration)
-          .attr("transform", function(d) {
-            if (orien == "left") {
-              return "translate(" + [canvasWidth - d.y, d.x] + ")"; 
-            } else if (orien == "right") {
-              return "translate(" + [d.y, d.x] + ")"; 
-            } 
-          })
+          .attr("transform", function(d) { return "translate(" + [d.y, d.x] + ")"; })
       nodeUpdate.select('text')
           .attr("dy", ".31em")
           .attr("x", function(d) { 
             let dx = textdx * nodeSizeArray[d.depth] / standMovement 
-            if (orien == "left") {
-              return d.children ? dx : -dx; 
-            } else if (orien == "right") {
-              return d.children ? -dx : dx;
-            }
+            return d.children ? -dx : dx; 
           })
-          .style("text-anchor", function(d) {
-            if (orien == "left") {
-              return d.children ? "start" : "end"; 
-            } else if (orien == "right") {
-              return d.children ? "end" : "start"; 
-            }            
-          })
+          .style("text-anchor", function(d) { return d.children ? "end" : "start"; })
           .style('font-size', function(d) { return fontSizeArray[d.depth] + 'px'})
           // .attr("transform", function(d) { 
           //   return "rotate(" + (xRange(d.x) ? d.x - 90 : d.x + 90) + ")"; 
@@ -1112,13 +1092,7 @@ var drawObject = {
                   + (typeof(d.data.type)=='undefined'?"":" "+d.data.type)
                   + (" depth-" + d.depth); 
           })
-          .attr("transform", function(d) { 
-            if (orien == "left") {
-              return "translate(" + [canvasWidth - d.y, d.x] + ")"; 
-            } else if (orien == "right") {
-              return "translate(" + [d.y, d.x] + ")"; 
-            }
-          })
+          .attr("transform", function(d) { return "translate(" + [d.y, d.x] + ")"; })
 
       nodeEnter.append("circle")
           .on("click", function(d, i) {
@@ -1129,20 +1103,10 @@ var drawObject = {
           .attr("dy", ".31em")
           .attr("x", function(d) { 
             let dx = textdx * nodeSizeArray[d.depth] / standMovement 
-            if (orien == "left") {
-              return d.children ? dx : -dx; 
-            } else if (orien == "right") {
-              return d.children ? -dx : dx;
-            }
+            return d.children ? -dx : dx; 
           })
           .style('font-size', function(d) { return fontSizeArray[d.depth] + 'px'})
-          .style("text-anchor", function(d) {
-            if (orien == "left") {
-              return d.children ? "start" : "end"; 
-            } else if (orien == "right") {
-              return d.children ? "end" : "start"; 
-            } 
-          })
+          .style("text-anchor", function(d) { return d.children ? "end" : "start"; })
           .text(function(d) { 
             return d.data.name 
           });
@@ -1171,26 +1135,10 @@ var drawObject = {
     }
     // the diagonal links between the nodes
     function diagonal(d) {
-      if (orien == "left") {
-        return "M" + (canvasWidth - d.y) + "," + d.x
-          + "C" + (canvasWidth - d.parent.y - 100) + "," + d.x
-          + " " + (canvasWidth - d.parent.y - 100) + "," + d.parent.x
-          + " " + (canvasWidth - d.parent.y) + "," + d.parent.x;
-      } else if (orien == "right") {
-        return "M" + (d.y) + "," + d.x
+      return "M" + d.y + "," + d.x
           + "C" + (d.parent.y + 100) + "," + d.x
           + " " + (d.parent.y + 100) + "," + d.parent.x
-          + " " + (d.parent.y) + "," + d.parent.x;
-      }
-    }
-    function straight(d) {
-      if (orien == "left") {
-        return "M" + (canvasWidth - d.y) + "," + d.x
-          + "L" + (canvasWidth - d.parent.y) + "," + d.parent.x;
-      } else if (orien == "right") {
-        return "M" + (d.y) + "," + d.x
-          + "L" + (d.parent.y) + "," + d.parent.x;
-      } 
+          + " " + d.parent.y + "," + d.parent.x;
     }
   }
 }
@@ -1201,7 +1149,7 @@ $.when(deferred)
     var singleName = "security"
     drawObject.drawLevel4()
   })
-d3.json("data/all_0601.json", function(error, data) {
+d3.json("data/data_3rd.json", function(error, data) {
   if (error) throw error;
   addIndex(data, 0)
   drawObject.overallData = data
@@ -1216,7 +1164,7 @@ function initSingleData(data) {
       drawObject.singleData["hardware"] = data.children[i]
     } else if (data.children[i].name === "信息系统安全") {
       drawObject.singleData["security"] = data.children[i]
-    } else if (data.children[i].name === "图形学与虚拟现实") {
+    } else if (data.children[i].name === "计算机图形学与虚拟现实") {
       drawObject.singleData["graphics"] = data.children[i]
     } else if (data.children[i].name === "生物信息计算与数字健康") {
       drawObject.singleData["biological"] = data.children[i]
@@ -1239,6 +1187,7 @@ function selectTree(tree) {
   }
   if (!(((currentTree == 'overall') && (tree == 'overall')) 
       || ((currentTree != 'overall') && (tree != 'overall')))) {
+    console.log('clear canvas')
     clearCanvas()
   }
   if (tree !== 'overall') {

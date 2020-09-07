@@ -1,0 +1,386 @@
+{
+  "name": "计算机图形学与虚拟现实",
+  "type": "application",
+  "children": [
+    {
+      "name": "几何建模与处理",
+      "children": [
+        {
+          "name": "对象的表示和建模",
+          "children": []
+        },
+        {
+          "name": "形状分析",
+          "children": []
+        },
+        {
+          "name": "三维重建",
+          "children": []
+        },
+        {
+          "name": "3D打印",
+          "children": []
+        },
+        {
+          "name": "几何和图形数据存储、压缩",
+          "children": []
+        },
+        {
+          "name": "即时定位与建图",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "计算机动画与渲染",
+      "children": [
+        {
+          "name": "计算机模拟与仿真",
+          "children": []
+        },
+        {
+          "name": "高动态成像和高级显示技术",
+          "children": []
+        },
+        {
+          "name": "真实感图形绘制",
+          "children": []
+        },
+        {
+          "name": "非真实感绘制与辅助艺术创作",
+          "children": []
+        },
+        {
+          "name": "图形处理硬件",
+          "children": []
+        },
+        {
+          "name": "自然场景模拟",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "计算影像学",
+      "children": [
+        {
+          "name": "高性能成像",
+          "children": []
+        },
+        {
+          "name": "光场成像",
+          "children": []
+        },
+        {
+          "name": "多相机多视角成像",
+          "children": []
+        },
+        {
+          "name": "结构光成像",
+          "children": []
+        },
+        {
+          "name": "计算光学",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "虚拟现实、增强现实和混合现实",
+      "children": [
+        {
+          "name": "人机工程学",
+          "children": []
+        },
+        {
+          "name": "多传感器融合",
+          "children": []
+        },
+        {
+          "name": "虚拟人和化身",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "人机交互",
+      "children": [
+        {
+          "name": "交互理论与模型",
+          "children": []
+        },
+        {
+          "name": "感知技术与普适计算",
+          "children": []
+        },
+        {
+          "name": "自然交互",
+          "children": []
+        },
+        {
+          "name": "笔式/手势交互",
+          "children": []
+        },
+        {
+          "name": "语音交互",
+          "children": []
+        },
+        {
+          "name": "情感交互",
+          "children": []
+        },
+        {
+          "name": "穿戴交互",
+          "children": []
+        },
+        {
+          "name": "实物交互",
+          "children": []
+        },
+        {
+          "name": "生理计算与脑机交互",
+          "children": []
+        },
+        {
+          "name": "触觉交互",
+          "children": []
+        },
+        {
+          "name": "嗅觉交互",
+          "children": []
+        },
+        {
+          "name": "多通道交互",
+          "children": []
+        },
+        {
+          "name": "交互式系统设计、开发与评估",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "计算机辅助设计",
+      "children": [
+        {
+          "name": "计算机辅助几何设计",
+          "children": []
+        },
+        {
+          "name": "计算机辅助工程",
+          "children": []
+        },
+        {
+          "name": "计算机辅助诊断",
+          "children": []
+        },
+        {
+          "name": "计算机辅助教学",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "可视化与可视分析",
+      "children": [
+        {
+          "name": "可视化基础",
+          "children": [
+            {
+              "name": "可视化评估与用户分析",
+              "children": []
+            },
+            {
+              "name": "可视化显示技术",
+              "children": []
+            },
+            {
+              "name": "可视化中的数据管理 ",
+              "children": []
+            },
+            {
+              "name": "可视化模型",
+              "children": []
+            },
+            {
+              "name": "可视化交互技术",
+              "children": []
+            },
+            {
+              "name": "自动可视化构建",
+              "children": []
+            },
+            {
+              "name": "可视化领域语言",
+              "children": []
+            },
+            {
+              "name": "可视化认知与感知研究",
+              "children": []
+            },
+            {
+              "name": "视觉设计",
+              "children": []
+            },
+            {
+              "name": "不确定性可视化",
+              "children": []
+            },
+            {
+              "name": "基于像素的可视化方法",
+              "children": []
+            },
+            {
+              "name": "基于纹理的可视化方法",
+              "children": []
+            },
+            {
+              "name": "可视化图标",
+              "children": []
+            },
+            {
+              "name": "协同可视化",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "科学可视化",
+          "children": [
+            {
+              "name": "标量场可视化",
+              "children": []
+            },
+            {
+              "name": "向量场可视化",
+              "children": []
+            },
+            {
+              "name": "张量场可视化",
+              "children": []
+            },
+            {
+              "name": "多变量/多模态/多场可视化",
+              "children": []
+            },
+            {
+              "name": "非规则网格可视化",
+              "children": []
+            },
+            {
+              "name": "体数据可视化",
+              "children": []
+            },
+            {
+              "name": "并行可视化",
+              "children": []
+            },
+            {
+              "name": "原位可视化",
+              "children": []
+            },
+            {
+              "name": "流场可视化",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "信息可视化",
+          "children": [
+            {
+              "name": "网络数据可视化",
+              "children": []
+            },
+            {
+              "name": "层次结构数据可视化",
+              "children": []
+            },
+            {
+              "name": "关系数据可视化",
+              "children": []
+            },
+            {
+              "name": "高维数据可视化",
+              "children": []
+            },
+            {
+              "name": "类别数据可视化",
+              "children": []
+            },
+            {
+              "name": "文本数据可视化",
+              "children": []
+            },
+            {
+              "name": "时序数据可视化",
+              "children": []
+            },
+            {
+              "name": "地理数据可视化",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "可视分析",
+          "children": [
+            {
+              "name": "人工智能可视分析（可解释性）",
+              "children": []
+            },
+            {
+              "name": "可视化知识发现",
+              "children": []
+            },
+            {
+              "name": "态势感知",
+              "children": []
+            },
+            {
+              "name": "语意构建",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "可视化应用",
+          "children": [
+            {
+              "name": "医疗与生物可视化",
+              "children": []
+            },
+            {
+              "name": "地理空间可视化",
+              "children": []
+            },
+            {
+              "name": "科普可视化",
+              "children": []
+            },
+            {
+              "name": "工程数据可视化",
+              "children": []
+            },
+            {
+              "name": "商业可视化",
+              "children": []
+            },
+            {
+              "name": "人文可视化",
+              "children": []
+            },
+            {
+              "name": "安全可视分析",
+              "children": []
+            },
+            {
+              "name": "大数据可视化与可视分析",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

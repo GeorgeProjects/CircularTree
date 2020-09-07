@@ -2,11 +2,1683 @@
   "name": "计算机学科",
   "children": [
     {
+      "name": "计算机基础理论",
+      "type": "theory",
+      "children": [
+        {
+          "name": "算法与数据结构",
+          "children": [
+            {
+              "name": "在线算法",
+              "children": []
+            },
+            {
+              "name": "近似算法",
+              "children": []
+            },
+            {
+              "name": "随机算法",
+              "children": []
+            },
+            {
+              "name": "亚线性算法与性质测试",
+              "children": []
+            },
+            {
+              "name": "数据结构的时空复杂度",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "计算复杂性",
+          "children": [
+            {
+              "name": "精细复杂度",
+              "children": []
+            },
+            {
+              "name": "交互式证明",
+              "children": []
+            },
+            {
+              "name": "困难性与复杂度分类",
+              "children": []
+            },
+            {
+              "name": "通讯复杂性",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "逻辑与形式化方法",
+          "children": [
+            {
+              "name": "自动机理论",
+              "children": []
+            },
+            {
+              "name": "形式化方法",
+              "children": []
+            },
+            {
+              "name": "程序语义",
+              "children": []
+            },
+            {
+              "name": "类型理论",
+              "children": []
+            },
+            {
+              "name": "有限模型论",
+              "children": []
+            },
+            {
+              "name": "可计算性理论",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "算法博弈论",
+          "children": [
+            {
+              "name": "最优机制设计",
+              "children": []
+            },
+            {
+              "name": "纳什均衡与市场均衡",
+              "children": []
+            },
+            {
+              "name": "资源公平分配",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "量子计算",
+          "children": [
+            {
+              "name": "量子容错计算",
+              "children": []
+            },
+            {
+              "name": "量子模拟",
+              "children": []
+            },
+            {
+              "name": "量子机器学习",
+              "children": []
+            },
+            {
+              "name": "量子编码理论",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "计算几何",
+          "children": [
+            {
+              "name": "计算几何算法设计和下界证明",
+              "children": []
+            },
+            {
+              "name": "计算拓扑",
+              "children": []
+            },
+            {
+              "name": "离散与组合几何",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "信息论与算法编码理论",
+          "children": [
+            {
+              "name": "存储编码",
+              "children": []
+            },
+            {
+              "name": "译码算法",
+              "children": []
+            },
+            {
+              "name": "量子编码",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "优化理论",
+          "children": [
+            {
+              "name": "连续优化",
+              "children": []
+            },
+            {
+              "name": "组合优化",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "并行与分布式算法理论",
+          "children": []
+        },
+        {
+          "name": "密码学数学基础",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "计算机软件",
+      "type": "fundation1",
+      "children": [
+        {
+          "name": "系统软件",
+          "children": [
+            {
+              "name": "操作系统",
+              "children": [
+                {
+                  "name": "资源管理与跨层调度",
+                  "children": []
+                },
+                {
+                  "name": "新型存储与文件系统",
+                  "children": []
+                },
+                {
+                  "name": "新型设备抽象与管理",
+                  "children": []
+                },
+                {
+                  "name": "新型操作系统结构",
+                  "children": []
+                },
+                {
+                  "name": "微内核操作系统",
+                  "children": []
+                },
+                {
+                  "name": "操作系统可靠性",
+                  "children": []
+                },
+                {
+                  "name": "操作系统形式化验证",
+                  "children": []
+                },
+                {
+                  "name": "异构操作系统",
+                  "children": []
+                },
+                {
+                  "name": "众核操作系统",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "虚拟化技术",
+              "children": [
+                {
+                  "name": "系统级虚拟化",
+                  "children": []
+                },
+                {
+                  "name": "轻量级虚拟化",
+                  "children": []
+                },
+                {
+                  "name": "语言级虚拟化",
+                  "children": []
+                },
+                {
+                  "name": "虚拟化管理软件",
+                  "children": []
+                },
+                {
+                  "name": "虚拟机集群管理",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "编译技术与运行时技术",
+              "children": [
+                {
+                  "name": "代码生成与优化",
+                  "children": []
+                },
+                {
+                  "name": "动静态编译分析",
+                  "children": []
+                },
+                {
+                  "name": "运行时性能优化",
+                  "children": []
+                },
+                {
+                  "name": "内存垃圾回收",
+                  "children": []
+                },
+                {
+                  "name": "二进制翻译与优化",
+                  "children": []
+                },
+                {
+                  "name": "并行编译",
+                  "children": []
+                },
+                {
+                  "name": "编译安全",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "中间件技术",
+              "children": [
+                {
+                  "name": "微服务/无服务器架构",
+                  "children": []
+                },
+                {
+                  "name": "PaaS/SaaS/FaaS",
+                  "children": []
+                },
+                {
+                  "name": "消息通信机制",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "并行与分布式软件",
+              "children": [
+                {
+                  "name": "数据中心操作系统",
+                  "children": []
+                },
+                {
+                  "name": "大型分布式系统软件",
+                  "children": []
+                },
+                {
+                  "name": "异构并行软件",
+                  "children": []
+                },
+                {
+                  "name": "并行程序可靠性",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "嵌入式与实时软件",
+              "children": [
+                {
+                  "name": "实时操作系统",
+                  "children": []
+                },
+                {
+                  "name": "嵌入式操作系统",
+                  "children": []
+                },
+                {
+                  "name": "系统实时分析与保证",
+                  "children": []
+                },
+                {
+                  "name": "嵌入式工具软件",
+                  "children": []
+                },
+                {
+                  "name": "嵌入式系统安全",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "泛在系统软件",
+              "children": [
+                {
+                  "name": "泛在系统软件的基础理论",
+                  "children": []
+                },
+                {
+                  "name": "泛在系统软件的软件定义方法和技术",
+                  "children": []
+                },
+                {
+                  "name": "领域泛在操作系统模型与运行机理",
+                  "children": []
+                },
+                {
+                  "name": "泛在系统软件可靠性建模与验证",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "数据库与数据科学",
+          "children": [
+            {
+              "name": "数据库理论",
+              "children": [
+                {
+                  "name": "数据模型",
+                  "children": []
+                },
+                {
+                  "name": "数据依赖与范式",
+                  "children": []
+                },
+                {
+                  "name": "结构/非结构查询语言",
+                  "children": []
+                },
+                {
+                  "name": "数据可用性",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "数据库系统",
+              "children": [
+                {
+                  "name": "关系数据库",
+                  "children": []
+                },
+                {
+                  "name": "分布式数据库",
+                  "children": []
+                },
+                {
+                  "name": "新硬件数据处理",
+                  "children": []
+                },
+                {
+                  "name": "大数据处理系统",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "新型数据库",
+              "children": [
+                {
+                  "name": "文本数据库",
+                  "children": []
+                },
+                {
+                  "name": "XML数据库",
+                  "children": []
+                },
+                {
+                  "name": "图数据库",
+                  "children": []
+                },
+                {
+                  "name": "时空数据库",
+                  "children": []
+                },
+                {
+                  "name": "众包数据库",
+                  "children": []
+                },
+                {
+                  "name": "不确定数据库",
+                  "children": []
+                },
+                {
+                  "name": "NewSQL数据库",
+                  "children": []
+                },
+                {
+                  "name": "key-value数据库",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "行业大数据应用",
+              "children": [
+                {
+                  "name": "金融大数据",
+                  "children": []
+                },
+                {
+                  "name": "医疗大数据",
+                  "children": []
+                },
+                {
+                  "name": "教育大数据",
+                  "children": []
+                },
+                {
+                  "name": "政务大数据",
+                  "children": []
+                },
+                {
+                  "name": "商业大数据",
+                  "children": []
+                },
+                {
+                  "name": "工业大数据",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "软件理论与软件工程",
+          "children": [
+            {
+              "name": "形式化方法",
+              "children": [
+                {
+                  "name": "形式化建模",
+                  "children": []
+                },
+                {
+                  "name": "形式化验证的数学和逻辑基础",
+                  "children": []
+                },
+                {
+                  "name": "模型校验",
+                  "children": []
+                },
+                {
+                  "name": "交互式和自动化定理证明",
+                  "children": []
+                },
+                {
+                  "name": "组合验证",
+                  "children": []
+                },
+                {
+                  "name": "概率验证",
+                  "children": []
+                },
+                {
+                  "name": "并行验证",
+                  "children": []
+                },
+                {
+                  "name": "动态验证",
+                  "children": []
+                },
+                {
+                  "name": "基于学习的验证",
+                  "children": []
+                },
+                {
+                  "name": "混成系统验证",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "程序设计语言",
+              "children": [
+                {
+                  "name": "类型系统",
+                  "children": []
+                },
+                {
+                  "name": "程序分析、验证与综合",
+                  "children": []
+                },
+                {
+                  "name": "编译优化和编译器设计",
+                  "children": []
+                },
+                {
+                  "name": "领域特定语言与元编程",
+                  "children": []
+                },
+                {
+                  "name": "并行与分布式编程语言",
+                  "children": []
+                },
+                {
+                  "name": "概率编程语言",
+                  "children": []
+                },
+                {
+                  "name": "双向变换",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "软件工程方法与环境",
+              "children": [
+                {
+                  "name": "软件复用",
+                  "children": []
+                },
+                {
+                  "name": "模型驱动的方法",
+                  "children": []
+                },
+                {
+                  "name": "众包和群智化方法",
+                  "children": []
+                },
+                {
+                  "name": "智能化开发环境",
+                  "children": []
+                },
+                {
+                  "name": "经验软件工程",
+                  "children": []
+                },
+                {
+                  "name": "开源软件与开源生态",
+                  "children": []
+                },
+                {
+                  "name": "软件测试",
+                  "children": []
+                },
+                {
+                  "name": "软件调试",
+                  "children": []
+                },
+                {
+                  "name": "软件再工程与逆向工程",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "软件方法学",
+              "children": [
+                {
+                  "name": "软件体系结构",
+                  "children": []
+                },
+                {
+                  "name": "软件自适应",
+                  "children": []
+                },
+                {
+                  "name": "软件定义方法",
+                  "children": []
+                },
+                {
+                  "name": "软件自动化",
+                  "children": []
+                },
+                {
+                  "name": "可信软件",
+                  "children": []
+                },
+                {
+                  "name": "人机物融合软件",
+                  "children": []
+                },
+                {
+                  "name": "网构软件",
+                  "children": []
+                },
+                {
+                  "name": "软件演化与维护",
+                  "children": []
+                },
+                {
+                  "name": "软件生态学",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "服务计算",
+              "children": [
+                {
+                  "name": "服务科学",
+                  "children": []
+                },
+                {
+                  "name": "服务计算理论",
+                  "children": []
+                },
+                {
+                  "name": "服务系统与工程",
+                  "children": []
+                },
+                {
+                  "name": "服务管理与服务治理",
+                  "children": []
+                },
+                {
+                  "name": "服务经济学",
+                  "children": []
+                },
+                {
+                  "name": "跨界服务",
+                  "children": []
+                },
+                {
+                  "name": "认知与智能服务",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "需求工程与领域工程",
+              "children": [
+                {
+                  "name": "需求建模",
+                  "children": []
+                },
+                {
+                  "name": "需求约束与精化",
+                  "children": []
+                },
+                {
+                  "name": "领域本体",
+                  "children": []
+                },
+                {
+                  "name": "领域模型与构架",
+                  "children": []
+                },
+                {
+                  "name": "领域资产分类、获取和维护",
+                  "children": []
+                },
+                {
+                  "name": "软件产品线",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "硬件与计算机体系结构",
+      "type": "fundation",
+      "children": [
+        {
+          "name": "存储器结构",
+          "children": [
+            {
+              "name": "高速缓存技术",
+              "children": [
+                {
+                  "name": "缓存替换算法",
+                  "children": []
+                },
+                {
+                  "name": "缓存一致性",
+                  "children": []
+                },
+                {
+                  "name": "DMA技术",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "内存器件与技术",
+              "children": [
+                {
+                  "name": "高带宽内存HBM",
+                  "children": []
+                },
+                {
+                  "name": "3D堆叠存储器",
+                  "children": []
+                },
+                {
+                  "name": "非易失性存储器",
+                  "children": []
+                },
+                {
+                  "name": "内存控制器",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "外存器件与技术",
+              "children": [
+                {
+                  "name": "SSD存储",
+                  "children": []
+                },
+                {
+                  "name": "DNA存储",
+                  "children": []
+                },
+                {
+                  "name": "全息存储",
+                  "children": []
+                },
+                {
+                  "name": "蓝光存储",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "异构存储技术",
+              "children": [
+                {
+                  "name": "异构混合内存结构",
+                  "children": []
+                },
+                {
+                  "name": "异构内存控制器",
+                  "children": []
+                },
+                {
+                  "name": "内外存统一结构",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "存算一体化技术",
+              "children": [
+                {
+                  "name": "忆阻器存算一体结构",
+                  "children": []
+                },
+                {
+                  "name": "存内计算",
+                  "children": []
+                },
+                {
+                  "name": "近数据计算",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "处理器结构",
+          "children": [
+            {
+              "name": "微处理器体系结构",
+              "children": [
+                {
+                  "name": "流水线技术",
+                  "children": []
+                },
+                {
+                  "name": "硬件预取技术",
+                  "children": []
+                },
+                {
+                  "name": "片上网络技术",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "多核/众核处理器",
+              "children": [
+                {
+                  "name": "GPU/MIC",
+                  "children": []
+                },
+                {
+                  "name": "异构众核处理器",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "算法/领域专用加速器",
+              "children": [
+                {
+                  "name": "FPGA",
+                  "children": []
+                },
+                {
+                  "name": "深度学习加速器",
+                  "children": []
+                },
+                {
+                  "name": "图计算加速器",
+                  "children": []
+                },
+                {
+                  "name": "CPU-加速器异构计算系统",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "嵌入式系统",
+          "children": [
+            {
+              "name": "可靠性系统",
+              "children": [
+                {
+                  "name": "事务存储",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "低功耗系统",
+              "children": [
+                {
+                  "name": "低功耗管控电路",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "实时系统",
+              "children": [
+                {
+                  "name": "软核处理器",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "并行计算",
+          "children": [
+            {
+              "name": "并行模式",
+              "children": [
+                {
+                  "name": "单指令流多数据流",
+                  "children": []
+                },
+                {
+                  "name": "多指令流多数据流",
+                  "children": []
+                },
+                {
+                  "name": "数据流体系结构",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "并行结构",
+              "children": [
+                {
+                  "name": "并行向量处理机PVP",
+                  "children": []
+                },
+                {
+                  "name": "对称多处理机SMP",
+                  "children": []
+                },
+                {
+                  "name": "大规模并行处理机MPP",
+                  "children": []
+                },
+                {
+                  "name": "集群",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "存储模型",
+              "children": [
+                {
+                  "name": "均匀访存模型UMA",
+                  "children": []
+                },
+                {
+                  "name": "非均匀访存模型NUMA",
+                  "children": []
+                },
+                {
+                  "name": "一致性高速缓存非均匀存储访问模型",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "并行系统",
+              "children": [
+                {
+                  "name": "高性能计算系统",
+                  "children": []
+                },
+                {
+                  "name": "超级计算机",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "容错技术",
+              "children": [
+                {
+                  "name": "故障检测",
+                  "children": []
+                },
+                {
+                  "name": "故障恢复",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "分布式计算",
+          "children": [
+            {
+              "name": "云计算体系结构",
+              "children": [
+                {
+                  "name": "低熵云计算结构",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "边缘计算体系结构",
+              "children": [
+                {
+                  "name": "边缘服务器",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "云边端融合计算架构",
+              "children": [
+                {
+                  "name": "Disaggregated体系结构",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "数据中心体系结构",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "非传统结构",
+          "children": [
+            {
+              "name": "量子计算机",
+              "children": [
+                {
+                  "name": "可逆电路",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "超导计算机",
+              "children": [
+                {
+                  "name": "超低温电路",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "生物计算机",
+              "children": [
+                {
+                  "name": "DNA计算",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "光计算机",
+              "children": [
+                {
+                  "name": "三值光计算",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "开源硬件与敏捷设计",
+          "children": [
+            {
+              "name": "开放指令集RISC-V",
+              "children": []
+            },
+            {
+              "name": "高层次综合HLS",
+              "children": []
+            },
+            {
+              "name": "面向领域的软硬件协同设计",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "计算机网络",
+      "type": "fundation",
+      "children": [
+        {
+          "name": "网络基础理论",
+          "children": [
+            {
+              "name": "网络体系结构 ",
+              "children": [
+                {
+                  "name": "下一代互联网/未来网络",
+                  "children": []
+                },
+                {
+                  "name": "互联网体系结构",
+                  "children": []
+                },
+                {
+                  "name": "一体化融合网络",
+                  "children": []
+                },
+                {
+                  "name": "绿色网络与节能技术",
+                  "children": []
+                },
+                {
+                  "name": "低时延网络",
+                  "children": []
+                },
+                {
+                  "name": "信息中心网络",
+                  "children": []
+                },
+                {
+                  "name": "名字驱动网络",
+                  "children": []
+                },
+                {
+                  "name": "分层结构与跨层优化",
+                  "children": []
+                },
+                {
+                  "name": "量子通信与网络",
+                  "children": []
+                },
+                {
+                  "name": "星际互联网",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "网络协议",
+              "children": [
+                {
+                  "name": "路由协议与路由策略",
+                  "children": []
+                },
+                {
+                  "name": "移动性管理",
+                  "children": []
+                },
+                {
+                  "name": "传输层协议TCP/QUIC",
+                  "children": []
+                },
+                {
+                  "name": "应用层协议",
+                  "children": []
+                },
+                {
+                  "name": "服务质量控制",
+                  "children": []
+                },
+                {
+                  "name": "多径传输",
+                  "children": []
+                },
+                {
+                  "name": "网络经济学",
+                  "children": []
+                },
+                {
+                  "name": "智能可演化网络􏰯 ",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "协议工程",
+              "children": [
+                {
+                  "name": "协议互操作",
+                  "children": []
+                },
+                {
+                  "name": "一致性测试",
+                  "children": []
+                },
+                {
+                  "name": "形式化描述与验证",
+                  "children": []
+                },
+                {
+                  "name": "形式化网络分析",
+                  "children": []
+                },
+                {
+                  "name": "网络建模与网络演算",
+                  "children": []
+                },
+                {
+                  "name": "网络模拟与仿真",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "网络测量与管理",
+              "children": [
+                {
+                  "name": "网络流量预测",
+                  "children": []
+                },
+                {
+                  "name": "网络管理",
+                  "children": []
+                },
+                {
+                  "name": "拓扑发现",
+                  "children": []
+                },
+                {
+                  "name": "网络测量与故障诊断",
+                  "children": []
+                },
+                {
+                  "name": "智能运维",
+                  "children": []
+                },
+                {
+                  "name": "负载均衡与流量工程",
+                  "children": []
+                },
+                {
+                  "name": "网络容错",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "新型网络",
+          "children": [
+            {
+              "name": "数据中心网络",
+              "children": [
+                {
+                  "name": "数据中心网络架构",
+                  "children": []
+                },
+                {
+                  "name": "高性能交换机",
+                  "children": []
+                },
+                {
+                  "name": "远程直接数据存取",
+                  "children": []
+                },
+                {
+                  "name": "确定性网络",
+                  "children": []
+                },
+                {
+                  "name": "软件定义网络",
+                  "children": []
+                },
+                {
+                  "name": "网络虚拟化",
+                  "children": []
+                },
+                {
+                  "name": "网络协议栈优化",
+                  "children": []
+                },
+                {
+                  "name": "智能网卡",
+                  "children": []
+                },
+                {
+                  "name": "网络化编程",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "云计算与边缘计算网络",
+              "children": [
+                {
+                  "name": "云边端融合网络",
+                  "children": []
+                },
+                {
+                  "name": "软件定义广域网",
+                  "children": []
+                },
+                {
+                  "name": "计算、存储、传输协同",
+                  "children": []
+                },
+                {
+                  "name": "计算卸载",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "物联网组网与传输",
+              "children": [
+                {
+                  "name": "近场通信",
+                  "children": []
+                },
+                {
+                  "name": "无线个域网",
+                  "children": []
+                },
+                {
+                  "name": "无线局域网",
+                  "children": []
+                },
+                {
+                  "name": "无线广域网",
+                  "children": []
+                },
+                {
+                  "name": "低功耗广域网",
+                  "children": []
+                },
+                {
+                  "name": "无线网络协议",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "物联网路由",
+              "children": [
+                {
+                  "name": "分层路由",
+                  "children": []
+                },
+                {
+                  "name": "查询式路由",
+                  "children": []
+                },
+                {
+                  "name": "多径路由",
+                  "children": []
+                },
+                {
+                  "name": "机会路由",
+                  "children": []
+                },
+                {
+                  "name": "低功耗有损路由",
+                  "children": []
+                },
+                {
+                  "name": "安全路由",
+                  "children": []
+                },
+                {
+                  "name": "智能路由",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "卫星组网",
+              "children": [
+                {
+                  "name": "多信道接入",
+                  "children": []
+                },
+                {
+                  "name": "星链网路由",
+                  "children": []
+                },
+                {
+                  "name": "切换管理",
+                  "children": []
+                },
+                {
+                  "name": "多轨道卫星组网",
+                  "children": []
+                },
+                {
+                  "name": "空天地融合",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "无线传感器网络",
+              "children": [
+                {
+                  "name": "环境感知网络",
+                  "children": []
+                },
+                {
+                  "name": "事件感知网络",
+                  "children": []
+                },
+                {
+                  "name": "离散目标感知网络",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "多媒体传感器网络",
+              "children": [
+                {
+                  "name": "视频传感器网络",
+                  "children": []
+                },
+                {
+                  "name": "音频传感器网络",
+                  "children": []
+                },
+                {
+                  "name": "图像传感器网络",
+                  "children": []
+                },
+                {
+                  "name": "多光谱传感器网络",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "异构传感网络",
+              "children": [
+                {
+                  "name": "异构传感器拓扑控制",
+                  "children": []
+                },
+                {
+                  "name": "异构网络统一管理",
+                  "children": []
+                },
+                {
+                  "name": "多源传感数据融合",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "移动感知",
+              "children": [
+                {
+                  "name": "穿戴式闭环感知",
+                  "children": []
+                },
+                {
+                  "name": "无人机协同感知",
+                  "children": []
+                },
+                {
+                  "name": "移动多源感知",
+                  "children": []
+                },
+                {
+                  "name": "多元情景感知",
+                  "children": []
+                },
+                {
+                  "name": "动态无缝感知",
+                  "children": []
+                },
+                {
+                  "name": "参与式感知",
+                  "children": []
+                },
+                {
+                  "name": "机会式感知",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "群智感知网络",
+              "children": [
+                {
+                  "name": "群智激发机制",
+                  "children": []
+                },
+                {
+                  "name": "群体质量管控",
+                  "children": []
+                },
+                {
+                  "name": "分布式任务调度",
+                  "children": []
+                },
+                {
+                  "name": "容错感知",
+                  "children": []
+                },
+                {
+                  "name": "多维群智协同",
+                  "children": []
+                },
+                {
+                  "name": "社交群智网络",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "无源感知网络",
+              "children": [
+                {
+                  "name": "能量捕获",
+                  "children": []
+                },
+                {
+                  "name": "低能耗传感器感知",
+                  "children": []
+                },
+                {
+                  "name": "环境反应信号感知",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "新型感知理论与技术",
+              "children": [
+                {
+                  "name": "泛在感知",
+                  "children": []
+                },
+                {
+                  "name": "绿色感知",
+                  "children": []
+                },
+                {
+                  "name": "人机物协同感知",
+                  "children": []
+                },
+                {
+                  "name": "分布式自主感知",
+                  "children": []
+                },
+                {
+                  "name": "非传感器感知",
+                  "children": []
+                },
+                {
+                  "name": "边缘一体化感知",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "物联网软件与服务",
+              "children": [
+                {
+                  "name": "物联网云服务",
+                  "children": []
+                },
+                {
+                  "name": "物联网实体服务",
+                  "children": []
+                },
+                {
+                  "name": "嵌入式软件",
+                  "children": []
+                },
+                {
+                  "name": "物联网操作系统",
+                  "children": []
+                },
+                {
+                  "name": "物联网中间件",
+                  "children": []
+                },
+                {
+                  "name": "物联网应用软件",
+                  "children": []
+                },
+                {
+                  "name": "软件定义物联网",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "网络应用",
+          "children": [
+            {
+              "name": "互联网应用",
+              "children": [
+                {
+                  "name": "社会网络",
+                  "children": []
+                },
+                {
+                  "name": "区块链",
+                  "children": []
+                },
+                {
+                  "name": "视频传输与实时通信",
+                  "children": []
+                },
+                {
+                  "name": "虚拟现实与增强现实",
+                  "children": []
+                },
+                {
+                  "name": "体验质量优化",
+                  "children": []
+                },
+                {
+                  "name": "大规模分布式机器学习",
+                  "children": []
+                },
+                {
+                  "name": "对等网络与覆盖网络",
+                  "children": []
+                },
+                {
+                  "name": "内容分发网络与万维网",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "物联网应用",
+              "children": [
+                {
+                  "name": "智能家居",
+                  "children": []
+                },
+                {
+                  "name": "体域网",
+                  "children": []
+                },
+                {
+                  "name": "交通信息服务",
+                  "children": []
+                },
+                {
+                  "name": "环境监测",
+                  "children": []
+                },
+                {
+                  "name": "工业物联网",
+                  "children": []
+                },
+                {
+                  "name": "医疗物联网",
+                  "children": []
+                },
+                {
+                  "name": "电网监测",
+                  "children": []
+                },
+                {
+                  "name": "智能仪表",
+                  "children": []
+                },
+                {
+                  "name": "精准农业",
+                  "children": []
+                },
+                {
+                  "name": "海洋信息监测",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "信息系统安全",
       "type": "fundation2",
       "children": [
         {
-          "name": "网络安全（王骞）",
+          "name": "网络安全",
           "children": [
             {
               "name": "入侵检测",
@@ -88,7 +1760,7 @@
                   "children": []
                 },
                 {
-                  "name": "资源调度迁移",
+                  "name": "信任与数据迁移",
                   "children": []
                 },
                 {
@@ -122,11 +1794,36 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "新兴网络安全",
+              "children": [
+                {
+                  "name": "软件定义网络安全",
+                  "children": []
+                },
+                {
+                  "name": "网络功能虚拟化安全",
+                  "children": []
+                },
+                {
+                  "name": "区块链安全与隐私",
+                  "children": []
+                },
+                {
+                  "name": "群智感知网络安全与隐私",
+                  "children": []
+                },
+                {
+                  "name": "移动感知安全",
+                  "children": []
+                }
+              ]
             }
           ]
         },
         {
-          "name": "系统安全（杨珉）",
+          "name": "系统安全",
           "children": [
             {
               "name": "硬件安全",
@@ -140,7 +1837,7 @@
                   "children": []
                 },
                 {
-                  "name": "硬件侧信道攻击",
+                  "name": "安全硬件扩展",
                   "children": []
                 }
               ]
@@ -149,7 +1846,7 @@
               "name": "操作系统安全",
               "children": [
                 {
-                  "name": "可信启动与可信执行",
+                  "name": "可信计算环境",
                   "children": []
                 },
                 {
@@ -165,20 +1862,28 @@
                   "children": []
                 },
                 {
-                  "name": "SGX安全",
+                  "name": "安全加固",
+                  "children": []
+                },
+                {
+                  "name": "虚拟化安全",
                   "children": []
                 }
               ]
             },
             {
-              "name": "漏洞攻防技术",
+              "name": "软件漏洞",
               "children": [
                 {
-                  "name": "漏洞挖掘、验证与利用",
+                  "name": "漏洞挖掘",
                   "children": []
                 },
                 {
-                  "name": "缓解机制",
+                  "name": "漏洞利用",
+                  "children": []
+                },
+                {
+                  "name": "缓解方法",
                   "children": []
                 },
                 {
@@ -192,7 +1897,28 @@
               ]
             },
             {
-              "name": "恶意行为",
+              "name": "数据安全与隐私保护",
+              "children": [
+                {
+                  "name": "数字身份标识",
+                  "children": []
+                },
+                {
+                  "name": "隐私性关联与度量",
+                  "children": []
+                },
+                {
+                  "name": "隐私泄露检测",
+                  "children": []
+                },
+                {
+                  "name": "隐私数据保护",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "恶意代码",
               "children": [
                 {
                   "name": "高级可持续性攻击",
@@ -207,11 +1933,44 @@
                   "children": []
                 },
                 {
-                  "name": "调查取证",
+                  "name": "网络黑产分析",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "侧信道分析",
+              "children": [
+                {
+                  "name": "能量分析攻击",
                   "children": []
                 },
                 {
-                  "name": "黑产（地下经济）",
+                  "name": "错误诱发攻击",
+                  "children": []
+                },
+                {
+                  "name": "电磁泄露分析",
+                  "children": []
+                },
+                {
+                  "name": "时间侧信道分析",
+                  "children": []
+                },
+                {
+                  "name": "光信息侧信道分析",
+                  "children": []
+                },
+                {
+                  "name": "网络流量侧信道分析",
+                  "children": []
+                },
+                {
+                  "name": "声音侧信道分析",
+                  "children": []
+                },
+                {
+                  "name": "热力学侧信道分析",
                   "children": []
                 }
               ]
@@ -228,11 +1987,11 @@
                   "children": []
                 },
                 {
-                  "name": "AI安全",
+                  "name": "智能系统安全",
                   "children": []
                 },
                 {
-                  "name": "供应链安全",
+                  "name": "软件供应链安全",
                   "children": []
                 }
               ]
@@ -240,15 +1999,11 @@
           ]
         },
         {
-          "name": "信息安全（徐鹏）",
+          "name": "信息安全",
           "children": [
             {
               "name": "密码理论与技术",
               "children": [
-                {
-                  "name": "密码学的数学理论",
-                  "children": []
-                },
                 {
                   "name": "认证加密",
                   "children": []
@@ -263,6 +2018,10 @@
                 },
                 {
                   "name": "公钥密码",
+                  "children": []
+                },
+                {
+                  "name": "对称/非对称可搜索加密",
                   "children": []
                 },
                 {
@@ -297,12 +2056,7 @@
                 {
                   "name": "多媒体内容安全",
                   "children": []
-                }
-              ]
-            },
-            {
-              "name": "多媒体安全",
-              "children": [
+                },
                 {
                   "name": "信息隐藏与分析",
                   "children": []
@@ -324,13 +2078,13 @@
                   "children": []
                 },
                 {
-                  "name": "多媒体隐私保护",
+                  "name": "版权保护",
                   "children": []
                 }
               ]
             },
             {
-              "name": "隐私保护",
+              "name": "隐私保护理论",
               "children": [
                 {
                   "name": "差分隐私",
@@ -349,1906 +2103,7 @@
                   "children": []
                 },
                 {
-                  "name": "隐私泄露检测",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "侧信道攻击与防御",
-              "children": [
-                {
-                  "name": "能量分析攻击",
-                  "children": []
-                },
-                {
-                  "name": "错误诱发攻击",
-                  "children": []
-                },
-                {
-                  "name": "电磁泄露分析",
-                  "children": []
-                },
-                {
-                  "name": "时间侧信道分析",
-                  "children": []
-                },
-                {
-                  "name": "光信息侧信道分析",
-                  "children": []
-                },
-                {
-                  "name": "网络流量侧信道分析",
-                  "children": []
-                },
-                {
-                  "name": "声音侧信道分析",
-                  "children": []
-                },
-                {
-                  "name": "热力学侧信道分析",
-                  "children": []
-                },
-                {
-                  "name": "密钥保护",
-                  "children": []
-                },
-                {
-                  "name": "硬件保护",
-                  "children": []
-                },
-                {
-                  "name": "算法分支均一化",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "计算机软件",
-      "type": "fundation1",
-      "children": [
-        {
-          "name": "系统软件（陈海波）",
-          "children": [
-            {
-              "name": "操作系统",
-              "children": [
-                {
-                  "name": "操作系统调度",
-                  "children": []
-                },
-                {
-                  "name": "存储与文件系统",
-                  "children": []
-                },
-                {
-                  "name": "内存管理",
-                  "children": []
-                },
-                {
-                  "name": "设备抽象与管理",
-                  "children": []
-                },
-                {
-                  "name": "操作系统架构",
-                  "children": []
-                },
-                {
-                  "name": "操作系统可靠性",
-                  "children": []
-                },
-                {
-                  "name": "操作系统安全与隔离",
-                  "children": []
-                },
-                {
-                  "name": "异构操作系统",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "虚拟化技术",
-              "children": [
-                {
-                  "name": "系统级虚拟化",
-                  "children": []
-                },
-                {
-                  "name": "轻量级虚拟化",
-                  "children": []
-                },
-                {
-                  "name": "语言级虚拟化",
-                  "children": []
-                },
-                {
-                  "name": "虚拟化管理软件",
-                  "children": []
-                },
-                {
-                  "name": "虚拟机集群管理",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "编译技术与运行时技术",
-              "children": [
-                {
-                  "name": "代码生成与优化",
-                  "children": []
-                },
-                {
-                  "name": "动静态编译分析",
-                  "children": []
-                },
-                {
-                  "name": "运行时优化",
-                  "children": []
-                },
-                {
-                  "name": "二进制翻译与优化",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "中间件技术",
-              "children": [
-                {
-                  "name": "微服务/无服务器架构",
-                  "children": []
-                },
-                {
-                  "name": "PaaS/SaaS/FaaS",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "并行与分布式软件",
-              "children": [
-                {
-                  "name": "分布式内存系统",
-                  "children": []
-                },
-                {
-                  "name": "分布式存储系统",
-                  "children": []
-                },
-                {
-                  "name": "并行计算系统",
-                  "children": []
-                },
-                {
-                  "name": "异构并行软件",
-                  "children": []
-                },
-                {
-                  "name": "并行程序可靠性",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "嵌入式与实时软件",
-              "children": [
-                {
-                  "name": "实时操作系统",
-                  "children": []
-                },
-                {
-                  "name": "嵌入式操作系统",
-                  "children": []
-                },
-                {
-                  "name": "系统实时分析与保证",
-                  "children": []
-                },
-                {
-                  "name": "嵌入式工具软件",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "泛在系统软件",
-              "children": [
-                {
-                  "name": "泛在系统软件的基础理论",
-                  "children": []
-                },
-                {
-                  "name": "泛在系统软件的软件定义方法和技术",
-                  "children": []
-                },
-                {
-                  "name": "领域泛在操作系统模型与运行机理",
-                  "children": []
-                },
-                {
-                  "name": "泛在系统软件可靠性建模与验证",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "数据库与数据管理（袁野）",
-          "children": [
-            {
-              "name": "数据库理论",
-              "children": [
-                {
-                  "name": "数据模型",
-                  "children": []
-                },
-                {
-                  "name": "数据依赖与范式",
-                  "children": []
-                },
-                {
-                  "name": "查询语言",
-                  "children": []
-                },
-                {
-                  "name": "数据可用性",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "数据库系统",
-              "children": [
-                {
-                  "name": "管理技术",
-                  "children": []
-                },
-                {
-                  "name": "关系数据库",
-                  "children": []
-                },
-                {
-                  "name": "文本数据库",
-                  "children": []
-                },
-                {
-                  "name": "分布式数据库",
-                  "children": []
-                },
-                {
-                  "name": "新硬件数据处理",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "数据库应用",
-              "children": [
-                {
-                  "name": "数据安全",
-                  "children": []
-                },
-                {
-                  "name": "XML数据库",
-                  "children": []
-                },
-                {
-                  "name": "图数据库",
-                  "children": []
-                },
-                {
-                  "name": "时空数据库",
-                  "children": []
-                },
-                {
-                  "name": "众包数据库",
-                  "children": []
-                },
-                {
-                  "name": "不确定数据库",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "软件理论与软件工程（刘寰哲）",
-          "children": [
-            {
-              "name": "形式化方法",
-              "children": [
-                {
-                  "name": "形式化建模",
-                  "children": []
-                },
-                {
-                  "name": "形式化验证的数学和逻辑基础",
-                  "children": []
-                },
-                {
-                  "name": "模型检查",
-                  "children": []
-                },
-                {
-                  "name": "定理证明",
-                  "children": []
-                },
-                {
-                  "name": "决策过程",
-                  "children": []
-                },
-                {
-                  "name": "抽象解释",
-                  "children": []
-                },
-                {
-                  "name": "组合验证",
-                  "children": []
-                },
-                {
-                  "name": "概率验证",
-                  "children": []
-                },
-                {
-                  "name": "并行验证",
-                  "children": []
-                },
-                {
-                  "name": "动态验证",
-                  "children": []
-                },
-                {
-                  "name": "基于学习的验证",
-                  "children": []
-                },
-                {
-                  "name": "硬件验证",
-                  "children": []
-                },
-                {
-                  "name": "软件验证",
-                  "children": []
-                },
-                {
-                  "name": "嵌入式和混成系统验证",
-                  "children": []
-                },
-                {
-                  "name": "并行验证",
-                  "children": []
-                },
-                {
-                  "name": "安全性验证",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "程序设计语言",
-              "children": [
-                {
-                  "name": "语言设计",
-                  "children": []
-                },
-                {
-                  "name": "类型系统",
-                  "children": []
-                },
-                {
-                  "name": "程序分析与验证",
-                  "children": []
-                },
-                {
-                  "name": "程序综合",
-                  "children": []
-                },
-                {
-                  "name": "编译优化和编译器设计",
-                  "children": []
-                },
-                {
-                  "name": "领域特定语言与元编程",
-                  "children": []
-                },
-                {
-                  "name": "语法分析",
-                  "children": []
-                },
-                {
-                  "name": "编译器验证与测试",
-                  "children": []
-                },
-                {
-                  "name": "面向对象语言",
-                  "children": []
-                },
-                {
-                  "name": "并行与分布式编程语言",
-                  "children": []
-                },
-                {
-                  "name": "动态语言",
-                  "children": []
-                },
-                {
-                  "name": "函数语言",
-                  "children": []
-                },
-                {
-                  "name": "逻辑语言",
-                  "children": []
-                },
-                {
-                  "name": "概率编程语言",
-                  "children": []
-                },
-                {
-                  "name": "双向变换",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "软件工程方法与环境",
-              "children": [
-                {
-                  "name": "模块化方法",
-                  "children": []
-                },
-                {
-                  "name": "结构化方法",
-                  "children": []
-                },
-                {
-                  "name": "面向对象的方法",
-                  "children": []
-                },
-                {
-                  "name": "软件复用",
-                  "children": []
-                },
-                {
-                  "name": "服务化方法",
-                  "children": []
-                },
-                {
-                  "name": "模型驱动的方法",
-                  "children": []
-                },
-                {
-                  "name": "面向方面的方法",
-                  "children": []
-                },
-                {
-                  "name": "敏捷开发方法",
-                  "children": []
-                },
-                {
-                  "name": "众包和群智化方法",
-                  "children": []
-                },
-                {
-                  "name": "智能化开发环境",
-                  "children": []
-                },
-                {
-                  "name": "最终用户编程方法",
-                  "children": []
-                },
-                {
-                  "name": "经验软件工程",
-                  "children": []
-                },
-                {
-                  "name": "开源软件与开源生态",
-                  "children": []
-                },
-                {
-                  "name": "软件测试",
-                  "children": []
-                },
-                {
-                  "name": "软件调试",
-                  "children": []
-                },
-                {
-                  "name": "程序理解",
-                  "children": []
-                },
-                {
-                  "name": "软件再工程",
-                  "children": []
-                },
-                {
-                  "name": "逆向工程",
-                  "children": []
-                },
-                {
-                  "name": "软件重构",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "软件方法学",
-              "children": [
-                {
-                  "name": "软件体系结构",
-                  "children": []
-                },
-                {
-                  "name": "软件自适应",
-                  "children": []
-                },
-                {
-                  "name": "软件定义方法",
-                  "children": []
-                },
-                {
-                  "name": "软件自动化",
-                  "children": []
-                },
-                {
-                  "name": "可信软件",
-                  "children": []
-                },
-                {
-                  "name": "人机物融合软件",
-                  "children": []
-                },
-                {
-                  "name": "网构软件",
-                  "children": []
-                },
-                {
-                  "name": "软件演化与维护",
-                  "children": []
-                },
-                {
-                  "name": "面向人工智能系统的软件工程",
-                  "children": []
-                },
-                {
-                  "name": "软件生态学",
-                  "children": []
-                },
-                {
-                  "name": "软件安全性",
-                  "children": []
-                },
-                {
-                  "name": "分布式软件工程",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "服务计算",
-              "children": [
-                {
-                  "name": "服务科学",
-                  "children": []
-                },
-                {
-                  "name": "服务计算理论",
-                  "children": []
-                },
-                {
-                  "name": "服务系统与工程",
-                  "children": []
-                },
-                {
-                  "name": "服务管理与服务治理",
-                  "children": []
-                },
-                {
-                  "name": "服务经济学",
-                  "children": []
-                },
-                {
-                  "name": "跨界服务",
-                  "children": []
-                },
-                {
-                  "name": "认知与智能服务",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "需求工程与领域工程",
-              "children": [
-                {
-                  "name": "需求建模",
-                  "children": []
-                },
-                {
-                  "name": "需求约束与精化",
-                  "children": []
-                },
-                {
-                  "name": "领域本体",
-                  "children": []
-                },
-                {
-                  "name": "领域模型与构架",
-                  "children": []
-                },
-                {
-                  "name": "领域资产分类、获取和维护",
-                  "children": []
-                },
-                {
-                  "name": "软件产品线",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "计算机基础理论",
-      "type": "theory",
-      "children": [
-        {
-          "name": "算法与数据结构",
-          "children": [
-            {
-              "name": "在线算法",
-              "children": []
-            },
-            {
-              "name": "近似算法",
-              "children": []
-            },
-            {
-              "name": "随机算法",
-              "children": []
-            },
-            {
-              "name": "亚线性算法与性质测试",
-              "children": []
-            },
-            {
-              "name": "数据结构时空复杂度",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "计算复杂性",
-          "children": [
-            {
-              "name": "精细复杂度",
-              "children": []
-            },
-            {
-              "name": "交互式证明",
-              "children": []
-            },
-            {
-              "name": "困难性与复杂度分类",
-              "children": []
-            },
-            {
-              "name": "通讯复杂性",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "逻辑与形式化方法",
-          "children": [
-            {
-              "name": "自动机理论",
-              "children": []
-            },
-            {
-              "name": "形式化方法",
-              "children": []
-            },
-            {
-              "name": "程序语义",
-              "children": []
-            },
-            {
-              "name": "类型理论",
-              "children": []
-            },
-            {
-              "name": "有限模型论",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "算法博弈论",
-          "children": [
-            {
-              "name": "最优机制设计",
-              "children": []
-            },
-            {
-              "name": "纳什均衡与市场均衡",
-              "children": []
-            },
-            {
-              "name": "资源公平分配",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "量子计算",
-          "children": [
-            {
-              "name": "量子容错计算",
-              "children": []
-            },
-            {
-              "name": "量子模拟",
-              "children": []
-            },
-            {
-              "name": "量子机器学习",
-              "children": []
-            },
-            {
-              "name": "量子编码理论",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "机器学习理论",
-          "children": [
-            {
-              "name": "在线学习",
-              "children": []
-            },
-            {
-              "name": "深度学习理论",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "计算几何",
-          "children": []
-        },
-        {
-          "name": "并行与分布式算法理论",
-          "children": []
-        },
-        {
-          "name": "信息论与算法编码理论",
-          "children": []
-        },
-        {
-          "name": "密码学数学基础",
-          "children": []
-        }
-      ]
-    },
-    {
-      "name": "硬件与计算机体系结构",
-      "type": "fundation",
-      "children": [
-        {
-          "name": "存储器结构",
-          "children": [
-            {
-              "name": "3D堆叠存储器",
-              "children": []
-            },
-            {
-              "name": "非易失性存储器NVM",
-              "children": [
-                {
-                  "name": "异构混合内存",
-                  "children": []
-                },
-                {
-                  "name": "内存计算",
-                  "children": []
-                },
-                {
-                  "name": "忆阻器存算一体结构",
-                  "children": []
-                },
-                {
-                  "name": "内外存统一结构",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "DNA存储",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "empty",
-          "type": "empty"
-        },
-        {
-          "name": "empty",
-          "type": "empty"
-        },          
-        {
-          "name": "处理器结构",
-          "children": [
-            {
-              "name": "众核处理器",
-              "children": [
-                {
-                  "name": "GPU/MIC",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "算法加速器/领域专用加速器",
-              "children": [
-                {
-                  "name": "深度学习加速器",
-                  "children": []
-                },
-                {
-                  "name": "图计算加速器",
-                  "children": []
-                },
-                {
-                  "name": "异构计算系统",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "empty",
-          "type": "empty"
-        }, 
-        {
-          "name": "empty",
-          "type": "empty"
-        }, 
-        {
-          "name": "嵌入式系统",
-          "children": [
-            {
-              "name": "可靠性系统",
-              "children": []
-            },
-            {
-              "name": "低功耗系统",
-              "children": []
-            },
-            {
-              "name": "实时系统",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "empty",
-          "type": "empty"
-        }, 
-        {
-          "name": "empty",
-          "type": "empty"
-        }, 
-        {
-          "name": "并行计算",
-          "children": [
-            {
-              "name": "高性能计算",
-              "children": [
-                {
-                  "name": "超级计算机",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "分布式计算",
-          "children": [
-            {
-              "name": "云计算",
-              "children": []
-            },
-            {
-              "name": "边缘计算",
-              "children": []
-            },
-            {
-              "name": "云边端融合计算",
-              "children": []
-            },
-            {
-              "name": "数据中心",
-              "children": [
-                {
-                  "name": "Disaggregated体系结构",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "非传统结构",
-          "children": [
-            {
-              "name": "量子计算机",
-              "children": []
-            },
-            {
-              "name": "超导计算机",
-              "children": []
-            },
-            {
-              "name": "生物计算机",
-              "children": []
-            },
-            {
-              "name": "光计算机",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "设计方法学",
-          "children": [
-            {
-              "name": "开源硬件与敏捷设计",
-              "children": [
-                {
-                  "name": "开放指令集RISC-V",
-                  "children": []
-                },
-                {
-                  "name": "高层次综合HLS",
-                  "children": []
-                },
-                {
-                  "name": "面向领域的软硬件协同设计",
-                  "children": []
-                },
-                {
-                  "name": "AI与设计自动化",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "计算机网络",
-      "type": "fundation",
-      "children": [
-        {
-          "name": "传统网络（崔勇）",
-          "children": [
-            {
-              "name": "网络体系结构 ",
-              "children": [
-                {
-                  "name": "下一代互联网",
-                  "children": []
-                },
-                {
-                  "name": "未来网络",
-                  "children": []
-                },
-                {
-                  "name": "互联网体系结构",
-                  "children": []
-                },
-                {
-                  "name": "一体化融合网络",
-                  "children": []
-                },
-                {
-                  "name": "对等网络与覆盖网络",
-                  "children": []
-                },
-                {
-                  "name": "绿色网络与节能技术",
-                  "children": []
-                },
-                {
-                  "name": "低时延网络",
-                  "children": []
-                },
-                {
-                  "name": "内容分发网络",
-                  "children": []
-                },
-                {
-                  "name": "信息中心网络",
-                  "children": []
-                },
-                {
-                  "name": "名字驱动网络",
-                  "children": []
-                },
-                {
-                  "name": "源地址验证",
-                  "children": []
-                },
-                {
-                  "name": "流量控制与拥塞控制",
-                  "children": []
-                },
-                {
-                  "name": "分层结构与跨层优化",
-                  "children": []
-                },
-                {
-                  "name": "量子网络",
-                  "children": []
-                },
-                {
-                  "name": "星际互联网",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "网络协议",
-              "children": [
-                {
-                  "name": "路由协议与路由策略",
-                  "children": []
-                },
-                {
-                  "name": "服务质量路由",
-                  "children": []
-                },
-                {
-                  "name": "移动性管理",
-                  "children": []
-                },
-                {
-                  "name": "传输层协议TCP/QUIC",
-                  "children": []
-                },
-                {
-                  "name": "应用层协议",
-                  "children": []
-                },
-                {
-                  "name": "域名服务协议",
-                  "children": []
-                },
-                {
-                  "name": "二维路由",
-                  "children": []
-                },
-                {
-                  "name": "多径传输",
-                  "children": []
-                },
-                {
-                  "name": "分段路由",
-                  "children": []
-                },
-                {
-                  "name": "网络经济学",
-                  "children": []
-                },
-                {
-                  "name": "智能可演化网络􏰯 ",
-                  "children": []
-                },
-                {
-                  "name": "实时通信",
-                  "children": []
-                },
-                {
-                  "name": "流媒体传输与直播",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "协议工程",
-              "children": [
-                {
-                  "name": "协议互操作",
-                  "children": []
-                },
-                {
-                  "name": "一致性测试",
-                  "children": []
-                },
-                {
-                  "name": "形式化描述与验证",
-                  "children": []
-                },
-                {
-                  "name": "形式化网络分析",
-                  "children": []
-                },
-                {
-                  "name": "网络建模与演算",
-                  "children": []
-                },
-                {
-                  "name": "网络模拟与仿真",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "网络测量与管理",
-              "children": [
-                {
-                  "name": "网络流量优化",
-                  "children": []
-                },
-                {
-                  "name": "网络流量预测",
-                  "children": []
-                },
-                {
-                  "name": "主动测量",
-                  "children": []
-                },
-                {
-                  "name": "被动测量",
-                  "children": []
-                },
-                {
-                  "name": "网络管理",
-                  "children": []
-                },
-                {
-                  "name": "拓扑测量",
-                  "children": []
-                },
-                {
-                  "name": "网络诊断",
-                  "children": []
-                },
-                {
-                  "name": "智能运维",
-                  "children": []
-                },
-                {
-                  "name": "负载均衡与流量工程",
-                  "children": []
-                },
-                {
-                  "name": "网络容错",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty"
-            },
-            {
-              "name": "empty",
-              "type": "empty"
-            },
-            {
-              "name": "数据中心网络",
-              "children": [
-                {
-                  "name": "数据中心网络架构",
-                  "children": []
-                },
-                {
-                  "name": "拓扑生成",
-                  "children": []
-                },
-                {
-                  "name": "高性能交换机",
-                  "children": []
-                },
-                {
-                  "name": "远程直接数据存取",
-                  "children": []
-                },
-                {
-                  "name": "确定性网络",
-                  "children": []
-                },
-                {
-                  "name": "软件定义网络",
-                  "children": []
-                },
-                {
-                  "name": "网络虚拟化",
-                  "children": []
-                },
-                {
-                  "name": "网络协议栈优化",
-                  "children": []
-                },
-                {
-                  "name": "智能网卡",
-                  "children": []
-                },
-                {
-                  "name": "网络化编程",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty"
-            },
-            {
-              "name": "empty",
-              "type": "empty"
-            },
-            {
-              "name": "云计算与边缘计算网络",
-              "children": [
-                {
-                  "name": "云边端融合网络",
-                  "children": []
-                },
-                {
-                  "name": "软件定义广域网",
-                  "children": []
-                },
-                {
-                  "name": "计算、存储、传输协同",
-                  "children": []
-                },
-                {
-                  "name": "计算卸载",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty"
-            },
-            {
-              "name": "empty",
-              "type": "empty"
-            },
-            {
-              "name": "网络应用",
-              "children": [
-                {
-                  "name": "社会网络",
-                  "children": []
-                },
-                {
-                  "name": "区块链",
-                  "children": []
-                },
-                {
-                  "name": "视频传输与实时通信",
-                  "children": []
-                },
-                {
-                  "name": "万维网通信",
-                  "children": []
-                },
-                {
-                  "name": "虚拟现实与增强现实",
-                  "children": []
-                },
-                {
-                  "name": "体验质量优化",
-                  "children": []
-                },
-                {
-                  "name": "大规模分布式机器学习",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "新型网络（吴帆）",
-          "children": [
-            {
-              "name": "物联网组网与传输",
-              "children": [
-                {
-                  "name": "近场通信",
-                  "children": []
-                },
-                {
-                  "name": "无线个域网",
-                  "children": []
-                },
-                {
-                  "name": "无线家用网络",
-                  "children": []
-                },
-                {
-                  "name": "无线局域网",
-                  "children": []
-                },
-                {
-                  "name": "低功耗广域网",
-                  "children": []
-                },
-                {
-                  "name": "无线广域网",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "无线网络协议",
-              "children": [
-                {
-                  "name": "无线个域网协议",
-                  "children": []
-                },
-                {
-                  "name": "无线家庭网络协议\n",
-                  "children": []
-                },
-                {
-                  "name": "无线局域网协议",
-                  "children": []
-                },
-                {
-                  "name": "无线广域网协议",
-                  "children": []
-                },
-                {
-                  "name": "介质访问控制协议",
-                  "children": []
-                },
-                {
-                  "name": "路由协议",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "物联网路由技术",
-              "children": [
-                {
-                  "name": "常规路由",
-                  "children": []
-                },
-                {
-                  "name": "安全路由",
-                  "children": []
-                },
-                {
-                  "name": "智能路由",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "卫星组网",
-              "children": [
-                {
-                  "name": "多信道接入",
-                  "children": []
-                },
-                {
-                  "name": "星链网路由",
-                  "children": []
-                },
-                {
-                  "name": "切换管理",
-                  "children": []
-                },
-                {
-                  "name": "多轨道卫星组网",
-                  "children": []
-                },
-                {
-                  "name": "空天地融合",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty"
-            },
-            {
-              "name": "empty",
-              "type": "empty"
-            },
-            {
-              "name": "无线传感器网络",
-              "children": [
-                {
-                  "name": "环境感知网络",
-                  "children": []
-                },
-                {
-                  "name": "事件感知网络",
-                  "children": []
-                },
-                {
-                  "name": "离散目标感知网络",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "多媒体传感器网络",
-              "children": [
-                {
-                  "name": "视频传感器网络",
-                  "children": []
-                },
-                {
-                  "name": "音频传感器网络",
-                  "children": []
-                },
-                {
-                  "name": "图像传感器网络",
-                  "children": []
-                },
-                {
-                  "name": "多光谱传感器",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "异构传感网络",
-              "children": [
-                {
-                  "name": "异构节点部署",
-                  "children": []
-                },
-                {
-                  "name": "异构传感器拓扑控制",
-                  "children": []
-                },
-                {
-                  "name": "异构网络统一管理",
-                  "children": []
-                },
-                {
-                  "name": "多源传感数据融合",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "移动感知",
-              "children": [
-                {
-                  "name": "穿戴式闭环感知",
-                  "children": []
-                },
-                {
-                  "name": "无人机协同感知",
-                  "children": []
-                },
-                {
-                  "name": "移动多源感知",
-                  "children": []
-                },
-                {
-                  "name": "多元情景感知",
-                  "children": []
-                },
-                {
-                  "name": "动态环境无缝感知",
-                  "children": []
-                },
-                {
-                  "name": "参与式感知",
-                  "children": []
-                },
-                {
-                  "name": "机会式感知",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "群智感知网络",
-              "children": [
-                {
-                  "name": "群智激发机制",
-                  "children": []
-                },
-                {
-                  "name": "群体质量管控",
-                  "children": []
-                },
-                {
-                  "name": "分布式任务调度",
-                  "children": []
-                },
-                {
-                  "name": "容错感知网络",
-                  "children": []
-                },
-                {
-                  "name": "多维群智协同",
-                  "children": []
-                },
-                {
-                  "name": "社交群智网络",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "无源感知网络",
-              "children": [
-                {
-                  "name": "能量捕获技术 ",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty"
-            },
-            {
-              "name": "新型感知理论与技术",
-              "children": [
-                {
-                  "name": "泛在感知",
-                  "children": []
-                },
-                {
-                  "name": "绿色感知",
-                  "children": []
-                },
-                {
-                  "name": "人机物协同感知",
-                  "children": []
-                },
-                {
-                  "name": "分布式自主感知",
-                  "children": []
-                },
-                {
-                  "name": "非传感器感知",
-                  "children": []
-                },
-                {
-                  "name": "边缘一体化感知",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty",
-              "children": [
-                {
-                  "name": "empty",
-                  "type": "empty"
-                }
-              ]
-            },
-            {
-              "name": "物联网软件与服务",
-              "children": [
-                {
-                  "name": "物联网云服务",
-                  "children": []
-                },
-                {
-                  "name": "物联网实体服务",
-                  "children": []
-                },
-                {
-                  "name": "嵌入式软件",
-                  "children": []
-                },
-                {
-                  "name": "物联网操作系统",
-                  "children": []
-                },
-                {
-                  "name": "物联网中间件",
-                  "children": []
-                },
-                {
-                  "name": "物联网应用软件",
-                  "children": []
-                },
-                {
-                  "name": "软件定义物联网",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "empty",
-              "type": "empty"
-            },
-            {
-              "name": "物联网应用",
-              "children": [
-                {
-                  "name": "智能家居",
-                  "children": []
-                },
-                {
-                  "name": "体域网",
-                  "children": []
-                },
-                {
-                  "name": "交通信息服务",
-                  "children": []
-                },
-                {
-                  "name": "环境监测",
-                  "children": []
-                },
-                {
-                  "name": "工业物联网",
-                  "children": []
-                },
-                {
-                  "name": "医疗物联网",
-                  "children": []
-                },
-                {
-                  "name": "电网监测",
-                  "children": []
-                },
-                {
-                  "name": "智能仪表",
-                  "children": []
-                },
-                {
-                  "name": "精准农业",
-                  "children": []
-                },
-                {
-                  "name": "海洋信息监测",
+                  "name": "多媒体隐私保护",
                   "children": []
                 }
               ]
@@ -2294,7 +2149,7 @@
           "name": "计算机动画与渲染",
           "children": [
             {
-              "name": "仿真",
+              "name": "计算机模拟与仿真",
               "children": []
             },
             {
@@ -2315,10 +2170,6 @@
             },
             {
               "name": "自然场景模拟",
-              "children": []
-            },
-            {
-              "name": "视觉效果",
               "children": []
             }
           ]
@@ -2352,19 +2203,7 @@
           "name": "虚拟现实、增强现实和混合现实",
           "children": [
             {
-              "name": "穿戴式设备",
-              "children": []
-            },
-            {
-              "name": "游戏",
-              "children": []
-            },
-            {
               "name": "人机工程学",
-              "children": []
-            },
-            {
-              "name": "伦理道德问题",
               "children": []
             },
             {
@@ -2378,7 +2217,7 @@
           ]
         },
         {
-          "name": "人机交互（田丰）",
+          "name": "人机交互",
           "children": [
             {
               "name": "交互理论与模型",
@@ -2456,7 +2295,7 @@
           ]
         },
         {
-          "name": "可视化与可视分析（袁晓如）",
+          "name": "可视化与可视分析",
           "children": [
             {
               "name": "可视化基础",
@@ -2470,11 +2309,23 @@
                   "children": []
                 },
                 {
+                  "name": "可视化中的数据管理 ",
+                  "children": []
+                },
+                {
                   "name": "可视化模型",
                   "children": []
                 },
                 {
                   "name": "可视化交互技术",
+                  "children": []
+                },
+                {
+                  "name": "自动可视化构建",
+                  "children": []
+                },
+                {
+                  "name": "可视化领域语言",
                   "children": []
                 },
                 {
@@ -2539,6 +2390,10 @@
                   "children": []
                 },
                 {
+                  "name": "原位可视化",
+                  "children": []
+                },
+                {
                   "name": "流场可视化",
                   "children": []
                 }
@@ -2599,15 +2454,11 @@
                 {
                   "name": "语意构建",
                   "children": []
-                },
-                {
-                  "name": "自动",
-                  "children": []
                 }
               ]
             },
             {
-              "name": "可视化与可视分析应用",
+              "name": "可视化应用",
               "children": [
                 {
                   "name": "医疗与生物可视化",
@@ -2642,26 +2493,13 @@
                   "children": []
                 }
               ]
-            },
-            {
-              "name": "新方向",
-              "children": [
-                {
-                  "name": "自动可视化构建",
-                  "children": []
-                },
-                {
-                  "name": "可视化领域语言",
-                  "children": []
-                }
-              ]
             }
           ]
         }
       ]
     },
     {
-      "name": "计算机图像视频处理与多媒体技术",
+      "name": "图像视频处理与多媒体技术",
       "type": "application",
       "children": [
         {
@@ -2676,7 +2514,7 @@
               "children": []
             },
             {
-              "name": "编辑和合成",
+              "name": "图像视频编辑与合成",
               "children": []
             },
             {
@@ -2697,27 +2535,15 @@
               "children": []
             },
             {
-              "name": "区域分割与形状分析",
+              "name": "分割、分组及形状表示",
               "children": []
             },
             {
-              "name": "目标检测与识别 ",
+              "name": "目标检测、识别与跟踪 ",
               "children": []
             },
             {
-              "name": "跟踪与分析",
-              "children": []
-            },
-            {
-              "name": "视频分割",
-              "children": []
-            },
-            {
-              "name": "事件分析",
-              "children": []
-            },
-            {
-              "name": "动作分析",
+              "name": "行为分析与事件理解",
               "children": []
             },
             {
@@ -2725,11 +2551,7 @@
               "children": []
             },
             {
-              "name": "理解与解释",
-              "children": []
-            },
-            {
-              "name": "生物医学图像分析",
+              "name": "生物医学影像分析",
               "children": []
             }
           ]
@@ -2747,10 +2569,6 @@
             },
             {
               "name": "多媒体质量评价",
-              "children": []
-            },
-            {
-              "name": "媒体内容安全、隐私与版权保护",
               "children": []
             }
           ]
@@ -2859,7 +2677,7 @@
               "children": []
             },
             {
-              "name": "移动多媒体",
+              "name": "移动多媒体和可穿戴多媒体",
               "children": []
             },
             {
@@ -2867,17 +2685,20 @@
               "children": []
             },
             {
-              "name": "多媒体质量评估与标准",
-              "children": []
-            },
-            {
-              "name": "多媒体艺术、娱乐和文化",
-              "children": []
-            },
-            {
               "name": "自动驾驶与无人系统中的多媒体技术",
               "children": []
-            },
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "信息检索与数据挖掘",
+      "type": "application",
+      "children": [
+        {
+          "name": "信息检索",
+          "children": [
             {
               "name": "文档表示",
               "children": []
@@ -2895,10 +2716,6 @@
               "children": []
             },
             {
-              "name": "检索任务和目标",
-              "children": []
-            },
-            {
               "name": "检索结果评估",
               "children": []
             },
@@ -2907,21 +2724,11 @@
               "children": []
             },
             {
-              "name": "专业信息检索",
-              "children": []
-            },
-            {
               "name": "信息检索系统",
               "children": []
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "信息检索与社会计算",
-      "type": "application",
-      "children": [
+        },
         {
           "name": "社会计算",
           "children": [
@@ -2950,57 +2757,12 @@
               "children": []
             },
             {
-              "name": "关系挖掘",
+              "name": "对话机器人",
               "children": []
             },
             {
-              "name": "迁徙数据挖掘",
+              "name": "结构洞分析",
               "children": []
-            },
-            {
-              "name": "隐私保护",
-              "children": []
-            },
-            {
-              "name": "垃圾检测",
-              "children": []
-            },
-            {
-              "name": "计算社会科学",
-              "children": [
-                {
-                  "name": "科学大数据",
-                  "children": []
-                },
-                {
-                  "name": "新兴趋势探测",
-                  "children": []
-                },
-                {
-                  "name": "数字资源聚合",
-                  "children": []
-                },
-                {
-                  "name": "大数据知识服务",
-                  "children": []
-                },
-                {
-                  "name": "网络的网络",
-                  "children": []
-                },
-                {
-                  "name": "人际竞争情报",
-                  "children": []
-                },
-                {
-                  "name": "数字社会",
-                  "children": []
-                },
-                {
-                  "name": "知识计量学",
-                  "children": []
-                }
-              ]
             }
           ]
         },
@@ -3008,23 +2770,19 @@
           "name": "数据挖掘",
           "children": [
             {
-              "name": "时间序列分析",
+              "name": "数据分类",
               "children": []
             },
             {
-              "name": "关联规则",
+              "name": "数据聚类",
               "children": []
             },
             {
-              "name": "算法",
+              "name": "流数据挖掘",
               "children": []
             },
             {
-              "name": "大数据",
-              "children": []
-            },
-            {
-              "name": "网络挖掘",
+              "name": "数据可视化",
               "children": []
             },
             {
@@ -3032,214 +2790,57 @@
               "children": []
             },
             {
-              "name": "知识管理",
+              "name": "认知图谱",
               "children": []
             },
             {
-              "name": "数据管理",
+              "name": "图数据挖掘",
               "children": []
             },
             {
-              "name": "文本挖掘",
+              "name": "大数据分析",
               "children": []
             },
             {
-              "name": "图像挖掘",
+              "name": "行业数据挖掘",
               "children": []
             },
             {
-              "name": "信息网络",
-              "children": []
-            },
-            {
-              "name": "图挖掘",
-              "children": []
-            },
-            {
-              "name": "卫生保健",
-              "children": []
-            },
-            {
-              "name": "可视化",
-              "children": []
-            },
-            {
-              "name": "信息系统",
-              "children": []
-            },
-            {
-              "name": "模糊数据挖掘",
-              "children": []
-            },
-            {
-              "name": "专家系统",
-              "children": []
-            },
-            {
-              "name": "相似性",
-              "children": []
-            },
-            {
-              "name": "数据结构",
-              "children": []
-            },
-            {
-              "name": "无监督学习",
-              "children": []
-            },
-            {
-              "name": "有监督学习",
-              "children": []
-            },
-            {
-              "name": "网络分析",
-              "children": []
-            },
-            {
-              "name": "决策分析",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "数据科学与大数据计算",
-      "type": "application",
-      "children": [
-        {
-          "name": "数据科学基础理论",
-          "children": [
-            {
-              "name": "大数据理论模型",
-              "children": []
-            },
-            {
-              "name": "大数据计算模型",
-              "children": []
-            },
-            {
-              "name": "数据质量",
-              "children": []
-            },
-            {
-              "name": "数据标准",
+              "name": "数据关联挖掘",
               "children": []
             }
           ]
         },
         {
-          "name": "大数据计算系统",
+          "name": "科技情报分析",
           "children": [
             {
-              "name": "分布式大数据计算",
-              "children": [
-                {
-                  "name": "MapReduce",
-                  "children": []
-                },
-                {
-                  "name": "Spark",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "领域大数据计算",
-              "children": [
-                {
-                  "name": "节能计算",
-                  "children": []
-                },
-                {
-                  "name": "大图数据计算",
-                  "children": []
-                },
-                {
-                  "name": "流式大数据计算",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "大数据机器学习",
-              "children": [
-                {
-                  "name": "参数服务器",
-                  "children": []
-                },
-                {
-                  "name": "Tensorflow",
-                  "children": []
-                },
-                {
-                  "name": "MXNet",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "硬件加速大数据计算",
+              "name": "知识溯源",
               "children": []
-            }
-          ]
-        },
-        {
-          "name": "大数据算法与应用",
-          "children": [
-            {
-              "name": "大数据挖掘分析",
-              "children": [
-                {
-                  "name": "数据流挖掘",
-                  "children": []
-                },
-                {
-                  "name": "大图挖掘",
-                  "children": []
-                },
-                {
-                  "name": "大数据聚类分析",
-                  "children": []
-                },
-                {
-                  "name": "大数据隐私与安全",
-                  "children": []
-                },
-                {
-                  "name": "大数据可视化分析",
-                  "children": []
-                }
-              ]
             },
             {
-              "name": "行业大数据应用",
-              "children": [
-                {
-                  "name": "金融大数据",
-                  "children": []
-                },
-                {
-                  "name": "医疗大数据",
-                  "children": []
-                },
-                {
-                  "name": "教育大数据",
-                  "children": []
-                },
-                {
-                  "name": "政务大数据",
-                  "children": []
-                },
-                {
-                  "name": "商业大数据",
-                  "children": []
-                },
-                {
-                  "name": "工业大数据",
-                  "children": []
-                }
-              ]
+              "name": "趋势分析",
+              "children": []
+            },
+            {
+              "name": "前沿预测",
+              "children": []
+            },
+            {
+              "name": "命名排歧",
+              "children": []
+            },
+            {
+              "name": "决策支持",
+              "children": []
+            },
+            {
+              "name": "人才情报",
+              "children": []
+            },
+            {
+              "name": "科学计量",
+              "children": []
             }
           ]
         }
@@ -3265,7 +2866,7 @@
               "children": []
             },
             {
-              "name": "表观组及其他组学数据处理与分析",
+              "name": "表观组等组学数据处理与分析",
               "children": []
             },
             {
@@ -3273,15 +2874,15 @@
               "children": []
             },
             {
-              "name": "基于单细胞测序等前沿技术的处理及分析",
+              "name": "前沿测序技术（如单细胞测序）",
               "children": []
             },
             {
-              "name": "复杂疾病相关的基因及非RNA分析",
+              "name": "复杂疾病基因及非RNA分析",
               "children": []
             },
             {
-              "name": "面向复杂疾病的多组学数据联合分析",
+              "name": "多组学数据联合分析",
               "children": []
             },
             {
@@ -3294,15 +2895,15 @@
           "name": "生物医学图像智能计算",
           "children": [
             {
-              "name": "生物医学图像目标区域检测",
+              "name": "目标区域检测",
               "children": []
             },
             {
-              "name": "多模态生物医学图像联合分析",
+              "name": "多模态联合分析",
               "children": []
             },
             {
-              "name": "基于生物医学图像的复杂疾病智能诊断",
+              "name": "复杂疾病智能诊断",
               "children": []
             },
             {
@@ -3327,7 +2928,7 @@
               "children": []
             },
             {
-              "name": "多源异构生物医学数据的融合表示学习",
+              "name": "多源异构融合表示学习",
               "children": []
             },
             {
@@ -3335,7 +2936,7 @@
               "children": []
             },
             {
-              "name": "个性化用药与治疗方案推荐",
+              "name": "个性化用药与治疗方案",
               "children": []
             },
             {
