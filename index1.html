@@ -100,24 +100,23 @@ body {
 }
 .node text {
   stroke: none !important;
-  stroke-width: 0px !important;
 }
 .legend-item text {
   stroke: none !important;
 }
 /* 
-theory:                       #d95f02, #d95f02, e41a1c; 66c2a5; 8dd3c7 d95f02 4286F3 006BB0
-network_hardware | fundation: #1b9e77, #e7298a, 4daf4a; fc8d62; ffffb3 EB4537 EB4537 EFA90D
-software | fundation1:        #e7298a, #1b9e77, d95f02; 8da0cb; bebada 1b9e77 FAC230 1D1815
-security | fundation2:        #999999, #66a61e, 984ea3; e78ac3; fb8072 377eb8 55AF7B 059341
-application:                  #7570b3, #7570b3, 377eb8; 4daf4a; 80b1d3 7570b3 7570b3 DC2F1F
+theory:                       #d95f02, #d95f02, e41a1c; 66c2a5; 8dd3c7
+network_hardware | fundation: #1b9e77, #e7298a, 4daf4a; fc8d62; ffffb3
+software | fundation1:        #e7298a, #1b9e77, d95f02; 8da0cb; bebada
+security | fundation2:        #999999, #66a61e, 984ea3; e78ac3; fb8072
+application:                  #7570b3, #7570b3, 377eb8; 4daf4a; 80b1d3
 */
 
 :root { 
   --theory:           #d95f02; 
-  --network_hardware: #1b9e77;
-  --software:         #e52c65;
-  --security:         #d68a05;
+  --network_hardware: #e7298a;
+  --software:         #1b9e77;
+  --security:         #377eb8;
   --application:      #7570b3;
 } 
 
@@ -355,10 +354,10 @@ var drawObject = {
         centerMVy = (canvasHeight - canvasWidth) / 2
       }
 
-      var order = ["计算机软件", "计算机网络",  "计算机图形学与虚拟现实", "信息检索与数据挖掘", "生物信息计算与数字健康", "图像视频处理与多媒体技术", "信息系统安全", "硬件与计算机体系结构", "计算机基础理论"]
+      var order = ["硬件与计算机体系结构", "信息系统安全", "计算机图形学与虚拟现实", "信息检索与数据挖掘", "生物信息计算与数字健康", "图像视频处理与多媒体技术",  "计算机网络", "计算机软件", "计算机基础理论"]
 
-      var rotation = 212.5
-      var rotationRootText = 235
+      var rotation = 195
+      var rotationRootText = -105
       var svg = d3.select("svg"),
           g = svg.select("g")
           .attr("transform", "translate(" + (centerMVx + margin.left + diameter / 2) + "," + (centerMVy + diameter / 2 + margin.top) + ")" + "rotate(" + rotation + ")");
@@ -656,7 +655,7 @@ var drawObject = {
           "type": "fundation2"
         }
     }
-    var fontSizeArray = [8, 6, 3.5, 3, 3]
+    var fontSizeArray = [8, 6, 4, 3, 3]
     var canvasWidth = d3.select('#canvas').style("width")
     var canvasHeight = d3.select('#canvas').style("height")
     canvasWidth = +canvasWidth.replace("px", "")
@@ -677,9 +676,9 @@ var drawObject = {
       centerMVy = (canvasHeight - canvasWidth) / 2
     }
 
-    var order = ["计算机软件", "计算机网络", "计算机图形学与虚拟现实", "信息检索与数据挖掘", "生物信息计算与数字健康", "图像视频处理与多媒体技术", "信息系统安全", "硬件与计算机体系结构", "计算机基础理论"]
+    var order = ["计算机基础理论", "硬件与计算机体系结构", "信息系统安全", "计算机图形学与虚拟现实", "信息检索与数据挖掘", "生物信息计算与数字健康", "图像视频处理与多媒体技术",  "计算机网络", "计算机软件"]
 
-    var rotation = 174
+    var rotation = 186
     var rotationRootText = 0
     var svg = d3.select("svg"),
         g = svg.select("g")
@@ -771,7 +770,7 @@ var drawObject = {
     }
 
     function xRange(x) {
-      rotation = 5
+      rotation = 0
       return x < rotation || x > (180 + rotation)
     }
 
